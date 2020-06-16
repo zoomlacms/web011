@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>724</LabelID>
+    <LabelName>输出招聘信息列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>店铺</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID|TitleNum,30,1,标题长度|ShowNum,10,1,显示个数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_ZPXX on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_ZPXX.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Inputer,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_CommonModel.UpDateTime,{table1}.dbo.ZL_C_ZPXX.WorkPlace</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) and status=99</LabelWhere>
+    <LabelOrder>UpDateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="Title"/}"&gt;{ZL:CutText({Field="Title"/},@TitleNum,...)/}&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{Field="Inputer"/}&lt;/td&gt;&lt;td&gt;{Field="WorkPlace"/}&lt;/td&gt;&lt;td&gt;{ZL:FormatDate({Field="UpDateTime"/},yyyy-MM-dd)/}&lt;/td&gt;
+&lt;/tr&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

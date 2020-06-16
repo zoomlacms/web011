@@ -1,0 +1,1 @@
+﻿<%@ page language="C#" autoeventwireup="true" validaterequest="false" inherits="OnlineService_ChattingRecord, App_Web_qbnbf0cp" enableviewstatemac="false" enableEventValidation="false" viewStateEncryptionMode="Never" %>

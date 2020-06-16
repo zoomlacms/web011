@@ -1,0 +1,397 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="msapplication-TileColor" content="#1A0066"/>
+<meta name="msapplication-TileImage" content="/images/win8_symbol_140x140.png"/>
+<title>{$SiteName/}_首页</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot()/}
+ <!--[if lt IE 7]>  <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>    <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>    <div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>      <div style='width: 75px; float: left;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-warning.jpg' alt='Warning!'/></div>      <div style='width: 275px; float: left; font-family: Arial, sans-serif;'>        <div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>2014年2月起逐浪CMS官方不再支持IE6！</div>        <div style='font-size: 12px; margin-top: 6px; line-height: 16px;'>是时候升级上网工具了！请点击右边图标升级到高级版本浏览器以获得完整准确的用户体验：</div>      </div>      <div style='width: 75px; float: left;'><a href='http://www.firefox.com' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-firefox.jpg' style='border: none;' alt='Get Firefox 3.5'/></a></div>      <div style='width: 75px; float: left;'><a href='http://www.browserforthebetter.com/download.html' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div>      <div style='width: 73px; float: left;'><a href='http://www.apple.com/safari/download/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-safari.jpg' style='border: none;' alt='Get Safari 4'/></a></div>      <div style='float: left;'><a href='http://www.google.com/chrome' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div>    </div>  </div>  <![endif]-->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+<script src="{$CssDir/}JS/dcs_tag.js"></script>
+<script src="{$CssDir/}js/server.js"></script>
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="home_bg">
+<!--<div style="height:60px;"></div>预留给传统网站顶部信息 -->
+<div class="navbar navbar-default  ">
+<div class="navbar navbar-static-top Myheader" role="navigation" id="scolls">
+<div class="container ">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">智能切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<div class="menua"><a class="navbar-brand" href="#"  onmouseover="showMoreSoftware(this,'softList')" onmouseout="hideMoreSoftware()" class="normal">开启WEB云计算内核之门：</a></div>
+</div>
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="{ZL:GetNodeListUrl(1)/}" target="_blank">网站首页</a></li>
+        <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">频道导航<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+			 {ZL.Label id="蓝色经典_顶部节点列表" ParentID="0" ShowNum="7" /}
+            </ul>
+        <li><a href="user/">会员中心</a></li>
+        <li><a href="ttp://help.zoomla.cn" target="_blank">使用帮助</a></li>
+        <li><a href="http://www.zoomla.cn/mb/" target="_blank">模板中心</a></li>
+        <li><a href="http://www.zoomla.cn/pub/" target="_blank">下载产品</a></li>
+        <li><a href="/demo/" target="_blank">体验中心</a></li>
+        <li><a href="http://bbs.zoomla.cn/" target="_blank">技术社区</a></li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 导航到此结束 -->
+ 
+<div class="container">
+    <div id="page_logo"><a href="/" target="_blank"><img alt='{$SiteName/}' id='logos' onerror="this.onerror=null;this.src='{$LogoUrl/}'" /></a></div>
+     <div class="row">
+      <div class="col-lg-8 col-md-6 col-xs-12">
+        <div class="page_main_l" id="pagemain1" style="height:307px;">
+          <div class="bic_left">
+            <div class="page_main_icon" onmouseover="show(this)" onmouseout="hide(this)"><img src="{$CssDir/}images/nic1.jpg" /> <a id="a1" href="{ZL:GetNodeListUrl(1)/}" style="display:none" target="_blank"><img src="{$CssDir/}images/nic1_1.jpg" /></a> </div>
+            <div class="page_main_icon" onmouseover="show(this)" onmouseout="hide(this)"><img src="{$CssDir/}images/nic2.jpg" /> <a id="a2" href="{ZL:GetNodeLinkUrl(2)/}" style="display:none" target="_blank" ><img src="{$CssDir/}images/nic2_1.jpg" /></a> </div>
+            <div class="page_main_icon" onmouseover="show(this)" onmouseout="hide(this)"><img src="{$CssDir/}images/nic3.jpg" /> <a id="a3" href="http://pano.zoomla.cn/" style="display:none" target="_blank" ><img src="{$CssDir/}images/nic3_1.jpg" /></a> </div>
+            <div class="page_main_icon" onmouseover="show(this)" onmouseout="hide(this)"> <img src="{$CssDir/}images/nic4.jpg" /><a id="a4" href="/Edit/" style="display:none" target="_blank" ><img src="{$CssDir/}images/nic4_1.jpg" /></a> </div>
+          </div>
+          <div class="bic_more">
+            <div class="page_main_icon2" onmouseover="show(this)" onmouseout="hide(this)"> <img src="{$CssDir/}images/nic5.jpg" /> <a href="javascript:void(0)" style="display:none"><img src="{$CssDir/}images/nic5_1.jpg" onclick="advshow2()"/></a> </div>
+          </div>
+        </div>
+        
+        <!--第二屏--> <div class="clearfix600"></div>
+        <div class="page_main_l loginNone" id="pagemain2" style="height:307px;">
+          <div class="page_main_icon"><a href="/try/" target="_blank" ><img src="{$CssDir/}images/metro1.jpg" alt="在线试戴" /></a></div>
+          <div class="page_main_icon"><a href="Prompt/EmailSender.aspx" target="_blank" ><img src="{$CssDir/}images/metro2.jpg" alt="邮件发送" /></a></div>
+          <div class="page_main_icon"><a href="/Questions/Default.aspx?id=1" target="_blank" ><img src="{$CssDir/}images/metro3.jpg" alt="智能组卷" /></a></div>
+          <div class="page_main_icon"><a href="Guest/Baike/" target="_blank" ><img src="{$CssDir/}images/metro4.jpg" alt="百科" /></a></div>
+          <div class="page_main_icon"><a href="Guest/Ask/" target="_blank" ><img src="{$CssDir/}images/metro5.jpg" alt="问答" /></a></div>
+          <div class="page_main_icon"><a href="Plugins/Domain/" target="_blank" ><img src="{$CssDir/}images/metro11.jpg" alt="域名注册" /></a></div>
+          <div class="page_main_icon"><a href="Guest/" target="_blank" ><img src="{$CssDir/}images/metro6.jpg" alt="留言" /></a></div>
+          <div class="page_main_icon"><a href="{ZL:GetNodeLinkUrl(85)/}" target="_blank" ><img src="{$CssDir/}images/metro7.jpg" alt="图库" /></a></div>
+          <div class="page_main_icon"><a href="{ZL:GetNodeLinkUrl(86)/}" target="_blank" ><img src="{$CssDir/}images/metro8.jpg" alt="视频" /></a></div>
+          <div class="page_main_icon"><a href="{ZL:GetNodeLinkUrl(3)/}" target="_blank" ><img src="{$CssDir/}images/metro9.jpg" alt="网店" /></a></div>
+          <div class="page_main_icon"><a href="{ZL:GetNodeLinkUrl(143)/}" target="_blank" ><img src="{$CssDir/}images/metro10.jpg" alt="文件工厂" /></a></div>
+          <div class="page_main_icon"><a href="/Site/Default.aspx" target="_blank" ><img src="{$CssDir/}images/metro12.jpg" alt="极速建站" /></a></div>
+        </div>
+        <div class="ac">
+          <div class="acleft"><img src="{$CssDir/}images/al.jpg" onclick="advshow1()"></div>
+          <div class="accenter" id="imagediv">
+            <div class="as"><img src="{$CssDir/}images/asbg.jpg"/></div>
+            <div onclick="advshow3()" style="cursor:pointer;">&nbsp;</div>
+          </div>
+          <div class="acright"><img src="{$CssDir/}images/ar.jpg" onclick="advshow2()"/></div>
+        </div>
+      </div>
+      
+      <!--轮播广告-->
+      <div class="col-lg-3  col-md-4 col-xs-12 e-bx_banner">
+        <div style="width:242px; height:242px; overflow:hidden; position:relative;_z-index:-999">
+          <div class="e-bx_banner_img" name="sun" onmouseover="over(0)" onmouseout="out(0)"  ><a id="a16"  href="User/info/AdPlan.aspx" target="_blank"><img src="{$CssDir/}images/pic4.jpg" alt="智能广告" /></a></div>
+          <div class="e-bx_banner_img" name="sun" onmouseover="over(1)" onmouseout="out(1)" ><a href="User/Magazine/AddMagazine.aspx" target="_blank"><img src="{$CssDir/}images/pic5.jpg" alt="电子杂志" /></a></div>
+          <div class="e-bx_banner_img" name="sun" onmouseover="over(2)" onmouseout="out(2)" ><a id="a17" href="Plugins/Doc.aspx" target="_blank"><img src="{$CssDir/}images/pic3.jpg" alt="文件工厂" /></a></div>
+          <div class="dot" style="position:absolute; top:232px; left:140px">
+            <ul>
+              <li id="s0" class="hsdot" onmouseover="over(0)" onmouseout="out(0)" style="display:none"></li>
+              <li id="s1" class="zsdot" onmouseover="over(1)" onmouseout="out(1)" style="display:none"></li>
+              <li id="s2" class="zsdot" onmouseover="over(2)" onmouseout="out(2)" style="display:none"></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div><div class="clearfix"></div>
+</div><div class="clearfix"></div>
+<!--轮播广告--> 
+
+<!-- footer-->
+<div class="container">
+  <div id="row">
+  <div id="home_footer">
+    <ul>
+      <li><a href="{ZL:GetNodeLinkUrl(106)/}" target="_blank">网站地图</a></li>
+      <li><a href="{ZL:GetInfoUrl(22)/}" target="_blank">法律声明</a></li>
+      <li><a href="{ZL:GetNodeLinkUrl(77)/}" target="_blank">帮助中心</a></li>
+      <li><a href="{ZL:GetInfoUrl(21)/}" target="_blank">联系我们</a></li>
+      <li><a href="{ZL:GetInfoUrl(20)/}" target="_blank">关于我们</a></li>  
+	  <li><a href="/Scha.aspx" target="_blank">防伪查询</a></li>
+      <li><a href="/guest/" target="_blank">用户反馈</a></li>
+	  <li><a href="/Plugins/Camera/Camera.html" target="_blank">在线拍照</a></li> 
+      <li><a href="{$ManageDir/}Default.aspx" target="_blank">管理登录</a></li>
+    </ul>
+	<div class="clearfix"></div>
+    <div id="copyright"> {$Copyright/}
+     </div>
+  </div>
+</div>
+</div>
+
+<!--下面是浮动最下面的客服代码，通过CSS中的MYbottom定义-->
+<div class="navbar navbar-fixed-bottom MYbottom">
+<div class="container BottomLink" >
+<div class="col-lg-7 col-md-6 col-xs-12">
+<ul>
+<li><a href="pub/listpage.shtml">Zoomla!逐浪CMS内核</a></li>
+<li><a href="m">Z-Mobile智能移动手机应用开发</a></li>
+<li><a href="#" Onclick="javaScript:alert('抱歉当前仅对商业用户开放')">RIA交互体验与桌面智能软件</a></li>
+</ul>
+</div>
+<div class="col-lg-5 col-md-6 col-xs-12">
+<span>
+<div class="dl"><a href="/pub/" target="_blank" title="Free Download">DownLoad></a></div>
+<div class="sp"><a href="/shop/" target="_blank" title="Buy Now">Buy Now</a></div>
+<div class="ins"><a href="/help/Install/692.shtml" target="_blank" title="快速安装">快速安装></a></div>
+</span>
+</div>
+</div>
+<div class="container Mytel">
+<div class="col-lg-12">
+<span class="glyphicon glyphicon-phone-alt"><a href="tel:021-50391046">联系官方服务热线</a></span>
+<span class="glyphicon glyphicon-phone"><a href="tel:13177777714">24小时移动专家在线</a></span>
+</div></div>
+</div>
+
+<div class="Micro">
+  <div class="Micro_r"> <img src="{$CssDir/}images/Micro.gif"   class="tigger" id="Micro1" alt="微信" onMouseMove="Micro()" /> </div>
+  <div id="Micro_l" style="display:none;"   onMouseMove="Micro()" onMouseout="Micro_none()" >
+    <div class="Mic_l"> <img src="{$CssDir/}images/Big_Micro.jpg" /></div>
+    <div class="Mic_r">
+      <ul>
+        <li>打开微信:</li>
+        <li>1.或选择魔术棒,扫一扫</li>
+        <li>2.或选择"朋友们",扫一扫</li>
+        <li>3.或查找微信号:逐浪CMS</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<DIV id=floatTools class=float0831>
+  <DIV class=floatL><A id=aFloatTools_Show class=btnOpen title=查看在线客服 onclick="javascript:$('#divFloatToolsView').animate({width: 'show', opacity: 'show'}, 'normal',function(){ $('#divFloatToolsView').show();kf_setCookie('RightFloatShown', 0, '', '/', 'www.zoomla.cn'); });$('#aFloatTools_Show').attr('style','display:none');$('#aFloatTools_Hide').attr('style','display:block');" 
+href="javascript:void(0);">展开</A> <A  style="DISPLAY: none" id=aFloatTools_Hide class=btnCtn title=关闭在线客服 onclick="javascript:$('#divFloatToolsView').animate({width: 'hide', opacity: 'hide'}, 'normal',function(){ $('#divFloatToolsView').hide();kf_setCookie('RightFloatShown', 1, '', '/', 'www.zoomla.cn'); });$('#aFloatTools_Show').attr('style','display:block');$('#aFloatTools_Hide').attr('style','display:none');" 
+href="javascript:void(0);">收缩</A> </DIV>
+  <DIV id=divFloatToolsView class=floatR style="display:none;">
+    <DIV class=tp></DIV>
+    <DIV class=cn>
+      <UL>
+        <LI class=top>
+          <H3 class=titZx>QQ咨询</H3>
+        </LI>
+        <!--<LI><SPAN class=icoZx>在线咨询</SPAN> </LI>-->
+        <LI><A class=icoTc href="http://wpa.qq.com/msgrd?v=3&amp;uin=184886758&amp;site=qq&amp;menu=yes">京沪苏粤售前</A> </LI>
+        <LI><A class=icoTc href="http://wpa.qq.com/msgrd?v=3&amp;uin=69250566&amp;site=qq&amp;menu=yes">软件授权售前</A> </LI>
+        <LI><A class=icoTc href="http://wpa.qq.com/msgrd?v=3&amp;uin=228388629&amp;site=qq&amp;menu=yes">高端订制售前</A> </LI>
+        <LI class=bot><A class=icoTc href="http://wpa.qq.com/msgrd?v=3&amp;uin=1579153275&amp;site=qq&amp;menu=yes">教育系统集成</A> </LI>
+      </UL>
+      <UL class=webZx>
+        <LI class=webZx-in><A href="/guest/" target="_blank" style="FLOAT: left" title="查看更多联系方式"><IMG src="{$CssDir/}images/right_float_web.png" alt="网页咨询"></A> </LI>
+      </UL>
+      <UL>
+        <LI>
+          <H3 class=titDh>电话咨询</H3>
+        </LI>
+        <LI><SPAN class=icoTl>1317777714</SPAN> </LI>
+        <LI class=bot>
+          <H3 class=titDc><A href="http://zoomla.cn/pub/" target="_blank">免费下载逐浪CMS</A></H3>
+        </LI>
+      </UL>
+    </DIV>
+  </DIV>
+</DIV>
+
+<div class="clearfix"></div>
+<div id="Plat_show">
+<ul class="list-unstyled">
+	<li><a rel="nofollow" href="/Plat/Blog/" title="事务处理" target="_blank"></a></li>
+	<li><a rel="nofollow" href="#" title="美工咨询" target="_blank"></a></li>
+	<li><a rel="nofollow" href="#" title="技术咨询" target="_blank"></a></li>
+	<li><a rel="nofollow" href="#" title="优化咨询" target="_blank"></a></li>
+	<li><a rel="nofollow" href="#" title="售后咨询" target="_blank"></a></li>
+	<li><a rel="nofollow" href="#" title="财务咨询" target="_blank"></a></li>
+	<li><a href="http://sc.admin5.com/" title="联系方式" target="_blank"></a></li>
+</ul>
+<div class="kfleft" title="能力中心"></div>
+</div>
+</body>
+</html>
+<script>
+//能力中心展示代码
+$(function() {
+$(".kfleft").click(function(){
+	var i=$("#Plat_show").css("left");
+	if (i=='0px'){
+		$('#Plat_show').animate({left:-80}, 200);
+	} else {
+		$('#Plat_show').animate({left:0}, 200);
+	}
+});
+});
+
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+ //]]>
+
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+  var msViewportStyle = document.createElement("style");
+  msViewportStyle.appendChild(
+    document.createTextNode(
+      "@-ms-viewport{width:auto!important}"
+    )
+  );
+  document.getElementsByTagName("head")[0].
+    appendChild(msViewportStyle);
+}
+
+//功能位
+$("#a1").attr("href", "{ZL:GetNodeListUrl(1)/}" );
+$("#a2").attr("href", "{ZL:GetNodeLinkUrl(2)/}" );
+$("#a3").attr("href", "http://pano.zoomla.cn/"  );
+$("#a4").attr("href", "/Edit/"  );
+$("#a5").attr("href", "/try/"  );
+$("#a6").attr("href", "Prompt/EmailSender.aspx"  );
+$("#a7").attr("href", "/Questions/Default.aspx?id=1" );
+$("#a8").attr("href", "Guest/Baike/" );
+$("#a9").attr("href", "Guest/Ask/" );
+$("#a10").attr("href", "Guest/"  );
+$("#a11").attr("href", "{ZL:GetNodeLinkUrl(85)/}" );
+$("#a12").attr("href", "{ZL:GetNodeLinkUrl(86)/}" );
+$("#a13").attr("href", "{ZL:GetNodeLinkUrl(3)/}" );
+$("#a14").attr("href", "Plugins/Doc.aspx"  );
+
+//通栏广告脚本---------------------------
+var now = 0;
+var max = $(".e-bx_banner_img").length - 1;
+for (var i = 0; i <= max; i++) {
+$("#s" + i).show();
+}
+function change() {
+
+$($(".e-bx_banner_img")[now]).css({
+    "display": "block"
+});
+//$($(".e-bx_banner_img")[now]).fadeIn("slow");
+var spid = document.getElementById("s" + now);
+spid.className = "zsdot";
+for (var i = 0; i <= max; i++) {
+    if (i != now) {
+        $($(".e-bx_banner_img")[i]).css({
+            "display": "none"
+        });
+        var spid = document.getElementById("s" + i);
+        spid.className = "hsdot";
+    }
+}
+if (now == max) {
+    now = 0;
+} else {
+    now += 1;
+}
+timerID = setTimeout("change()", 3000);
+}
+
+//鼠标放上去
+function over(num) {
+now = num;
+$($(".e-bx_banner_img")[now]).css({
+    "display": "block"
+});
+//$($(".e-bx_banner_img")[now]).fadeIn("slow");
+var spid = document.getElementById("s" + now);
+spid.className = "zsdot";
+
+for (var i = 0; i <= max; i++) {
+    if (i != now) {
+        $($(".e-bx_banner_img")[i]).css({
+            "display": "none"
+        });
+        var spid = document.getElementById("s" + i);
+        spid.className = "hsdot";
+    }
+}
+clearTimeout(timerID);
+}
+
+//鼠标离开
+function out(num) {
+now = num;
+change();
+}
+
+function show(ele) {
+$(ele.children[0]).hide();
+$(ele.children[1]).show();
+}
+
+function hide(ele) {
+$(ele.children[0]).show();
+$(ele.children[1]).hide();
+}
+function advshow1() {
+document.getElementById("pagemain1").style.display = 'block';
+document.getElementById("pagemain2").style.display = 'none';
+$("#imagediv").empty();
+$("#imagediv").append('<div class="as"><img src="{$CssDir/}images/asbg.jpg"/></div><div onclick="advshow3()"  style="cursor:pointer;">&nbsp;</div>');
+}
+function advshow2() {
+document.getElementById("pagemain1").style.display = 'none';
+document.getElementById("pagemain2").style.display = 'block';
+$("#imagediv").empty();
+$("#imagediv").append('<div class="as1"><img src="{$CssDir/}images/asbg.jpg"/></div><div onclick="advshow3()"  style="cursor:pointer;">&nbsp;</div>');
+}
+function advshow3() {
+if (document.getElementById("pagemain1").style.display == 'none') {
+    document.getElementById("pagemain1").style.display = 'block';
+    document.getElementById("pagemain2").style.display = 'none';
+    $("#imagediv").empty();
+    $("#imagediv").append('<div class="as"><img src="{$CssDir/}images/asbg.jpg"/></div><div onclick="advshow3()"  style="cursor:pointer;">&nbsp;</div>');
+} else {
+    document.getElementById("pagemain1").style.display = 'none';
+    document.getElementById("pagemain2").style.display = 'block';
+    $("#imagediv").empty();
+    $("#imagediv").append('<div class="as1"><img src="{$CssDir/}images/asbg.jpg"/></div><div onclick="advshow3()"  style="cursor:pointer;">&nbsp;</div>');
+}
+}
+
+$(function () {
+$("#pagemain2").find(".text1").hide();
+//鼠标在图片上的变幻
+$("#pagemain2").find(".tou").mouseover(function () {
+//$(this).next(".text1").show("2000");	
+//$(this).next(".text1").fadeIn("2000");		
+$(this).next(".text1").slideDown("2000");
+$("#pagemain2").find(".page_main_icon").css("z-index", "1");
+$(this).parent().css("z-index", 99);
+});
+//移除鼠标
+$("#pagemain2").find(".tou").mouseout(function () {
+//$(this).next(".text1").hide();
+//$(this).next(".text1").fadeOut();		
+$(this).next(".text1").slideUp(100);
+});
+});
+
+today = new Date();//取当前日期
+date1 = ''  + (today.getMonth() + 1 ) +  today.getDate() +  '';
+document.getElementById("logos").src="http://zoomla.cn/logo/"+date1+".jpg";
+// document.write(date1);//能显示出时间
+</SCRIPT> 

@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>620</LabelID>
+    <LabelName>搜索商家列表</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>店铺</LabelCate>
+    <LabelDesc />
+    <LabelParam>TitleNum,25,1,标题长|ShowNum,10,1,显示数</LabelParam>
+    <LabelTable>ZL_CommonModel left join ZL_Store_reg on ZL_CommonModel.ItemID=ZL_Store_reg.ID</LabelTable>
+    <LabelField>ZL_Store_reg.addr,ZL_Store_reg.area,ZL_CommonModel.GeneralID,ZL_Store_reg.logo,ZL_Store_reg.lxr,ZL_Store_reg.StoreName,ZL_Store_reg.tel,ZL_Store_reg.weibo,UserName</LabelField>
+    <LabelWhere>ZL_CommonModel.TableName like '%ZL_Store_%' And ZL_CommonModel.Status=99 And (area like '%{$PostRequest(shi)$}%' And area like '%{$PostRequest(prov)$}%' And area like '%{$PostRequest(xian)$}%') and StoreName like '%{$PostRequest(keyword)$}%' </LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>&lt;ul class="list-unstyled"&gt;
+{Repeate}
+&lt;li class="col-lg-4 col-md-4 col-sm-4 col-xs-12"&gt;&lt;div&gt;&lt;a href="/Store/StoreIndex.aspx?id={Field="GeneralID"/}" target="_blank" title="{Field="StoreName"/}"&gt;&lt;img src="{ZL:GetPicUrl({Field="logo"/})/}" class="center-block img-responsive" alt="{Field="StoreName"/}"&gt;&lt;/a&gt;&lt;strong class="text-center"&gt;&lt;a href="/Store/StoreIndex.aspx?id={Field="GeneralID"/}" target="_blank" title="{Field="StoreName"/}"&gt;{ZL:CutText({Field="StoreName"/},@TitleNum,)/}&lt;/a&gt;&lt;/strong&gt;&lt;br/&gt;
+&lt;span class="pull-left"&gt;联系人：{Field="lxr"/}&lt;/span&gt;&lt;span class="pull-right"&gt;{Field="addr"/}&lt;/span&gt;&lt;br/&gt;&lt;span class="pull-left"&gt;联系方式：{Field="tel"/}&lt;/span&gt;&lt;span class="pull-right"&gt;&lt;a href="/Store/StoreIndex.aspx?id={Field="GeneralID"/}" target="_blank" class="btn btn-sm btn-danger"&gt;进入店铺&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;
+{/Repeate}
+&lt;/ul&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+{ZL.Page id="大图标响应式列表分页v3"/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

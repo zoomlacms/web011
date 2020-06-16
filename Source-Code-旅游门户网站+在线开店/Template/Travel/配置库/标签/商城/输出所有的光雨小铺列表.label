@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>802</LabelID>
+    <LabelName>输出所有的光雨小铺列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>商城</LabelCate>
+    <LabelDesc />
+    <LabelParam>Diccate,4,1,数据字典ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Grade</LabelTable>
+    <LabelField>GradeID,GradeName</LabelField>
+    <LabelWhere>Cate=8 and Grade=1</LabelWhere>
+    <LabelOrder>Cate DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;
+&lt;strong&gt;{Field="GradeName"/}&lt;/strong&gt; 
+{ZL.Label id="输出指定父ID的小铺子列表" ParentID="{Field="GradeID"/}" /}
+&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

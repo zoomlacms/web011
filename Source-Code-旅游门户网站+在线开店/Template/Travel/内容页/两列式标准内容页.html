@@ -1,0 +1,133 @@
+﻿{ZL.Source id="文章模型数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="文章模型数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="文章模型数据源标签" FD="Tagkey" page="0"/}" />
+<meta name="Description" content="{SField sid="文章模型数据源标签" FD="Title" page="0"/}">
+{ZL:Boot()/}
+<script src="{$CssDir/}js/jquery-1.4.2.min.js" type="text/javascript" ></script>
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<style>
+.navbar-default .navbar .nav_l .menu{SField sid="文章模型数据源标签" FD="NodeID" page="0"/} a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/} 
+<!--面包屑导航结束 -->
+<div class="article">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fashion_r" style="margin-top:10px;">
+<div class="art_list1">
+<div class="art_lt"><strong>栏目推荐</strong></div>
+<div class="row">
+<div class="padding10">
+<ul class="list-unstyled">
+{ZL.Label id="输出指定节点缩略图列表_推荐" NodeID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" TitleNum="24" ShowNum="4" /}
+</ul>
+</div>
+</div>
+</div>
+{ZL.Label id="指定父ID下节点名称与链接列表_内容页" ParentID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" ShowNum="100" /}
+</div>
+<!--内容左侧结束-->
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+<ol class="breadcrumb">
+<li><a href="/">首页</a><span class="divider"></span></li>
+<li>{ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" /}<span class="divider"></span></li>
+<li><a href="{ZL:GetNodeUrl({SField sid="文章模型数据源标签" FD="NodeID" page="0"/})/}">{ZL.Label id="输出指定ID节点名" NodeID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" /}</a><span class="divider"></span></li>
+</ol>
+<div class="myBanner" style="display:none;">
+<img src="{$CssDir/}images/profile.jpg" class="center-block img-responsive" alt="关于我们" />
+</div>
+<div class="art_t">
+<h1 class="text-center">{SField sid="文章模型数据源标签" FD="Title" page="0"/}</h1>
+<div class="myAbbr text-center">  <span id="CreateTime">发布时间：{ZL:FormatDate({SField sid="文章模型数据源标签" FD="CreateTime" page="0"/},yyyy-MM-dd)/}</span> <span id="Hits">浏览次数：<SCRIPT language=javascript src="/Common/GetHits.aspx?id={SField sid="文章模型数据源标签" FD="GeneralID" page="0"/}"></SCRIPT></span>
+</div>
+</div>
+<div class="art_content">
+{SField sid="文章模型数据源标签" FD="content" page="{SField sid="文章模型数据源标签" FD="K_pages" page="0"/}"/}</div>
+<div id="T_page">{ZL.Page id="默认内容分页标签" num="{SField sid="文章模型数据源标签" FD="pages" page="0"/}"/}</div>
+ 
+<!--分享-->
+<div class="pull-left">
+<div class="bdsharebuttonbox" data-tag="share_1">
+	<a class="bds_mshare" data-cmd="mshare"></a>
+	<a class="bds_qzone" data-cmd="qzone" href="#"></a>
+	<a class="bds_tsina" data-cmd="tsina"></a>
+	<a class="bds_baidu" data-cmd="baidu"></a>
+	<a class="bds_renren" data-cmd="renren"></a>
+	<a class="bds_tqq" data-cmd="tqq"></a>
+	<a class="bds_more" data-cmd="more"></a>
+</div>
+</div>
+<script>
+	window._bd_share_config = {
+	share : [{
+			"tag" : "share_1",
+			"bdSize" : 32,
+			
+		}]
+	,
+	common : {		
+			bdText : '{SField sid="文章模型数据源标签" FD="Title" page="0"/}',	
+			bdDesc : '{SField sid="文章模型数据源标签" FD="synopsis" page="{SField sid="文章模型数据源标签" FD="K_pages" page="0"/}"/}',	
+			bdUrl : '{$SiteURL/}/Item/{SField sid="文章模型数据源标签" FD="GeneralID" page="0"/}.aspx', 	
+			bdPic : '{$SiteURL/}/UploadFiles/{SField sid="文章模型数据源标签" FD="pic" page="0"/}',					
+		}
+	}
+
+	//以下为js加载部分
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+
+
+</div>
+<!--内容右侧结束-->
+</div>
+</div>
+</div>
+
+
+</div>
+{ZL.Label id="全站底部"/} 
+</body>
+</html>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script>
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+	".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+ if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//]]>
+
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+  var msViewportStyle = document.createElement("style");
+  msViewportStyle.appendChild(
+    document.createTextNode(
+      "@-ms-viewport{width:auto!important}"
+    )
+  );
+  document.getElementsByTagName("head")[0].
+    appendChild(msViewportStyle);
+}
+$().ready(function(e) {
+    if('{SField sid="文章模型数据源标签" FD="GeneralID" page="0"/}'==1){
+		$(".myBanner").show();
+	}
+});
+</script>

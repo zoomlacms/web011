@@ -1,0 +1,112 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$CssDir/}js/NSW_Index.js"></script>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="/js/jquery.lazyload.js" type="text/javascript"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/} 
+<div class="container mySites"> 
+<ul class="breadcrumb">
+<li><a href="/">首页</a><span class="divider"></span></li>
+<li>{ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" /}</li>
+<li>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}<span class="divider"></span></li>
+</ul> 
+<div class="clearfix"></div>
+</div>
+<div class="sport_news">
+<div class="container">   
+{ZL.Label id="输出指定节点标题列表_带时间属性_分页" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}"  TitleNum="70" ShowNum="10" /} 
+</div>  
+</div>
+<div class="sport_shop_list">
+<div class="container">
+<div class="zj_js">
+<div class="zjs01 fl" id="Left_ding1" style="cursor: pointer;">
+<a href="javascript:void(0)"><i class="fa fa-angle-left"></i></a></div>
+<div class="container zjs02 fl" id="ISL_Cont_1d1" style="float: left;">
+<ul class="list-unstyled">
+{ZL.Label id="栏目页商品列表_不分页" NodeID="23" TitleNum="20" ShowNum="20" /}    
+</ul>
+</div>
+<div class="zjs03 fr" style="cursor: pointer;" id="Right_ding1">
+<a href="javascript:void(0)"><i class="fa fa-angle-right"></i></a></div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+<!--主体开始 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script type="text/javascript">
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//关闭顶部广告
+ function img_clo(){
+	var t= setTimeout($(".home_ad").slideUp(2000),2000);	
+	}
+
+//导航手机列表向上定时滚动
+$(function(){ 
+var $this = $(".renav"); 
+var scrollTimer; 
+$this.hover(function(){ 
+clearInterval(scrollTimer); 
+},function(){ 
+scrollTimer = setInterval(function(){ 
+scrollNews( $this ); 
+}, 2000 ); 
+}).trigger("mouseout"); 
+}); 
+function scrollNews(obj){ 
+var $self = obj.find("ul:first"); 
+var lineHeight = $self.find("li:first").height(); 
+$self.animate({ "margin-top" : -lineHeight +"px" },300 , function(){ 
+$self.css({"margin-top":"0px"}).find("li:first").appendTo($self); 
+}) 
+}
+ 
+$().ready(function(e) { 
+	$(".share_bt").mouseover(function(e) {
+        $(this).find(".bdsharebuttonbox").show();
+    }).mouseout(function(e) {
+        $(this).find(".bdsharebuttonbox").hide();
+    });;  
+}); 
+//商品列表滚动
+var scrollPic_01 = new ScrollPicleft();
+scrollPic_01.scrollContId = "ISL_Cont_1d1"; // 内容容器ID""
+scrollPic_01.arrLeftId = "Left_ding1"; //左箭头ID
+scrollPic_01.arrRightId = "Right_ding1"; //右箭头ID
+scrollPic_01.frameWidth = $(".zj_js").innerWidth(); //显示框宽度
+scrollPic_01.pageWidth = $(".zj_js").innerWidth(); //翻页宽度
+scrollPic_01.speed = 10; //移动速度(单位毫秒，越小越快)
+scrollPic_01.space = 10; //每次移动像素(单位px，越大越快)
+scrollPic_01.autoPlay = true; //自动播放
+scrollPic_01.autoPlayTime = 3; //自动播放间隔时间(秒)
+scrollPic_01.initialize(); //初始化
+</script>

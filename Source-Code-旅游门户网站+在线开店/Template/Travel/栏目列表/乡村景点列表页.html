@@ -1,0 +1,127 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<style type="text/css">
+.navbar-default .navbar .nav_l .menu{ZL.Label id="抽取父节点ID" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" /} a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+.navbar-default .navbar .nav_l .menu{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="mySite">
+<div class="container">
+<ul class="breadcrumb">
+<li>当前位置：<a href="/">首页</a><span class="divider"></span></li> 
+<li>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</li>
+</ul>
+</div>
+</div>
+<!--面包屑导航结束-->
+<div class="container view">
+<div class="row">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 view_l">
+{ZL.Label id="乡村景点列表_带标题带分页" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" TitleNum="30" ShowNum="10" SynNum="150" /} 
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 view_r">
+<div class="view_r_item">
+<div class="view_r_title"><i class="fa fa-ellipsis-v"></i>推荐景点</div>
+<ul class="list-unstyled">
+{ZL.Label id="推荐乡村景点列表_带图带评分" NodeID="8" TitleNum="24" ShowNum="6" /}
+</ul>
+</div>
+<div class="view_r_item">
+<div class="view_r_title"><span class="pull-right"><a href="{ZL:GetNodeLinkUrl(7)/}" target="_blank">更多</a></span><i class="fa fa-ellipsis-v"></i>旅游动态</div>
+<div class="index-main-bd">
+<div class="dh-section dh-col-m">
+<div class="index-catlist">
+</div>
+</div>
+<div class="dh-aside dh-col-s">
+<div class="index-sub-news">
+<div class="bd">
+<ul class="list-unstyled">
+{ZL.Label id="文章列表_带图带简介" NodeID="7" TitleNum="36" ShowNum="10" synNum="50" /}
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script type="text/javascript">
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//关闭顶部广告
+ function img_clo(){
+	var t= setTimeout($(".home_ad").slideUp(2000),2000);	
+	}
+
+//导航手机列表向上定时滚动
+$(function(){ 
+var $this = $(".renav"); 
+var scrollTimer; 
+$this.hover(function(){ 
+clearInterval(scrollTimer); 
+},function(){ 
+scrollTimer = setInterval(function(){ 
+scrollNews( $this ); 
+}, 2000 ); 
+}).trigger("mouseout"); 
+}); 
+function scrollNews(obj){ 
+var $self = obj.find("ul:first"); 
+var lineHeight = $self.find("li:first").height(); 
+$self.animate({ "margin-top" : -lineHeight +"px" },300 , function(){ 
+$self.css({"margin-top":"0px"}).find("li:first").appendTo($self); 
+}) 
+} 
+$(".score1").append('<i class="fa fa-star">');
+$(".score2").append('<i class="fa fa-star"><i class="fa fa-star">');
+$(".score3").append('<i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star">');
+$(".score4").append('<i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star">');
+$(".score5").append('<i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star">');
+//旅游动态列表滚动效果
+var cms={
+        box:'',
+        index:0,
+        init:function(){
+            this.box=$(".index-sub-news").find(".bd");
+            this.run();
+        },
+        run:function(){
+            var _this=this;
+            setInterval(function(){
+                var _index=_this.index%10;
+                _this.box.find("li").eq(_index).find(".raider_item").slideDown();
+                _this.box.find("li").eq(_index).siblings().find(".raider_item").slideUp();
+                _this.index++;
+            },2000);
+        }
+    }
+cms.init();
+</script>

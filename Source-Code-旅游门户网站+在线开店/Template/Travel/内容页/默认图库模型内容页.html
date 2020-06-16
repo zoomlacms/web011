@@ -1,0 +1,94 @@
+﻿{ZL.Source id="图库模型数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="图库模型数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="图库模型数据源标签" FD="Tagkey" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script language="javascript">
+//多行滚动JS 
+function chang(id){
+ var chi = 0;
+while (chi < 13){
+chi++;
+eval("btnContent"+chi+".style.display='none';");
+}
+eval("btnContent"+id+".style.display='';");
+}
+</script>
+<style type="text/css">
+.navbar-default .navbar .nav_l .menu12 a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+</style>  
+</head>
+<body>
+{ZL.Label id="全站头部"/}   
+<div class="container mySites">
+<ul class="breadcrumb">
+<li><a href="/">首页</a><span class="divider"></span></li>
+<li>{ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="图库模型数据源标签" FD="NodeID" page="0"/}" /}<span class="divider"></span></li>
+<li><a href="{ZL:GetNodeUrl({SField sid="图库模型数据源标签" FD="NodeID" page="0"/})/}">{ZL.Label id="输出指定ID节点名" NodeID="{SField sid="图库模型数据源标签" FD="NodeID" page="0"/}" /}</a><span class="divider"></span></li>
+<li>{SField sid="图库模型数据源标签" FD="Title" page="0"/} </li>
+</ul>
+</div> 
+<div class="container photo"> 
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 photo_l">
+{ZL.Label id="指定父ID下节点名称与链接列表_图库内容页" ParentID="{SField sid="图库模型数据源标签" FD="NodeID" page="0"/}" ShowNum="100" /}
+</div> 
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 padding0 photo_r">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+<div class="photo_con mt10">
+<h1>{SField sid="图库模型数据源标签" FD="Title" page="0"/}</h1> 
+<address> 发布时间：{ZL:FormatDate({SField sid="图库模型数据源标签" FD="CreateTime" page="0"/},yyyy-MM-dd)/} 点击数：<SCRIPT language=javascript src="/Common/GetHits.aspx?id={SField sid="图库模型数据源标签" FD="GeneralID"/}"></SCRIPT></address>
+<div id="photo_first"></div>
+<div id="photo_pic">
+<ul class="list-inline text-center">
+{ZL:SplitPicUrl({SField sid="图库模型数据源标签" FD="PhotoUrl"/})/}
+</ul>
+</div>
+<script language='javascript'>
+var siteurl="{$UploadDir/}";
+var firstpho="";
+var photos='{SField sid="图库模型数据源标签" FD="PhotoUrl"/}';
+var pho=photos.split("$"); 
+var arrUrlName=new Array();
+var arrUrl=new Array();
+for(i=0;i<pho.length;i++)
+{ 
+arrUrlName[i]=pho[i].split("|")[1]; 
+if(pho[i].split("|")[1].indexOf("http://")==-1)
+{
+arrUrl[i]="/UploadFiles"+"/"+pho[i].split("|")[1];	 
+document.getElementById("photo_first").innerHTML="<img src='"+arrUrl[i]+"'  alt='预览图' id='turnimg' class='img-responsive' />";	
+} 	
+}
+</script> 
+<div class="clearfix"></div>
+</div>
+<div class="photo_content">{SField sid="图库模型数据源标签" FD="Content" page="0"/}</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding0 pic_shop">
+<ul class="list-unstyled">
+{ZL.Label id="抽取图库内容页商铺信息" author="{SField sid="图库模型数据源标签" FD="author" page="0"/}" NodeID="65" /}
+</ul> 
+</div>
+</div>
+</div> 
+</div> 
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script type="text/javascript">
+	$("#photo_pic img").click(function(e) {
+		var proimgsrc=$(this).attr('src'); 
+		$('#turnimg').attr('src',proimgsrc);
+        
+    });
+$(".grade1").append('<i class="fa fa-star">');
+$(".grade2").append('<i class="fa fa-star"><i class="fa fa-star">');
+$(".grade3").append('<i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star">');
+$(".grade4").append('<i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star">');
+$(".grade5").append('<i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star">');	 
+</script>

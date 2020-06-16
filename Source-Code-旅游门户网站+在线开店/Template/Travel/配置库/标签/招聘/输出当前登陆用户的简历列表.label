@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>727</LabelID>
+    <LabelName>输出当前登陆用户的简历列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>招聘</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID|TitleNum,30,1,标题长度</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel</LabelTable>
+    <LabelField>GeneralID,Title</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) and status=99 and Inputer = '{ZL:GetuserName()/}'</LabelWhere>
+    <LabelOrder>CreateTime DESC</LabelOrder>
+    <LabelContent>&lt;select name="GeneralID" class="form-control"&gt;
+&lt;option value=""&gt;请选择简历&lt;/option&gt;
+{Repeate}
+&lt;option value="{Field="GeneralID"/}"&gt;{ZL:CutText({Field="Title"/},@TitleNum,...)/}&lt;/option&gt;
+{/Repeate}
+&lt;/select&gt;</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

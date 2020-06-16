@@ -1,0 +1,109 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="/dist/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script> 
+<style type="text/css">
+.navbar-default .navbar .nav_l .menu44 a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="show_banner text-center">
+<img src="{$CssDir/}images/kaimu.jpg" class="center-block" alt="即将开幕" />
+<h1>会展频道即将开幕</h1>
+<p>—— 敬请期待中</p>
+</div>
+<div class="container show_main">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="show_title">会展资讯</div>
+<ul class="list-unstyled">
+<li><a href="#" target="_blank"></a></li>
+</ul>
+</div>
+<div class="col-lg-6 colmd-6 col-sm-6 col-xs-12 padding0">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 padding0">
+<img src="{$CssDir/}images/show_pic1.jpg" class="center-block img-responsive" alt="会展图" />
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding0">
+<img src="{$CssDir/}images/show_pic2.jpg" class="center-block img-responsive" alt="会展图" />
+<img src="{$CssDir/}images/show_pic3.jpg" class="center-block img-responsive" alt="会展图" />
+</div>
+</div>
+<div class="col-lg-3 colmd-3 col-sm-3 col-xs-12">
+<span class="text-center"></span>
+
+</div>
+</div> 
+<div class="clearfix"></div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script type="text/javascript">
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//关闭顶部广告
+ function img_clo(){
+	var t= setTimeout($(".home_ad").slideUp(2000),2000);	
+	}
+
+//导航手机列表向上定时滚动
+$(function(){ 
+var $this = $(".renav"); 
+var scrollTimer; 
+$this.hover(function(){ 
+clearInterval(scrollTimer); 
+},function(){ 
+scrollTimer = setInterval(function(){ 
+scrollNews( $this ); 
+}, 2000 ); 
+}).trigger("mouseout"); 
+}); 
+function scrollNews(obj){ 
+var $self = obj.find("ul:first"); 
+var lineHeight = $self.find("li:first").height(); 
+$self.animate({ "margin-top" : -lineHeight +"px" },300 , function(){ 
+$self.css({"margin-top":"0px"}).find("li:first").appendTo($self); 
+}) 
+}
+ 
+$().ready(function(e) {
+    $(".sport_shop li").mouseenter(function(e) {
+        $(this).find(".gobuy").slideDown();
+    }).mouseleave(function(e) {
+        $(this).find(".gobuy").slideUp();
+    });;
+	
+	$(".share_bt").mouseover(function(e) {
+        $(this).find(".bdsharebuttonbox").show();
+    }).mouseout(function(e) {
+        $(this).find(".bdsharebuttonbox").hide();
+    });;
+	
+	if('{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}'!=33){
+		$(".par_node").css("display",'inline-block');
+		$(".place_pic").show();
+		$(".place_pic").html("");	
+		$(".place_pic").append('{ZL.Label id="输出栏目图片" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" /}');
+	}
+}); 
+</script>

@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>787</LabelID>
+    <LabelName>赣鄱文化子节点名称与链接列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>ParentID,0,1,父节点ID|ShowNum,100,1,调用信息数</LabelParam>
+    <LabelTable>ZL_Node</LabelTable>
+    <LabelField>NodeID,NodeName</LabelField>
+    <LabelWhere>ParentID=(select ParentID from ZL_Node where NodeID=@ParentID)</LabelWhere>
+    <LabelOrder>OrderID ASC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li class="node{Field="NodeID"/}"&gt;&lt;a href="{ZL:GetNodeUrl({Field="NodeID"/})/}" title="{Field="NodeName"/}" target="_blank"&gt;{Field="NodeName"/}&lt;/a&gt;&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

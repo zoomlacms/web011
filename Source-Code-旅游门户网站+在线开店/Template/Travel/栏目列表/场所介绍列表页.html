@@ -1,0 +1,116 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="/dist/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script> 
+<style type="text/css">
+.navbar-default .navbar .nav_l .menu3 a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="place">
+<img src="{$CssDir/}images/sport_bg.jpg" class="center-block img-responsive" alt=""></a>
+</div>
+<div class="container">
+<div class="place_style"> 
+<ul class="list-inline text-center">
+{ZL.Label id="输出健身场所子栏目列表_带图" ParentID="33" ShowNum="10" /}
+</ul> 
+<div class="clearfix"></div>
+</div>
+</div> 
+<div class="container">
+<div class="mysite">
+<ol class="breadcrumb">
+<li>当前位置：<a href="/">首页</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(3)/}">时尚健身</a></li>
+<li class="par_node">{ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" /}</li>
+<li>{ZL.Label id="输出指定ID节点名和链接" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" /}</li>
+<li>{$GetUrldecode({$GetRequest(area)$})$}</li>  
+</ol>
+</div>
+<div class="site_select">
+<ul class="list-inline text-center"> 
+<li><a href="/Class_{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}/Default.aspx?area={$GetUrlencode(南昌县)$}">南昌县</a></li><li><a href="/Class_{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}/Default.aspx?area={$GetUrlencode(新建县)$}">新建县</a></li><li><a href="/Class_{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}/Default.aspx?area={$GetUrlencode(进贤县)$}">进贤县</a></li><li><a href="/Class_{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}/Default.aspx?area={$GetUrlencode(安义县)$}">安义县</a></li><li><a href="/Class_{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}/Default.aspx?area={$GetUrlencode(东湖区)$}">东湖区</a></li><li><a href="/Class_{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}/Default.aspx?area={$GetUrlencode(西湖区)$}">西湖区</a></li><li><a href="/Class_{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}/Default.aspx?area={$GetUrlencode(青云谱区)$}">青云谱区</a></li><li><a href="/Class_{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}/Default.aspx?area={$GetUrlencode(青山湖区)$}">青山湖区</a></li><li><a href="/Class_{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}/Default.aspx?area={$GetUrlencode(湾里区)$}">湾里区</a></li>
+</ul>
+</div>
+</div>
+<!--面包屑导航结束-->
+<div class="place_main">
+<div class="container">
+<div class="place_pic"></div>
+{ZL.Label id="输出时尚健身列表_带分页" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" TitleNum="30" ShowNum="10" SynNum="250"/}
+</div> 
+</div> 
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script type="text/javascript">
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//关闭顶部广告
+ function img_clo(){
+	var t= setTimeout($(".home_ad").slideUp(2000),2000);	
+	}
+
+//导航手机列表向上定时滚动
+$(function(){ 
+var $this = $(".renav"); 
+var scrollTimer; 
+$this.hover(function(){ 
+clearInterval(scrollTimer); 
+},function(){ 
+scrollTimer = setInterval(function(){ 
+scrollNews( $this ); 
+}, 2000 ); 
+}).trigger("mouseout"); 
+}); 
+function scrollNews(obj){ 
+var $self = obj.find("ul:first"); 
+var lineHeight = $self.find("li:first").height(); 
+$self.animate({ "margin-top" : -lineHeight +"px" },300 , function(){ 
+$self.css({"margin-top":"0px"}).find("li:first").appendTo($self); 
+}) 
+}
+ 
+$().ready(function(e) {
+    $(".sport_shop li").mouseenter(function(e) {
+        $(this).find(".gobuy").slideDown();
+    }).mouseleave(function(e) {
+        $(this).find(".gobuy").slideUp();
+    });;
+	
+	$(".share_bt").mouseover(function(e) {
+        $(this).find(".bdsharebuttonbox").show();
+    }).mouseout(function(e) {
+        $(this).find(".bdsharebuttonbox").hide();
+    });;
+	
+	if('{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}'!=33){
+		$(".par_node").css("display",'inline-block');
+		$(".place_pic").show();
+		$(".place_pic").html("");	
+		$(".place_pic").append('{ZL.Label id="输出栏目图片" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" /}');
+	}
+}); 
+</script>

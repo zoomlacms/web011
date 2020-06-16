@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>748</LabelID>
+    <LabelName>用户登陆状态显示</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>会员</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>{table1}.dbo.ZL_CommonModel</LabelTable>
+    <LabelField>*</LabelField>
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;li&gt;欢迎您：&lt;a href="/User/" target="_blank"&gt;{ZL:GetuserName()/}&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="/User/Logout.aspx?ReturnUrl={$SiteURL/}"&gt;退出&lt;/a&gt;&lt;/li&gt;</LabelContent>
+    <LabelCount>10</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>用户登陆判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>1</IsOpen>
+    <FalseContent>&lt;li&gt;&lt;a href="/User/Register.aspx" target="_blank"&gt;注册会员&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/User/" target="_blank"&gt;会员登录&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/User/login1.aspx" target="_blank"&gt;小铺登录&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/User/" target="_blank"&gt;加盟合作&lt;/a&gt;&lt;/li&gt;</FalseContent>
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

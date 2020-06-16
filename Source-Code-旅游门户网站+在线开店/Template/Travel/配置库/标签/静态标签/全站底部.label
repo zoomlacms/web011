@@ -1,0 +1,66 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>674</LabelID>
+    <LabelName>全站底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="home_bottom"&gt;
+&lt;div class="container"&gt;
+&lt;ul class="list-inline text-center"&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(135)/}" target="_blank"&gt;&lt;img src="{$CssDir/}images/fun1.png" class="center-block" alt=""&gt;阳光保障&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(136)/}" target="_blank"&gt;&lt;img src="{$CssDir/}images/fun2.png" class="center-block" alt=""&gt;产品丰富&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(137)/}" target="_blank"&gt;&lt;img src="{$CssDir/}images/fun3.png" class="center-block" alt=""&gt;卓越服务&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(138)/}" target="_blank"&gt;&lt;img src="{$CssDir/}images/fun4.png" class="center-block" alt=""&gt;预定价格保障&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(139)/}" target="_blank"&gt;&lt;img src="{$CssDir/}images/fun5.png" class="center-block" alt=""&gt;酒店升级保障&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(140)/}" target="_blank"&gt;&lt;img src="{$CssDir/}images/fun6.png" class="center-block" alt=""&gt;航班延误保障&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(141)/}" target="_blank"&gt;&lt;img src="{$CssDir/}images/fun7.png" class="center-block" alt=""&gt;特殊原因退订保障&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(142)/}" target="_blank"&gt;&lt;img src="{$CssDir/}images/fun8.png" class="center-block" alt=""&gt;不可抗力退订保障&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(143)/}" target="_blank"&gt;&lt;img src="{$CssDir/}images/fun9.png" class="center-block" alt=""&gt;重大灾害保障&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="home_footer"&gt;
+&lt;div class="container  text-center"&gt;
+&lt;ul class="list-inline"&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(1)/}" target="_blank"&gt;公司简介&lt;/a&gt;&lt;/li&gt;|
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(132)/}" target="_blank"&gt;招贤纳士&lt;/a&gt;&lt;/li&gt;|
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(133)/}" target="_blank"&gt;广告服务&lt;/a&gt;&lt;/li&gt;|
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(70)/}" target="_blank"&gt;联系方式&lt;/a&gt;&lt;/li&gt;|
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(131)/}" target="_blank"&gt;版权声明&lt;/a&gt;&lt;/li&gt;|
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(134)/}" target="_blank"&gt;法律顾问&lt;/a&gt;&lt;/li&gt;|
+&lt;li&gt;&lt;a href="/guest/" target="_blank"&gt;问题报告&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;{$Copyright/}&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="container footer_attestation"&gt;
+&lt;ul class="list-inline text-center"&gt;
+&lt;li&gt;&lt;a href="http://117.40.91.39/"&gt;&lt;img src="{$CssDir/}images/ba1.gif" alt="报警岗亭" width="50"&gt;&lt;span&gt;南昌网络警察报警平台&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://117.40.91.39/"&gt;&lt;img src="{$CssDir/}images/ba2.jpg" alt="卡通警察"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.nc315.gov.cn/ba!certificate.html?id=64"&gt;&lt;img src="{$CssDir/}images/ba3.gif" alt="互联网经营备案登记信息"&gt;&lt;span&gt;经营性网站备案信息&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://117.40.91.39/wzba_search.asp"&gt;&lt;img src="{$CssDir/}images/ba4.jpg" alt="网站备案"&gt;&lt;span&gt;南昌市公安局网监备案&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.anquan.org/authenticate/cert/?site=www.tiboo.cn&amp;at=realname"&gt;&lt;img src="{$CssDir/}images/ba5.png" alt="报警岗亭"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

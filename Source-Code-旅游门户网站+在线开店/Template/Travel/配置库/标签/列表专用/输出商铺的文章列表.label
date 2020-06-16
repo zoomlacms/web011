@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>800</LabelID>
+    <LabelName>输出商铺的文章列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,12,1,节点ID|TitleNum,60,1,标题长度|SynNum,200,1,简介长度|ShowNum,15,1,显示个数|author,,1,作者</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_Photo on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_Photo.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.CreateTime,{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_Photo.PhotoUrl,{table1}.dbo.ZL_C_Photo.synopsis</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) and status=99 and author='@author'</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}&lt;li&gt;&lt;strong&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank"&gt;{ZL:CutText({Field="Title"/},@TitleNum,)/}&lt;/a&gt;&lt;/strong&gt;&lt;p&gt;{ZL:CutText({Field="synopsis"/},@SynNum,...)/}&lt;/p&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;ul class="pic_ul list-unstyled"&gt;{ZL:SplitPicUrl({Field="PhotoUrl"/})/}&lt;/ul&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

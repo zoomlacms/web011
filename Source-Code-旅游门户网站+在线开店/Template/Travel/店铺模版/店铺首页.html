@@ -1,0 +1,174 @@
+{ZL.Source id="店铺模型数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="店铺模型数据源标签" FD="StoreName" page="0"/}_{$SiteName/}</title>
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script>
+function showpic(witchpic){
+var src=witchpic.getAttribute("href");
+var pruch=document.getElementById("witch");
+pruch.setAttribute("src",src);
+}
+</script>
+<script src="{$CssDir/}js/jquery.min.js"></script>
+<script type="text/javascript">
+$.fn.infiniteCarousel = function () {
+    function repeat(str, num) {
+        return new Array( num + 1 ).join( str );
+    }
+    return this.each(function () {
+        var $wrapper = $('> div', this).css('overflow', 'hidden'),
+            $slider = $wrapper.find('> ul'),
+            $items = $slider.find('> li'),
+            $single = $items.filter(':first'),
+            
+            singleWidth = $single.outerWidth(), 
+            visible = Math.ceil($wrapper.innerWidth() / singleWidth), 
+			// note: doesn't include padding or border
+            currentPage = 1,
+            pages = Math.ceil($items.length / visible);            
+
+        if (($items.length % visible) != 0) {
+            $slider.append(repeat('<li class="empty" />', visible - ($items.length % visible)));
+            $items = $slider.find('> li');
+        }
+        $items.filter(':first').before($items.slice(- visible).clone().addClass('cloned'));
+        $items.filter(':last').after($items.slice(0, visible).clone().addClass('cloned'));
+        $items = $slider.find('> li'); // reselect
+        $wrapper.scrollLeft(singleWidth * visible);
+        function gotoPage(page) {
+            var dir = page < currentPage ? -1 : 1,
+                n = Math.abs(currentPage - page),
+                left = singleWidth * dir * visible * n;
+            
+            $wrapper.filter(':not(:animated)').animate({
+                scrollLeft : '+=' + left
+            }, 500, function () {
+                if (page == 0) {
+                    $wrapper.scrollLeft(singleWidth * visible * pages);
+                    page = pages;
+                } else if (page > pages) {
+                    $wrapper.scrollLeft(singleWidth * visible);
+                    // reset back to start position
+                    page = 1;
+                } 
+
+                currentPage = page;
+            });                
+            
+            return false;
+        }
+        $wrapper.after('<a class="arrow back"></a><a class="arrow forward"></a>');
+        
+        $('a.back', this).click(function () {
+            return gotoPage(currentPage - 1);                
+        });
+        $('a.forward', this).click(function () {
+            return gotoPage(currentPage + 1);
+        });
+        
+        $(this).bind('goto', function (event, page) {
+            gotoPage(page);
+        });
+    });  
+};
+$(document).ready(function () {
+  $('.infiniteCarousel').infiniteCarousel();
+});
+</script>
+</head>
+<body>
+<div class="bus_top">
+<div class="container">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 bus_top_l">
+<a href="/Store/StoreIndex.aspx?id={SField sid="店铺模型数据源标签" FD="GeneralID" page="0"/}"><img src="{ZL:GetPicUrl({SField sid="店铺模型数据源标签" FD="logo" page="0"/})/}" alt="{SField sid="店铺模型数据源标签" FD="StoreName" page="0"/}" class="img-responsive center-block" /></a>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 bus_top_m">
+<span>{SField sid="店铺模型数据源标签" FD="StoreName" page="0"/}</span>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 bus_top_r">
+<ul class="list-inline pull-right">
+<li><a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('window.location');">设为首页</a></li>
+<li><a href="javascript:window.external.addFavorite('{$SiteURL/}','{SField sid="店铺模型数据源标签" FD="StoreName" page="0"/}');">收藏店铺</a></li>
+</ul>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="bus_nav">
+<div class="navbar navbar-default">
+<div class="navbar navbar-static-top" role="navigation" id="scolls">
+<div class="container">
+<div class="row">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 bus_nav_l">
+	<div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	</button>
+	</div>
+	<div class="navbar-collapse collapse">
+	<ul class="nav navbar-nav">
+	<li><a href="/Store/StoreIndex.aspx?id={SField sid="店铺模型数据源标签" FD="GeneralID" page="0"/}">首页</a></li>
+    <li><a href="{ZL:GetNodeLinkUrl(19)/}?id={SField sid="店铺模型数据源标签" FD="GeneralID" page="0"/}">商品列表</a></li>
+    <li><a href="{ZL:GetNodeLinkUrl(18)/}?id={SField sid="店铺模型数据源标签" FD="GeneralID" page="0"/}">促销信息</a></li>
+    <li><a href="{ZL:GetNodeLinkUrl(18)/}?id={SField sid="店铺模型数据源标签" FD="GeneralID" page="0"/}">店铺公告</a></li>
+    <li><a href="{ZL:GetNodeLinkUrl(20)/}?id={SField sid="店铺模型数据源标签" FD="GeneralID" page="0"/}">关于我们</a></li>       
+	</ul>
+	</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 nav_m">
+	
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--店铺导航结束-->
+<div class="bus_main">
+<div class="main_border"></div>
+<div class="container">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 bus_main_l">
+<ul class="list-unstyled">
+<li><a href="/Store/StoreIndex.aspx?id={SField sid="店铺模型数据源标签" FD="GeneralID" page="0"/}"><img src="{ZL:GetPicUrl({SField sid="店铺模型数据源标签" FD="logo" page="0"/})/}"></a></li>
+<li><strong><a href="/Store/StoreIndex.aspx?id={SField sid="店铺模型数据源标签" FD="GeneralID" page="0"/}">{SField sid="店铺模型数据源标签" FD="StoreName" page="0"/}</a></strong></li>  
+<li>联系人：{SField sid="店铺模型数据源标签" FD="lxr" page="0"/}</li>
+<li>联系方式：{SField sid="店铺模型数据源标签" FD="tel" page="0"/}</li> 
+<li>店铺地址：{SField sid="店铺模型数据源标签" FD="addr" page="0"/}</li>
+</ul>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 bus_main_r">
+<div class="bus_site">
+<ul class="list-inline pull-right">
+<li><span class="glyphicon glyphicon-home"></span><a href="/">首页</a></li>>>
+<li><a href="{ZL:GetNodeLinkUrl(5)/}" target="_blank">光雨小铺</a></li>>>
+<li>{SField sid="店铺模型数据源标签" FD="StoreName" page="0"/}</li>
+</ul>
+</div>
+<div class="clearfix"></div>
+<div class="bus_info">
+<div class="bus_info_t text-center"><a href="{ZL:GetNodeLinkUrl(20)/}?id={SField sid="店铺模型数据源标签" FD="GeneralID" page="0"/}" target="_blank">店铺介绍</a><br/>Shop Introduction</div>
+<p>{SField sid="店铺模型数据源标签" FD="content" page="0"/}
+</p>
+</div>
+<div class="bus_hot">
+<div class="bus_hot_t"><span class="pull-right"><a href="{ZL:GetNodeLinkUrl(19)/}?id={SField sid="店铺模型数据源标签" FD="GeneralID" page="0"/}" target="_blank">查看更多>></a></span><span id="hot_name">热销商品</span></div>
+<div class="row">
+<ul class="list-unstyled">
+{ZL.Label id="店铺商品列表" UserName="{SField sid="店铺模型数据源标签" FD="UserName" page="0"/}" TitleNum="48" ShowNum="20" /}
+</ul>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>

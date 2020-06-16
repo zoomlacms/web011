@@ -1,0 +1,103 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script> 
+<style type="text/css">
+.navbar-default .navbar .nav_l .menu{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="mySite">
+<div class="container">
+<ul class="breadcrumb">
+<li>您的位置：<a href="/">首页</a><span class="divider"></span></li>
+<li>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</li>
+</ul>
+</div>
+</div>
+<div class="container show">
+<div class="row">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 show_l">
+<div class="show_l_title">会展活动</div>
+<div class="show_body">
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 padding5 show_l_item">
+<a href="#" target="_blank">最新活动</a>
+</div>
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 padding5">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding5 show_r_item">
+<a href="#" target="_blank">作品珍藏</a>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding5 show_r_item">
+<a href="#" target="_blank">文艺大比拼</a>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding5 show_r_item">
+<a href="#" target="_blank">大家来找茬</a>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding5 show_r_item">
+<a href="#" target="_blank">我要爆料</a>
+</div>
+</div>
+</div>
+</div> 
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 show_r">
+<div class="show_r_title">时尚达人</div>
+
+
+</div>
+</div>
+</div>
+
+  
+{ZL.Label id="全站底部"/} 
+<script src="{$CssDir/}js/scroll2.js" type="text/javascript"></script>
+</body>
+</html>
+<script type="text/javascript">
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//关闭顶部广告
+ function img_clo(){
+	var t= setTimeout($(".home_ad").slideUp(2000),2000);	
+	}
+
+//导航手机列表向上定时滚动
+$(function(){ 
+var $this = $(".renav"); 
+var scrollTimer; 
+$this.hover(function(){ 
+clearInterval(scrollTimer); 
+},function(){ 
+scrollTimer = setInterval(function(){ 
+scrollNews( $this ); 
+}, 2000 ); 
+}).trigger("mouseout"); 
+}); 
+function scrollNews(obj){ 
+var $self = obj.find("ul:first"); 
+var lineHeight = $self.find("li:first").height(); 
+$self.animate({ "margin-top" : -lineHeight +"px" },300 , function(){ 
+$self.css({"margin-top":"0px"}).find("li:first").appendTo($self); 
+}) 
+}
+</script>
+ 

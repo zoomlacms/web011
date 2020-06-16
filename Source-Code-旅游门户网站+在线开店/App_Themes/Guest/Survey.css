@@ -1,0 +1,269 @@
+﻿@charset "utf-8";
+/*问卷投票页面*/
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+img
+{
+    border: none;
+}
+
+li
+{
+    list-style-type: none;
+}
+
+ul, ol
+{
+    list-style: none;
+}
+
+a:link
+{
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+a:focus
+{
+    outline: none;
+}
+
+a:visited
+{
+    color: #f6ff00;
+    text-decoration: none;
+}
+
+.clear
+{
+    clear: both;
+}
+
+body
+{
+    background: #F2E5C3 url(images/body_bg.jpg) repeat-x;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+
+#head, .qlink, .banner, #main, .bottom, .desp, .result
+{
+    margin: 0 auto;
+}
+
+#head
+{
+    height: 200px;
+}
+
+#htop
+{
+    background: #5e8fdb url(images/top_bg.gif) top left repeat-x;
+    margin-top: 2px;
+    width: 100%;
+    height: 27px;
+}
+
+.qlink
+{
+    width: 960px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+    .qlink a:hover
+    {
+        color: #fff;
+    }
+
+    .qlink .left
+    {
+        float: left;
+    }
+
+        .qlink .left a:hover
+        {
+            color: #CCC;
+        }
+
+    .qlink .right
+    {
+        float: right;
+    }
+.banner
+{
+    width: 861px;
+    height: 192px;
+    margin-top: 20px;
+    background: url(images/Survey_banner.png) no-repeat;
+}
+#main
+{
+    width: 863px;
+    border: solid 1px #d5ddd4;
+    background: #FFF;
+    margin-top: 5px;
+}
+.title
+{
+    width: 800px;
+    background: url(images/title_bg.jpg) left top no-repeat;
+    height: 48px;
+    padding: 37px 0 0 65px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: blue;
+    float: left;
+}
+.date
+{
+    float: right;
+    padding-right: 35px;
+    color: #5e8fdb;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: normal;
+}
+.desp
+{
+    width: 90%;
+    font-size: 13px;
+    color: #808080;
+}
+    .desp p
+    {
+        line-height: 17px;
+        text-indent: 26px;
+        padding-bottom: 4px;
+    }
+.compart
+{
+    border: dotted 1px #ff6a00;
+    margin-top: 8px;
+}
+.list, .result
+{
+    margin-top: 2px;
+}
+    .list table
+    {
+        width: 750px;
+        margin: 6px auto;
+        border-bottom: solid 1px #f1eded;
+    }
+    .list th
+    {
+        font-size: 13.5px;
+        font-weight: bold;
+        color: #0a63c4;
+        margin-bottom: 5px;
+        text-align: justify;
+        letter-spacing: 1.5px;
+    }
+    .list td
+    {
+        padding: 5px 0 5px 20px;
+        color: #000;
+        font-size: 14px;
+        line-height: 1.8em;
+    }
+
+        .list td label
+        {
+            padding-left: 12px;
+        }
+
+        .list td input
+        {
+            padding-right: 8px;
+        }
+
+.result
+{
+    width: 820px;
+}
+
+    .result a
+    {
+        color: #0a63c4;
+    }
+
+        .result a:hover
+        {
+            color: purple;
+        }
+
+    .result dl
+    {
+        margin: 10px;
+    }
+    .result dt span
+    {
+        font-size: 15px;
+        color: #b200ff;
+        font-weight: 500;
+    }
+
+    .result dd
+    {
+    }
+        /*待实现： 最小高度。 google。*/
+        .result dd table
+        {
+            width: 620px;
+            margin: 5px;
+            float: left;
+            min-height: 150px;
+        }
+
+        .result dd td
+        {
+            color: #808080;
+        }
+
+.bottom
+{
+    height: 50px;
+    padding-top: 10px;
+    width: 350px;
+}
+
+.btn
+{
+    height: 35px;
+    width: 70px;
+    background-color: #ffb202;
+    line-height: 25px;
+    font-size: 14px;
+    color: purple;
+    border: none;
+    cursor: pointer;
+}
+
+#foot
+{
+    height: 40px;
+}
+
+#foot
+{
+    float: right;
+    font-size: 14px;
+    color: #06C;
+    margin: 8px;
+}
+
+    #foot a:hover
+    {
+        color: #FD5A02;
+    }
+/* Powered by Zoomla!逐浪CMS www.zoomla.cn */

@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>723</LabelID>
+    <LabelName>根据店铺ID获取店铺信息</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>店铺</LabelCate>
+    <LabelDesc />
+    <LabelParam>ItemID,0,1,店铺ID|NodeID,0,1,节点ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_GYXP on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_GYXP.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_GYXP.ShopAddr,{table1}.dbo.ZL_C_GYXP.ShopLogo,{table1}.dbo.ZL_C_GYXP.ShopPep,{table1}.dbo.ZL_C_GYXP.ShopTel</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) and status=99 and ItemID=@ItemID</LabelWhere>
+    <LabelOrder />
+    <LabelContent>&lt;li&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="Title"/}"&gt;&lt;img src="{ZL:GetPicUrl({Field="ShopLogo"/})/}" class="center-block img-responsive" alt="{Field="Title"/}" /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="Title"/}"&gt;{Field="Title"/}&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;联系人：{Field="ShopPep"/}&lt;/li&gt;
+&lt;li&gt;电话：{Field="ShopTel"/}&lt;/li&gt;
+&lt;li&gt;地址：{Field="ShopAddr"/}&lt;/li&gt;</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>31</ModelID>
+    <ModelName>招聘信息</ModelName>
+    <Description />
+    <TableName>ZL_C_ZPXX</TableName>
+    <ItemName>招聘信息</ItemName>
+    <ItemUnit>篇</ItemUnit>
+    <ItemIcon>Default.gif</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认招聘信息内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>true</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

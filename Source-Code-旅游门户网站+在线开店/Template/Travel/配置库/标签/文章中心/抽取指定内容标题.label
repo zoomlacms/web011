@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>805</LabelID>
+    <LabelName>抽取指定内容标题</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>文章中心</LabelCate>
+    <LabelDesc />
+    <LabelParam>GeneralID,1,1,ID|TitleNum,20,1,标题长度</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel</LabelTable>
+    <LabelField>Title</LabelField>
+    <LabelWhere>Status=99 and GeneralID=@GeneralID</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{ZL:CutText({Field="Title"/},@TitleNum,)/}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

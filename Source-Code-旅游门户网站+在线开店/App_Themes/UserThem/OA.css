@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* power by Zoomla!逐浪 */
+
+*{margin:0; padding:0px;}/*初始化*/
+ul,li{ list-style:none;}
+img{ border:none;}
+a{ color:#666; text-decoration:none;}
+a:hover{ text-decoration:underline;}
+body{font-family:Arial, Helvetica, sans-serif; font-size:12px; background:url(images/Mis/user_bg.jpg) repeat-x left top }
+.clear{clear:both;}
+
+header,#logM,#main_bot,footer,#user_top{ width:960px; display:block; margin:auto;}  
+ 
+header{height:75px; padding-top:30px;}
+#logo{ float:left;}
+#logo a{ color:#73B9FF; font-size:32px; font-family:"黑体"; text-decoration:none}
+.topRig{float:right;padding-top:40px; line-height:30px;color:#999999; }
+.topRig a{ margin-left:10px; margin-right:10px;}
+
+#main{width:100%; height:440px;  }/*主体*/ 
+#logM{  height:440px;background:url(images/Mis/u_bg.jpg) no-repeat left 55px;  } 
+#login{float:right; width:323px; height:375px;  background:url(images/Mis/u_login.jpg) left no-repeat; margin-right:110px; }
+#m_left{ float:left; width:670px;}
+#tit{ padding-top:160px; height:120px; line-height:120px; font-size:28px; }
+#log_bg{ height:272px;   }
+#logc{padding-left:25px;  padding-top:90px; line-height:35px;}
+#logc li{height:35px; margin-top:10px;}
+#logc span{ display:block; float:left; width:75px;height:35px; text-align:center;  }
+.txtInp{ float:left; width:180px; height:25px; line-height:25px;border:1px solid #ccc; background:none; }
+.ckhelp{ color:#FFF; padding-left:75px; line-height:30px;}
+.ckhelp a{ margin-left:20px; color:#fff;}
+.btnDiv{ padding-top:20px; padding-left:105px; }
+.logBtn{ float:left; width:59px; height:25px;   border:none; cursor:pointer;}
+.RegBtn{ float:left;margin-left:8px; width:59px; height:25px; background:url(images/Mis/reg.jpg) left no-repeat;  border:none; cursor:pointer;} 
+#main_bot{ padding-top:5px;}
+.mb_l{float:left;  margin-left:20px;padding-left:50px;width:430px; margin-top:10px; line-height:25px;background:url(images/Mis/icon.gif) no-repeat ; color:#666666;}
+.mb_r{float:right;}
+.mb_r li{ float:left; width:100px; text-align:center;}
+.mb_r li a{ display:block; padding-top:50px;background:url(images/Mis/icon.gif) no-repeat;}
+.mb_r li.bbx a{background-position: 25px -88px;}
+.mb_r li.syjc a{background-position: 30px -165px;}
+.mb_r li.yysc a{background-position: 30px -250px;}
+.mb_r a:hover{ text-decoration:none; color:#003b5b;}
+footer{ text-align:center; line-height:45px; color:#999; }
+#bot{background:url(images/Mis/bot_bg.jpg) repeat-x; width:100%; height:90px;position:fixed;bottom:0px;top:auto;_position:absolute; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}
+#user_top{ width:985px; background:url(images/Mis/user_bg_t.jpg) left no-repeat; height:140px;}
+.tips { padding-left:55px; padding-top:10px;}
+.tips li{ line-height:23px; color:#777; padding-right:55px;}
+
+
+

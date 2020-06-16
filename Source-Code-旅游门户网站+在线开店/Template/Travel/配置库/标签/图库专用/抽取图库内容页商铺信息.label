@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>799</LabelID>
+    <LabelName>抽取图库内容页商铺信息</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>图库专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>author,,1,作者|NodeID,69,1,节点ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_GYXP on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_GYXP.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_GYXP.ShopAddr,{table1}.dbo.ZL_C_GYXP.ShopGrade,{table1}.dbo.ZL_C_GYXP.ShopLogo,{table1}.dbo.ZL_C_GYXP.ShopPep,{table1}.dbo.ZL_C_GYXP.ShopTel</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) and status=99 and Title='@author'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>&lt;li&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank"&gt;&lt;img src="{ZL:GetPicUrl({Field="ShopLogo"/})/}" class="center-block img-responsive" alt="{Field="Title"/}"/&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class="text-center"&gt;&lt;strong&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank"&gt;{Field="Title"/}&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li class="rz"&gt;星级：&lt;span class="grade grade{Field="ShopGrade"/}"&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;店主：{Field="ShopPep"/}&lt;/li&gt;
+&lt;li&gt;电话：{Field="ShopTel"/}&lt;/li&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;li&gt;地址：{Field="ShopAddr"/}&lt;/li&gt;
+&lt;li&gt;&lt;span class="text-center center-block"&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank"&gt;浏览商家主页&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

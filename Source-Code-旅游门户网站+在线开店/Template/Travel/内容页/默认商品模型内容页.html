@@ -1,0 +1,421 @@
+﻿{ZL.Source id="常规商品数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="常规商品数据源" FD="Proname" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="常规商品数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="常规商品数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script> 
+<script type=text/javascript>
+function switchTab(mark,index,count) {
+var curTab = document.getElementById("tab_"+mark+index)
+var curList = document.getElementById("list_"+mark+index)
+for(var i=0;i<=count;i++) {
+	var tabObj = document.getElementById("tab_"+mark+i) ;
+	var listObj = document.getElementById("list_"+mark+i) ;
+	if (i != index) {
+		if (tabObj) {tabObj.className = "";}
+		if (listObj) {listObj.style.display = "none" ;}
+	}
+}
+
+if (curTab) {curTab.className = "zc_on" ;}
+if (curList) {curList.style.display = "block" ;}
+return false;
+}
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<!--内页通栏banner广告位 -->
+<div class="container mySites">
+<div class="row">
+<ul class="breadcrumb">
+<li><a href="/">首页</a><span class="divider"></span></li>
+<li>{ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="常规商品数据源" FD="NodeID" page="0"/}" /}</li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="常规商品数据源" FD="NodeID" page="0"/})/}">{ZL.Label id="输出指定ID节点名" NodeID="{SField sid="常规商品数据源" FD="Nodeid" page="0"/}" /}</a></li>
+<li>{SField sid="常规商品数据源" FD="ProName" page="0"/} </li>
+</ul>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="product">
+<div class="container">  
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 padding0">
+<div class="proimg">
+<div class="tablist block"> <a href="/{SField sid="常规商品数据源" FD="Thumbnails" page="0"/}" class="jqzoom" style="" title="{SField sid="常规商品数据源" FD="ProName" page="0"/}">
+<div id="jkdd"></div>
+<script> 
+var mark='{SField sid="常规商品数据源" FD="picture" page="0"/}';
+var str1=mark.split('$')
+var n1=mark.lastIndexOf('文件地址1|')+6;　
+if(str1.length>1){
+var n2=mark.lastIndexOf('$文件地址2');
+mark=mark.substring(n1,n2);
+document.getElementById("jkdd").innerHTML="<img src='/UploadFiles/"+mark+"'  alt='商品大图' id='turnimg ' class='img-responsive'/>";
+}
+else{
+mark=mark.substring(n1);
+document.getElementById("jkdd").innerHTML="<img src='/UploadFiles/"+mark+"'  alt='商品大图' id='turnimg' class='img-responsive' />";
+}
+</script> 
+</a> </div>
+<ul id="tab1" class="list-unstyled">
+{ZL:SplitPicUrl({SField sid="常规商品数据源" FD="picture" page="0"/})/}
+<div class="clearfix"></div>
+</ul>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 product_info">
+<h3>{SField sid="常规商品数据源" FD="Proname" page="0"/}</h3>
+<ul class="list-unstyled">
+<li>编号：{SField sid="常规商品数据源" FD="ProCode" page="0"/}</li>
+<li class="hidden">品牌：{SField sid="常规商品数据源" FD="brand" page="0"/}</li>
+<li>库存：{SField sid="常规商品数据源" FD="stock" page="0"/}{SField sid="常规商品数据源" FD="Prounit" page="0"/}</li>
+<li>零售价：{ZL:GetMoney({SField sid="常规商品数据源" FD="ShiPrice" page="0"/},2,1)/}元</li>
+<li>会员价：{ZL:GetMoney({SField sid="常规商品数据源" FD="UserPrice" page="0"/},2,1)/}元</li>
+<li>颜色：<script language="javascript">    
+str='{SField sid="常规商品数据源" FD="color" page="0"/}'; //这是一字符串
+var strs= new Array(); //定义一数组
+strs=str.split(","); //字符分割      
+for (n=0;n<strs.length ;n++ )    
+    {    //分割后的字符输出 
+        document.write("<a href='javascript:void(0)' class='normal' id='color"+n+"' onclick=changcolor('"+strs[n]+"','"+n+"')>"+strs[n]+"</a>");    //分割后的字符输出
+    } 
+</script></li>
+<li>尺寸：<script language="javascript">    
+str='{SField sid="常规商品数据源" FD="size" page="0"/}'; //这是一字符串
+var strs= new Array(); //定义一数组
+strs=str.split(","); //字符分割 
+for (i=0;i<strs.length ;i++ )    
+    {    //分割后的字符输出
+      document.write("<a href='javascript:void(0)' class='normal' id='size"+i+"' onclick=changUrl('"+strs[i]+"','"+i+"')>"+strs[i]+"</a>");    //分割后的字符输出
+    } 
+</script></li>
+</ul>
+
+<div class="to_buy"> 
+你已选择：<span id="colors"></span><span id="sizes"></span>
+<form id="form" name="form" method="post" action="/UserCart.aspx">
+<input name="id" type="hidden" id="id" value="{SField sid="常规商品数据源" FD="ID" page="0"/}" />
+我要买：<a href="javascript:;" class="J_minus"  style="padding:4px; border:1px solid #ccc; background:#ddd;">-</a>
+<input name="Pronum" type="text" id="Pronum" value="1" class="J_input" style="width:30px;" />
+<a href="javascript:;" class="J_add" style="padding:4px; border:1px solid #ccc; background:#ddd;">+</a>{SField sid="常规商品数据源" FD="Prounit" page="0"/}
+<div style="display:none">
+<input type="submit" name="button" id="buttons" value="提交" />
+</div>
+<input name="Attribute" id="Attribute"  type="hidden" value="">
+</form>
+<input name="color" value="" id="color" type="hidden">
+<input name="size" value="" id="size" type="hidden">
+<div id="mychoice"><strong style="float:left; padding-top:10px;">小铺选择：</strong><select name="choice_shop" id="choice_shop" class="form-control" style="float:left; width:160px;">
+<option value="">{SField sid="常规商品数据源" FD="szdq" page="0"/}附近的小铺</option>
+{ZL.Label id="输出相应地区的光雨小铺列表" area="{SField sid="常规商品数据源" FD="szdq" page="0"/}" /}  
+</select>
+<a href="javascript:;" id="other_choice" data-toggle="modal" data-target="#myModal">其他选择</a>
+</div>
+<div class="clearfix"></div>
+<div class="haschoice"><strong>您已选择的小铺：</strong><span id="shop_name">请先选择一个小铺</span></div>
+<table>
+<tr>
+<td><input type="button" onClick="subm()" class="shopBtn btn btn-sm btn-danger" value="立即购买" id="buy_btn" disabled="false" ></td>
+<td><a href="/User/Content/AddToFav.aspx?itemid={SField sid="常规商品数据源" FD="ID" page="0"/}&Url=/Shop.aspx?itemid={SField sid="常规商品数据源" FD="ID" page="0"/}&type=2" target="_blank"  class="shopBtn btn btn-sm btn-danger" ><span class="glyphicon glyphicon-heart-empty" style="margin-right:5px;"></span>加入收藏</a>
+</td>
+</tr>
+</table>
+</div>
+
+
+</div>
+<div class="clearfix"></div>
+<div class="product_detail">
+<ul class="nav nav-tabs">
+<li  class="active"><a href="#detail" data-toggle="tab">商品详细</a></li>
+<li><a href="#comment" data-toggle="tab">商品评论</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="detail">{SField sid="常规商品数据源" FD="Procontent" page="0"/}</div>
+<div class="tab-pane" id="comment">
+<span class="center-block text-center"><input type="button" id="commentbtn" value="我来评论" class="btn btn-xs btn-danger" style="padding-left:20px; padding-right:20px;"/></span>
+<div id="mycomment" style="display:none;">
+<form name="form9" method="post" action="/PubAction.aspx">
+<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 padding5 user_l">
+<img src="/Template/Travel/style/images/noface.png" alt="">
+</div>
+<div class="col-lg-10 col-md-10 col-sm-9 col-xs-9 padding5 user_r">
+<ul class="list-unstyled">
+<li><input name="PubTitle" type="hidden" id="PubTitle" value="{ZL:GetuserName()/}的购买评论" ><input type="hidden" name="PubID" id="PubID" value="9"><input type="hidden" name="PubContentid" id="PubContentid" value="{PubContentid/}"><input type="hidden" name="PubInputer" id="PubInputer" value="{ZL:GetuserName()/}"><input type="hidden" name="PubShopID" id="PubShopID" value="{SField sid="常规商品数据源" FD="ID" page="0"/}"></li>
+<li><textarea name="PubContent" rows="5" id="PubContent" class="form-control"></textarea></li>
+<li><span class="pull-right"><input type="submit" name="button" id="button" value="发 表"  class="btn btn-xs btn-danger"></span></li>
+</ul>
+</div>
+<div class="celarfix"></div>
+</form>
+<div class="celarfix"></div>
+</div>
+<div class="commentlist">
+<ul class="list-unstyled">
+{ZL.Label id="商品评论列表" ShopID="{SField sid="常规商品数据源" FD="ID" page="0"/}" /}
+</ul>
+</div>
+</div>
+</div>
+</div> 
+</div> 
+</div>
+<!--内容主体结束 --> 
+{ZL.Label id="全站底部"/}
+<div class="allchoice">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h2 class="text-center">已开设的小铺站点</h2> 
+</div>
+<div class="modal-body">
+<ul class="list-unstyled">
+{ZL.Label id="输出所有的光雨小铺列表" Diccate="4" /}
+</ul> 
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> 
+</div>
+</div>
+</div>
+</div>
+</div> 
+</body>
+</html>
+<script>
+$().ready(function(e) {
+	$("#mychoice").find("select").change(function(){
+		if($(this).val()!="" && $("#Pronum").val()>0){
+			$(".haschoice span").html($(this).val());	
+			document.getElementById("buy_btn").disabled=false;
+		}
+		else{
+			$(".haschoice span").html("请先选择一个小铺");
+			document.getElementById("buy_btn").disabled=true;			
+		}
+	});
+});
+$().ready(function(e) {
+	var showhide=1;
+    $("#commentbtn").bind("click",function(){
+		var username='{ZL:GetuserName()/}'
+		if(username==""){
+			var url='/Shop/{SField sid="常规商品数据源" FD="ID" page="0"/}.aspx'
+			var url1=escape(url);
+			alert("请先登录！");
+			window.location.href='/User/Login.aspx?ReturnUrl='+url1;
+		}else{
+			if(showhide==1 && username!=""){
+				$("#mycomment").fadeIn();
+				$("#commentbtn").val("收起评论");
+				$(".user_l").html('<img src="{ZL.Label id="获取用户头像路径"/}"/>');			
+			}
+			else{
+				$("#mycomment").fadeOut();
+				$("#commentbtn").val("我来评论");
+			}
+			showhide*=-1;
+		}
+	});	
+});
+var strval='{SField sid="常规商品数据源" FD="Nums" page="0"/}';
+strval=strval.split(','); 
+for(var i=0;i<strval.length;i++){
+	strval[i]=strval[i].split('|');
+	if(strval[i].length>1){
+document.getElementById("priceC").innerHTML+=strval[i][0]+"|价格:<input type='hidden' name='price' id='price"+i+"' value='"+strval[i][1]+"'>"+strval[i][1]+"<input type='text' name='num' id='num"+i+"' value='1' >件<input type='button' class='gopay' id='buttons"+i+"' onclick='putval("+i+")' value='购买'><br>";
+}; 
+	}
+function putval(num){
+	document.getElementById("Stock").value=document.getElementById("num"+num).value;//赋予购物表单中商品数量值
+		document.getElementById("Wholesaleone").value=document.getElementById("price"+num).value;//赋予购物表单中商品价格值
+	  formw.submit();//提交name为formw的form表单
+	}
+</script> 
+<script>
+//商品图片切换 
+$('#tab1 img').click(function(){
+	var proimgsrc=$(this).attr('src');
+	$('#turnimg').attr('src',proimgsrc);
+$('#jkdd').html("<img src='"+proimgsrc+"' class='img-responsive'>");
+	$('.jqzoom').attr('href',proimgsrc)
+})
+
+$(document).ready(function(){
+	$(function() {
+		var options =
+		{
+		zoomWidth: 300,
+	zoomHeight: 300,
+		lens:false
+		}
+		$(".jqzoom").jqzoom(options) //NO.1 image
+	})
+})
+
+function changUrl(n,a){
+		for (var i=0;i<20;i++){
+	
+		if(i==a&&document.getElementById("size"+i).className=='normal'){
+        document.getElementById("size"+i).className='active';
+		$("#size").val(n);
+		$("#sizes").html(n); 
+
+	} 
+else if(i==a&&document.getElementById("size"+i).className=='active'){
+document.getElementById("size"+i).className='normal';
+$("#size").val("");
+$("#sizes").html(""); 
+
+}
+else{
+document.getElementById("size"+i).className='normal';
+$("#size").val(n);
+$("#sizes").html(n); 
+			}
+}}
+function changcolor(n,b) {
+	for (var i=0;i<20;i++){
+		if(i==b&&document.getElementById("color"+i).className=='normal'){
+        document.getElementById("color"+i).className='active';
+$("#color").val(n);
+$("#colors").html(n); 
+
+	} 
+else if(i==b&&document.getElementById("color"+i).className=='active'){
+document.getElementById("color"+i).className='normal';
+$("#color").val("");
+$("#colors").html(""); 
+}
+
+else{
+document.getElementById("color"+i).className='normal';
+$("#color").val(n);
+$("#colors").html(n); 
+}
+}
+}
+	function subm(){
+		document.getElementById("Attribute").value=document.getElementById("shop_name").innerHTML;
+document.forms[1].submit(); 
+		}
+    
+	/*商品加减*/
+	$.fn.iVaryVal=function(iSet){
+	iSet=$.extend({Minus:$('.J_minus'),Add:$('.J_add'),Input:$('.J_input'),Min:1,Max:20,Fun:null},iSet);
+	var C=null,O=null;
+	//输出值全局对象[若担心全局对象污染，可定义一个hidden表单，向其传值]
+	$GLOBAL={};
+	//增加
+	iSet.Add.each(function(i){
+		$(this).click(function(){
+			O=parseInt(iSet.Input.eq(i).val());
+			(O+1<=iSet.Max) || (iSet.Max==null) ? iSet.Input.eq(i).val(O+1) : iSet.Input.eq(i).val(iSet.Max);
+			//输出当前改变后的值
+			$GLOBAL.val=iSet.Input.eq(i).val();
+			$GLOBAL.index=i;
+			//回调函数
+			if (typeof iSet.Fun == 'function') {
+				iSet.Fun.call(this);
+		  	}
+		});
+	});
+	//减少
+	iSet.Minus.each(function(i){
+		$(this).click(function(){
+			O=parseInt(iSet.Input.eq(i).val());
+			O-1<iSet.Min ? iSet.Input.eq(i).val(iSet.Min) : iSet.Input.eq(i).val(O-1);
+			$GLOBAL.val=iSet.Input.eq(i).val();
+			$GLOBAL.index=i;
+			//回调函数
+			if (typeof iSet.Fun == 'function') {
+				iSet.Fun.call(this);
+		  	}
+		});
+	});
+	//手动
+	iSet.Input.bind({
+		'click':function(){
+			O=parseInt($(this).val());
+			$(this).select();
+		},
+		'keyup':function(e){
+			if($(this).val()!=''){
+				C=parseInt($(this).val());
+				//非负整数判断
+				if(/^[1-9]\d*|0$/.test(C)){
+					$(this).val(C);
+					O=C;
+				}else{
+					$(this).val(O);
+				}
+			}
+			//键盘控制：上右--加，下左--减
+			if(e.keyCode==38 || e.keyCode==39){
+				iSet.Add.eq(iSet.Input.index(this)).click();
+			}
+			if(e.keyCode==37 || e.keyCode==40){
+				iSet.Minus.eq(iSet.Input.index(this)).click();
+			}
+			//输出当前改变后的值
+			$GLOBAL.val=$(this).val();
+			$GLOBAL.index=iSet.Input.index(this);
+			//回调函数
+			if (typeof iSet.Fun == 'function') {
+				iSet.Fun.call(this);
+		  	}
+		},
+		'blur':function(){
+			$(this).trigger('keyup');
+			if($(this).val()==''){
+				$(this).val(O);
+			}
+			//判断输入值是否超出最大最小值
+			if(iSet.Max){
+				if(O>iSet.Max){
+					$(this).val(iSet.Max);
+				}
+			}
+			if(O<iSet.Min){
+				$(this).val(iSet.Min);
+			}
+			//输出当前改变后的值
+			$GLOBAL.val=$(this).val();
+			$GLOBAL.index=iSet.Input.index(this);
+			//回调函数
+			if (typeof iSet.Fun == 'function') {
+				iSet.Fun.call(this);
+		  	}
+		}
+	});
+}
+//调用
+$( function() {
+	
+	$('.i_box').iVaryVal({Fun:function(){
+		
+	}});
+});
+$("#myModal li option").click(function(e) {
+    $("#myModal").hide(); 
+	$(".haschoice span").html($(this).val());
+	document.getElementById("buy_btn").disabled=false;
+ });
+</script>
+<script>
+var curnode='{SField sid="常规商品数据源" FD="NodeID" page="0"/}';
+if(curnode != 23){  
+	$(".to_buy").show();
+	$(".product_info").find("ul").show();	
+}
+</script>

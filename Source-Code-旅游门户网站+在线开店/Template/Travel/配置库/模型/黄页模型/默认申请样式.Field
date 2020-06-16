@@ -1,0 +1,171 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <FieldID>1636</FieldID>
+    <ModelId>9</ModelId>
+    <FieldName>Address</FieldName>
+    <FieldAlias>地址</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>false</IsNotNull>
+    <IsSearchForm>false</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=35,IsPassword=False,DefaultValue=</Content>
+    <OrderId>0</OrderId>
+    <ShowList>true</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>true</IsShow>
+    <IsView>true</IsView>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <Sys_type>false</Sys_type>
+    <IsCopy>0</IsCopy>
+    <Islotsize>false</Islotsize>
+    <IsChain>false</IsChain>
+  </Table>
+  <Table>
+    <FieldID>1637</FieldID>
+    <ModelId>9</ModelId>
+    <FieldName>Size</FieldName>
+    <FieldAlias>企业规模</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>false</IsNotNull>
+    <IsSearchForm>false</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=35,IsPassword=False,DefaultValue=</Content>
+    <OrderId>1</OrderId>
+    <ShowList>true</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>true</IsShow>
+    <IsView>true</IsView>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <Sys_type>false</Sys_type>
+    <IsCopy>0</IsCopy>
+    <Islotsize>false</Islotsize>
+    <IsChain>false</IsChain>
+  </Table>
+  <Table>
+    <FieldID>1638</FieldID>
+    <ModelId>9</ModelId>
+    <FieldName>Style</FieldName>
+    <FieldAlias>行业类型</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>false</IsNotNull>
+    <IsSearchForm>false</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=35,IsPassword=False,DefaultValue=</Content>
+    <OrderId>2</OrderId>
+    <ShowList>true</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>true</IsShow>
+    <IsView>true</IsView>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <Sys_type>false</Sys_type>
+    <IsCopy>0</IsCopy>
+    <Islotsize>false</Islotsize>
+    <IsChain>false</IsChain>
+  </Table>
+  <Table>
+    <FieldID>1639</FieldID>
+    <ModelId>9</ModelId>
+    <FieldName>Who</FieldName>
+    <FieldAlias>联系人</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>false</IsNotNull>
+    <IsSearchForm>false</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=35,IsPassword=False,DefaultValue=</Content>
+    <OrderId>3</OrderId>
+    <ShowList>true</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>true</IsShow>
+    <IsView>true</IsView>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <Sys_type>false</Sys_type>
+    <IsCopy>0</IsCopy>
+    <Islotsize>false</Islotsize>
+    <IsChain>false</IsChain>
+  </Table>
+  <Table>
+    <FieldID>1640</FieldID>
+    <ModelId>9</ModelId>
+    <FieldName>Tel</FieldName>
+    <FieldAlias>联系电话</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>false</IsNotNull>
+    <IsSearchForm>false</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=35,IsPassword=False,DefaultValue=</Content>
+    <OrderId>4</OrderId>
+    <ShowList>true</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>true</IsShow>
+    <IsView>true</IsView>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <Sys_type>false</Sys_type>
+    <IsCopy>0</IsCopy>
+    <Islotsize>false</Islotsize>
+    <IsChain>false</IsChain>
+  </Table>
+  <Table>
+    <FieldID>1641</FieldID>
+    <ModelId>9</ModelId>
+    <FieldName>qq</FieldName>
+    <FieldAlias>QQ</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>false</IsNotNull>
+    <IsSearchForm>false</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=35,IsPassword=False,DefaultValue=</Content>
+    <OrderId>5</OrderId>
+    <ShowList>true</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>true</IsShow>
+    <IsView>true</IsView>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <Sys_type>false</Sys_type>
+    <IsCopy>0</IsCopy>
+    <Islotsize>false</Islotsize>
+    <IsChain>false</IsChain>
+  </Table>
+  <Table>
+    <FieldID>1642</FieldID>
+    <ModelId>9</ModelId>
+    <FieldName>Email</FieldName>
+    <FieldAlias>邮箱</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>false</IsNotNull>
+    <IsSearchForm>false</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=35,IsPassword=False,DefaultValue=</Content>
+    <OrderId>6</OrderId>
+    <ShowList>true</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>true</IsShow>
+    <IsView>true</IsView>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <Sys_type>false</Sys_type>
+    <IsCopy>0</IsCopy>
+    <Islotsize>false</Islotsize>
+    <IsChain>false</IsChain>
+  </Table>
+</NewDataSet>

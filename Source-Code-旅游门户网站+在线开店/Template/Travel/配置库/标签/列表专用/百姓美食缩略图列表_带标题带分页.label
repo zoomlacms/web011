@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>794</LabelID>
+    <LabelName>百姓美食缩略图列表_带标题带分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID|TitleNum,30,1,标题长度|ShowNum,12,1,显示个数|SynNum,100,1,简介长度|Area,,1,地区名</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_Photo on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_Photo.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_Photo.PhotoUrlThum,{table1}.dbo.ZL_C_Photo.synopsis,{table1}.dbo.ZL_C_Photo.szdq</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) and Status=99 and ZL_C_Photo.szdq like '%@Area%'</LabelWhere>
+    <LabelOrder>CreateTime DESC</LabelOrder>
+    <LabelContent>&lt;ul class="list-unstyled"&gt;
+{Repeate}
+&lt;li class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding5"&gt;&lt;div class="fashion_item"&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank" title="{Field="Title"/}"&gt;&lt;img src="{ZL:GetPicUrl({Field="PhotoUrlThum"/})/}" class="center-block img-responsive" alt="{Field="Title"/}"&gt;&lt;/a&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank" title="{Field="Title"/}"&gt;{ZL:CutText({Field="Title"/},@TitleNum,)/}&lt;/a&gt;&lt;p&gt;{ZL:CutText({Field="synopsis"/},@SynNum,)/}&lt;/p&gt;&lt;/div&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+{/Repeate}
+&lt;/ul&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+{ZL.Page id="大图标响应式列表分页v3"/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

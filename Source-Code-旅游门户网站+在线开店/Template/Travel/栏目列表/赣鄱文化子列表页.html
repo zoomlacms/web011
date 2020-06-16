@@ -1,0 +1,98 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script> 
+<style type="text/css">
+.navbar-default .navbar .nav_l .menu2 a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+.culture_node_title .node{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} a{ color:#fff; font-weight:bold;}
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="mySite">
+<div class="container">
+<ul class="breadcrumb">
+<li>您的位置：<a href="/">首页</a></li>
+<li>{ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" /}</li>
+<li>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</li>
+</ul>
+</div>
+</div>
+<div class="culture_main">
+<div class="container">
+<div class="culture_node_title">
+<ul class="list-inline" id="node10">
+<li class="node10"><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}">{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</a>：</li>
+{ZL.Label id="输出一级子栏目列表" ParentID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" ShowNum="10" /}</ul>
+<ul class="list-inline" id="node11">
+<li class="node10">{ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" /}：</li>
+{ZL.Label id="赣鄱文化子节点名称与链接列表" ParentID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" ShowNum="100" /}
+</ul>  
+</div>
+<div class="culture_node_list"> 
+<div class="novel_l_title">{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</div>
+{ZL.Label id="文章列表_带图带简介带作者" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" TitleNum="26" SynNum="100" ShowNum="30" /}
+</div> 
+</div> 
+<div class="container novel">
+ 
+</div> 
+{ZL.Label id="全站底部"/}
+  
+</body>
+</html>
+<script type="text/javascript">
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//关闭顶部广告
+ function img_clo(){
+	var t= setTimeout($(".home_ad").slideUp(2000),2000);	
+	}
+
+//导航手机列表向上定时滚动
+$(function(){ 
+var $this = $(".renav"); 
+var scrollTimer; 
+$this.hover(function(){ 
+clearInterval(scrollTimer); 
+},function(){ 
+scrollTimer = setInterval(function(){ 
+scrollNews( $this ); 
+}, 2000 ); 
+}).trigger("mouseout"); 
+}); 
+function scrollNews(obj){ 
+var $self = obj.find("ul:first"); 
+var lineHeight = $self.find("li:first").height(); 
+$self.animate({ "margin-top" : -lineHeight +"px" },300 , function(){ 
+$self.css({"margin-top":"0px"}).find("li:first").appendTo($self); 
+}) 
+}
+$().ready(function(e) {
+    if('{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}'==10 || '{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}'==2){
+		$("#node10").show();	
+	}else{
+		$("#node11").show();	
+	}
+});
+</script>
+ 

@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>29</ModelID>
+    <ModelName>光雨小铺</ModelName>
+    <Description />
+    <TableName>ZL_C_GYXP</TableName>
+    <ItemName>商铺</ItemName>
+    <ItemUnit>家</ItemUnit>
+    <ItemIcon>GuestBook.gif</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认光雨小铺内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

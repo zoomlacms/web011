@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>752</LabelID>
+    <LabelName>购物时光雨小铺选择列表</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;option value="南昌市"&gt;南昌市&lt;/option&gt;
+&lt;option value="九江市"&gt;九江市&lt;/option&gt;
+&lt;option value="景德镇市"&gt;景德镇市&lt;/option&gt;
+&lt;option value="萍乡市"&gt;萍乡市&lt;/option&gt;
+&lt;option value="新余市"&gt;新余市&lt;/option&gt;
+&lt;option value="鹰潭市"&gt;鹰潭市&lt;/option&gt;
+&lt;option value="赣州市"&gt;赣州市&lt;/option&gt;
+&lt;option value="宜春市"&gt;宜春市&lt;/option&gt;
+&lt;option value="上饶市"&gt;上饶市&lt;/option&gt;
+&lt;option value="吉安市"&gt;吉安市&lt;/option&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

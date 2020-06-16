@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>714</LabelID>
+    <LabelName>团购列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>商城</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID|ShowNum,10,1,显示个数|TitleNum,30,1,标题长度</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Commodities</LabelTable>
+    <LabelField>ID,LinPrice,Thumbnails,Proname</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) and Sales=1 and ProClass=4</LabelWhere>
+    <LabelOrder>AddTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;&lt;div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"&gt;&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}" target="_blank" title="{Field="Proname"/}"&gt;&lt;img src="{ZL:GetPicUrl({Field="Thumbnails"/})/}" class="center-block img-responsive" alt="{Field="Proname"/}"&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"&gt;
+&lt;ul class="list-unstyled"&gt;&lt;li&gt;&lt;h3&gt;&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}" target="_blank" title="{Field="Proname"/}"&gt;{ZL:CutText({Field="Proname"/},@TitleNum,)/}&lt;/a&gt;&lt;/h3&gt;&lt;/li&gt;&lt;li&gt;团购价：&lt;strong&gt;{Field="LinPrice"/}元&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

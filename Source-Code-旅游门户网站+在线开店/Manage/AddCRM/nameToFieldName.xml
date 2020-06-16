@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--needCheck 1:必须检测不允许为空;2:必须检测允许为空;3:不必检测可以插入任意值-->
+<!--CRM_Dictionary.xml,与数据库对应字段名,与本xml中fieldName三者必须一致-->
+<!--name为空的是后台插入字段，如跟进人,日期等,请勿更改(其不会输出到模板中)-->
+<dataset><!--注销的是类型不对的,如客户组别只能输数字-->
+<mapping name="客户名称" fieldname="P_name"  tablename="Zl_Client_Basic" needCheck="3" />
+<mapping name="助记名称" fieldname="P_alias"  tablename="Zl_Client_Basic"/>
+<mapping name="上级客户" fieldname="Client_Upper"   tablename="Zl_Client_Basic" needCheck="3" />
+<mapping name="区域" fieldname="Client_Area"  tablename="Zl_Client_Basic" needCheck="3" />
+<mapping name="行业" fieldname="Client_Calling"   tablename="Zl_Client_Basic"  needCheck="3"/>
+<mapping name="价值评估" fieldname="Client_Value"  tablename="Zl_Client_Basic" needCheck="2" />
+<mapping name="信用等级" fieldname="Client_Credit"   tablename="Zl_Client_Basic"  needCheck="3"/>
+<mapping name="重要程度" fieldname="Client_Importance"  tablename="Zl_Client_Basic" needCheck="3" />
+<!--<mapping name="关系等级" fieldname="Client_Connection"   tablename="Zl_Client_Basic"  needCheck="3"/>-->
+<!--<mapping name="客户组别" fieldname="Client_Group"  tablename="Zl_Client_Basic" needCheck="3" />-->
+<mapping name="客户来源" fieldname="Client_Source"  tablename="Zl_Client_Basic" needCheck="3" />
+<mapping name="阶段" fieldname="Client_Phase"  tablename="Zl_Client_Basic" needCheck="1" />
+<mapping name="客户类型" fieldname="Client_Type"  tablename="Zl_Client_Basic" needCheck="3" />
+<!--<mapping name="添加人" fieldname="Add_Name"   tablename="Zl_Client_Basic"  needCheck="3"/>-->
+<mapping name="" fieldname="FPManID"   tablename="Zl_Client_Basic"  needCheck="3"/>
+<!--<mapping name="" fieldname="Unit_Name" tablename="Zl_Client_Basic" needCheck="3"/>
+<mapping name="" fieldname="Unit_Post" tablename="Zl_Client_Basic" needCheck="3"/>
+<mapping name="" fieldname="Unit_Title" tablename="Zl_Client_Basic" needCheck="3"/>
+<mapping name="" fieldname="Unit_Class" tablename="Zl_Client_Basic" needCheck="3"/>
+<mapping name="" fieldname="Unit_Operation" tablename="Zl_Client_Basic" needCheck="3"/>
+<mapping name="" fieldname="Unit_Address" tablename="Zl_Client_Basic" needCheck="3"/>
+<mapping name="" fieldname="Title" tablename="Zl_Client_Basic" needCheck="3"/>-->
+<mapping name="开户银行" fieldname="Bank_Open" tablename="Zl_Client_Enterprise"  needCheck="3"/>
+<mapping name="银行帐号" fieldname="Bank_Code" tablename="Zl_Client_Enterprise" needCheck="3" />
+<mapping name="税号" fieldname="Tax_Code" tablename="Zl_Client_Enterprise" needCheck="3" />
+<mapping name="行业地位" fieldname="Co_Status" tablename="Zl_Client_Enterprise" needCheck="3" />
+<mapping name="公司规模" fieldname="Co_Size" tablename="Zl_Client_Enterprise" needCheck="3" />
+<mapping name="经营状态" fieldname="Co_Management" tablename="Zl_Client_Enterprise" needCheck="3" />
+<!--<mapping name="注册资本" fieldname="Reg_Capital" tablename="Zl_Client_Enterprise" needCheck="3" />-->
+<!--<mapping name="年销售额" fieldname="Sales"  tablename="Zl_Client_Enterprise"  needCheck="3"/>-->
+<!--<mapping name="" fieldname="Operation_Bound"  tablename="Zl_Client_Enterprise" needCheck="3" />-->
+<mapping name="网址" fieldname="Homepage" tablename="Zl_Client_Enterprise" needCheck="3" />
+<mapping name="联系地址" fieldname="Message_Address" tablename="Zl_Client_Enterprise" needCheck="3" />
+<mapping name="电话" fieldname="Phone" tablename="Zl_Client_Enterprise" needCheck="3" />
+<mapping name="传真" fieldname="Fax_phone" tablename="Zl_Client_Enterprise" needCheck="3" />
+<mapping name="邮编" fieldname="ZipCodeW" tablename="Zl_Client_Enterprise" needCheck="3" />
+<!--<mapping name="国家" fieldname="county" tablename="Zl_Client_Enterprise" needCheck="3" />
+<mapping name="省份" fieldname="province" tablename="Zl_Client_Enterprise" needCheck="3" />
+<mapping name="城市" fieldname="city" tablename="Zl_Client_Enterprise" needCheck="3" />-->
+</dataset>

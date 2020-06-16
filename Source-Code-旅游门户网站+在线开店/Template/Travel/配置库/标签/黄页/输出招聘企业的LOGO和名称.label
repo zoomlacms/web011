@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>744</LabelID>
+    <LabelName>输出招聘企业的LOGO和名称</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>黄页</LabelCate>
+    <LabelDesc />
+    <LabelParam>Pageid,1,1,黄页ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_PageReg</LabelTable>
+    <LabelField>CompanyName,LOGO</LabelField>
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;li&gt;&lt;a href="/Page/Default.aspx?pageid={$GetRequest(pageid)$}"&gt;&lt;img src="{ZL:GetPicUrl({Field="LOGO"/})/}" class="center-block img-responsive" /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="/Page/Default.aspx?pageid={$GetRequest(pageid)$}"&gt;{Field="CompanyName"/}&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+{ZL.Label id="输出招聘企业的其他属性" Pageid="{$GetRequest(pageid)$}" /}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

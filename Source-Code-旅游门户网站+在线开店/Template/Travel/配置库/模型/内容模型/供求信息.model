@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>30</ModelID>
+    <ModelName>供求信息</ModelName>
+    <Description />
+    <TableName>ZL_C_GQXX</TableName>
+    <ItemName>供求信息</ItemName>
+    <ItemUnit>篇</ItemUnit>
+    <ItemIcon>Default.gif</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认供求信息内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>true</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

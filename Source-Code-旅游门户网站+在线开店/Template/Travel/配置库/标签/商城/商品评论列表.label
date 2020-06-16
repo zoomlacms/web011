@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>736</LabelID>
+    <LabelName>商品评论列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>商城</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShopID,1,1,商品ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Pub_SPPL left join {table1}.dbo.ZL_UserBase on {table1}.dbo.ZL_Pub_SPPL.PubUserID={table1}.dbo.ZL_UserBase.UserID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_Pub_SPPL.PubAddTime,{table1}.dbo.ZL_Pub_SPPL.PubContent,{table1}.dbo.ZL_Pub_SPPL.PubInputer,{table1}.dbo.ZL_UserBase.UserFace</LabelField>
+    <LabelWhere>{table1}.dbo.ZL_Pub_SPPL.PubShopID=@ShopID</LabelWhere>
+    <LabelOrder>PubAddTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;&lt;img src="{Field="UserFace"/}" onerror="this.src='/Template/Travel/style/images/noface.png'" /&gt;&lt;div&gt;&lt;strong&gt;{Field="PubInputer"/}&lt;/strong&gt;{ZL:FormatDate({Field="PubAddTime"/},MM-dd hh:mm)/}&lt;p&gt;{Field="PubContent"/}&lt;/p&gt;&lt;/div&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

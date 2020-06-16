@@ -1,0 +1,313 @@
+﻿{ZL.Source id="图库模型数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="图库模型数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="图库模型数据源标签" FD="Tagkey" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<link href="{$CssDir/}fix.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="/js/jquery.lazyload.js" type="text/javascript"></script>
+<SCRIPT src="/js/ajax.js"></SCRIPT>
+<script language="javascript">
+//多行滚动JS 
+function chang(id){
+var chi = 0;
+while (chi < 13){
+chi++;
+eval("btnContent"+chi+".style.display='none';");
+}
+eval("btnContent"+id+".style.display='';");
+}
+</script>
+<style>
+#Menu{ZL.Label id="抽取父节点ID" NodeID="{SField sid="图库模型数据源标签" FD="NodeID" page="0"/}" /} a span:hover{ text-decoration:underline;}
+#Menu{ZL.Label id="抽取父节点ID" NodeID="{SField sid="图库模型数据源标签" FD="NodeID" page="0"/}" /} a span{background:url({$CssDir/}Images/top_nav.gif) no-repeat 0px -42px; font-weight:bold; color:#fff; text-decoration:none;width:77px; height:38px; display:block;}
+</style>
+<SCRIPT type=text/javascript src="{$CssDir/}js/sunflash.js"></SCRIPT>
+<SCRIPT type=text/javascript src="{$CssDir/}js/sunpic.js"></SCRIPT>
+</head>
+<body id="header" >
+<div id="home_all">  
+{ZL.Label id="蓝色头部"/}
+<div id="topbanner"><img src="{$CssDir/}Images/bannertop2.jpg" /></div><!-- 通栏广告位 -->
+
+<div id="mysite">
+<p>您的位置：<a href="/">{$SiteName/}</a>>>{ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="图库模型数据源标签" FD="NodeID" page="0"/}" /}>><a href="{ZL:GetNodeUrl({SField sid="图库模型数据源标签" FD="NodeID" page="0"/})/}">{ZL.Label id="输出指定ID节点名" NodeID="{SField sid="图库模型数据源标签" FD="NodeID" page="0"/}" /}</a>>>{SField sid="图库模型数据源标签" FD="Title" page="0"/}</p>
+</div>
+
+<!--内容主体开始 -->
+<div id="content">
+
+<div id="v8_wrap">
+<div class=eTitle>
+	<h1><span id=txtTitle>{SField sid="图库模型数据源标签" FD="Title" page="0"/}</span><span id=total>(<span class=cC00>0</span>/0)</span></h1>
+</div>
+<div class=eControl>
+	<div style="float:left ; line-height:50px; font-size:13px; margin-left:1em; color:#666">
+        <img src="../../../Skin/blue/Images/prv.jpg" />
+        发表时间{ZL:FormatDate({SField sid="图库模型数据源标签" FD="CreateTime" page="0"/},yyyy-MM-dd)/} &nbsp;
+		来源:{SField sid="图库模型数据源标签" FD="source" page="0"/} &nbsp;
+		浏览:<font id="hits"><SCRIPT language=javascript src="/Common/GetHits.aspx?id={SField sid="图库模型数据源标签" FD="GeneralID"/}"></SCRIPT></font>次	</div>
+<div class=ecCont>
+
+	<div id=ecbSpeed>
+		<div id=ecbSpeedInfo class=buttonCont>5&#x79D2;</div>
+	</div>
+	<div id=ecbPre title=上一张>
+		<div class=buttonCont></div>
+	</div>
+	<div id=ecbPlay>
+		<div id=ecpPlayStatus class=play></div>
+	</div>
+	<div id=ecbNext title=下一张>
+		<div class=buttonCont></div>
+	</div>
+<div style="display:none;">
+	<div id=ecbLine>
+	<div class=buttonCont></div></div>
+	<div id=ecbComm></div>
+	<div id=ecbMode></div>
+	<div id=ecbModeReturn></div>
+	<div id=ecbFullScreen>
+	<div id=fullScreenFlash class=buttonCont></div>
+	</div>
+</div>
+
+<!-- 速度条 begin -->
+<div id=SpeedBox>
+	<div id=SpeedCont>
+		<div id=SpeedSlide></div>
+		<div id=SpeedNonius></div>
+	</div>
+</div>
+<!-- 速度条 end -->
+<!-- 评论口 begin -->
+<div id=CommFormTopBox>
+	<div id=CommFormTopCont>
+		<A id=cftClose href="javascript:void(0)"></A>	</div>
+</div>
+<!-- 评论口 end --></div></div>
+
+<div style="border-bottom:1px solid #BEECFA; margin:0px"></div>
+	<div id=eFramePic>
+		<div id=efpBigPic>
+		<div id=efpClew></div>
+		<div id=d_BigPic></div>
+		<div id=efpLeftArea class=arrLeft title=上一张></div>
+		<div id=efpRightArea class=arrRight title=下一张></div>
+		<div id=endSelect>
+		<div id=endSelClose></div>
+		<div class=bg></div>
+		<div class=E_Cont>
+		  	<P>您已经浏览完所有图片</P>
+			<P><A id=rePlayBut href="javascript:void(0)"></A><A id=nextPicsBut href="javascript:void(0)"></A></P>
+		</div>
+	</div>
+</div>
+
+
+                   
+<div id=efpTxt style="display:none;">
+	<H2 id=d_picTit></H2>
+	<div id=d_picTime></div>
+	<div id=d_picIntro></div>
+		<A id=buttonCommBottom href="javascript:void(0)"></A>
+	<div id=CommFormBottomBox>
+	<div id=CommFormBottomCont>
+	<A id=cfbClose href="javascript:void(0)"></A></div>
+	</div>
+</div>
+<div id=efpPicList style="display:none;">
+	<div id=efpPreGroup >
+		<div id=efpPreTxt></div>
+	</div>
+	<div id=efpListLeftArr onMouseOver="this.className='selected'" onMouseOut="this.className=''"></div>
+	<div id=efpPicListCont></div>
+	<div id=efpListRightArr onMouseOver="this.className='selected'" onMouseOut="this.className=''"></div>
+	<div id=efpNextGroup >
+		<div id=efpPreTxt>{ZL.Label id="下一篇[V8图]"/}</div>
+  	</div>
+</div>
+</div>
+<div id=ePicList></div>
+<div style="display: none" id=eData>
+
+
+<script>
+    function loadimgstr(imgtxt) {
+        if (imgtxt != "" && imgtxt.indexOf('$') > -1) {
+            var imgarr = imgtxt.split('$');
+            for (var i = 0; i < imgarr.length; i++) {
+
+                if (imgarr[i] != "" & imgarr[i].toString().indexOf('|') > -1) {
+                    var imgstr = imgarr[i].toString();
+                    var sarr = imgstr.split('|');
+
+                    document.write("<dl>");
+                    document.write("<dt></dt>");
+                    document.write("<dd>{$UploadDir/}" + sarr[1] + "</dd>");
+                    document.write("<dd>加载中...</dd>");
+                    document.write("<dd>加载中...</dd>");
+                    document.write("<dd>" + sarr[0] + "</dd>");
+                    document.write("<dd><a></a></dd>");
+                    document.write("</dl>");
+                }
+            }
+        }
+    }
+
+    var imgstr = "{SField sid="图库模型数据源标签" FD="PhotoUrl" page="0"/}";
+    loadimgstr(imgstr);
+</script>
+
+
+</div>
+
+
+
+<div style="border:1px solid #BEECFA; border-top:0px; padding:0px 15px 0px 15px">
+<div style="clear:both;"><div style="width:30%; float:left;text-align:left;">
+<script language=javascript>
+function std_playUrl(obj)
+{
+if(obj==null)
+{
+var ok=window.clipboardData.setData("Text",document.location.toString());
+if(ok==true)alert("系统提示：你当前网址已被复制！你可以转发给朋友了！"); 
+}
+}
+document.write('【<a href=javascript:std_playUrl() title=复制本页网址，推荐给好友！><font style="color:#006600;">复制地址给QQ/MSN好友</font></a>】');
+</script>
+				</div>
+				<div style="width:68%; float:right; text-align:right;">
+                  【<a href="javascript:window.close()">关闭</a>】
+				  【<a href="javascript:window.close()"></a><a href="#"><font style="color:#FF0000">返回顶部</font></a>】
+				</div></div>
+
+  </div>
+      
+
+</div>
+
+<div id="content_synopsis">{SField sid="图库模型数据源标签" FD="Content" page="0"/}</div>
+<div id="content_elit">责任编辑：{SField sid="图库模型数据源标签" FD="Edit" page="0"/}</div>
+</div>
+<!--内容主体结束 -->
+<div id="content_up">
+上一篇：{ZL.Label id="上一篇文章"/} 下一篇：{ZL.Label id="下一篇文章"/}
+</div>
+<div id="content_other">
+<div class="main_title">相关文章</div>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="{SField sid="图库模型数据源标签" FD="NodeID" page="0"/}" TitleNum="30" ShowNum="10" /}
+</div>
+
+{ZL.Label id="蓝色底部"/}
+<div class="clear"></div>
+</div>
+<SCRIPT language=javascript type=text/javascript>
+<!--//--><![CDATA[//><!--
+var dataInfo = {
+	title : '{SField sid="图库模型数据源标签" FD="Title" page="0"/}',
+	others : {	
+    	downloadPic : true, //允许下载图片
+        PVCountUrl_a : ''
+	}
+};
+function echoFocus(){
+	var flashPic = "",flashTxt = "";
+	var newHref;
+	var datas = sina.$('eData').getElementsByTagName('dl');
+	for(var i=0;i<datas.length;i++){
+		//try{
+			var title,pic,middlePic,smallPic,datetime,intro,commUrl;
+			title = datas[i].getElementsByTagName('dt');
+			if(title){
+				title = title[0].innerHTML;
+			}else{
+				title = 'null';
+			};
+			var info = datas[i].getElementsByTagName('dd');
+			if(info){
+				pic = info[0].innerHTML;
+				middlePic = info[1].innerHTML;
+				smallPic = info[2].innerHTML;
+				datetime = info[3].innerHTML;
+				intro = info[4].innerHTML;
+				if(commUrl){
+					commUrl = commUrl[0].href;
+				}else{
+					commUrl = '';
+				};
+			};
+			epidiascope.add({
+							src : pic,
+							lowsrc_b : middlePic,
+							lowsrc_s : smallPic,
+							date : datetime,
+							title : title,
+							text : intro,
+							comment : commUrl
+						});
+			//for flash
+			if(flashPic != ""){flashPic += "|"};
+			flashPic += encodeURIComponent(pic);
+			
+			if(flashTxt != ""){flashTxt += "|"};
+			flashTxt += encodeURIComponent(title) + "#　　" + encodeURIComponent(intro.replace(/<.*?>/g,'')); 
+		//}catch(e){}
+	};
+	
+	epidiascope.PVUrl_m = dataInfo.others.PVCountUrl_m;
+	epidiascope.PVUrl_a = dataInfo.others.PVCountUrl_a;
+	epidiascope.autoPlay = false;
+	epidiascope.init();
+	fullFlash(flashTxt,flashPic);
+	
+	if(Math.random()<=0.01){
+		epidiascope.PVUrl_a = epidiascope.PVUrl_m = "";
+		epidiascope.stop();
+	};
+
+	if(dataInfo.others.downloadPic===true){
+
+	};
+};
+function fullFlash(txt,pic){	
+	var flashurl = "skin/blue/swf/loop_8.17.swf";
+	var fullScreen = new sinaFlash(flashurl, "fullScreenObj", "100%", "100%", "8", "#000000");
+	fullScreen.addParam("quality", "best");
+	fullScreen.addParam("wmode", "transparent");
+	fullScreen.addParam("allowFullScreen", "true");
+	fullScreen.addParam("allowScriptAccess","always");
+	fullScreen.addVariable("mylinkpic", pic);		//此处添加组图标题
+	fullScreen.addVariable("infotxt",dataInfo.title);
+	//此处添加图片文字标题，导语，分别用“|”，“#”分割
+	fullScreen.addVariable("mytxt",txt);
+	fullScreen.addVariable("fulls_btnx","0");
+	fullScreen.addVariable("fulls_btny","0");
+	fullScreen.addVariable("fulls_btnalpha","0")
+	fullScreen.write("fullScreenFlash");
+};
+function flash_to_js(name){
+	name = new String(name);
+	var status = name.split("|");
+	epidiascope.speedBar.setGrade(status[1]);
+	epidiascope.select(parseInt(status[0]));
+};
+function js_to_flash(){
+	epidiascope.stop();
+	return epidiascope.selectedIndex + "|" + epidiascope.speedBar.grade;
+};
+function errorFocus(str){//错误
+	document.getElementById("d_picTit").innerHTML = str;
+	document.getElementById("d_BigPic").innerHTML = '<img src="skin/blue/images/err02.gif" alt="' + str + '" />';
+};
+echoFocus();
+//--><!]]>
+</SCRIPT> 
+<SCRIPT src="/js/openType.js" type=text/javascript></SCRIPT> 
+</body>
+</html>

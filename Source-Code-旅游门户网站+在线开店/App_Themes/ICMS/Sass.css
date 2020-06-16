@@ -1,0 +1,101 @@
+﻿@charset "utf-8";
+*{font-family:'Microsoft YaHei';}
+ul{padding-left:0px;}/*解决Chrome浏览器默认样式*/
+ul li{list-style-type:none;}
+.margin_t5{margin-top:5px;}
+.margin_l5{margin-left:5px;}
+.margin_r5{margin-right:5px;}
+.margin_l20{margin-left:20px;}
+.paddbottom5{padding-bottom:5px;}
+.paddin_t30{padding-top:30px;}
+.borderl{border-left:1px solid #ddd;}
+.padding0{padding:0px;}
+.padding10{padding:10px;}
+.paddin5{padding:5px;}
+.width50{width:50px;}
+.width100{width:100%;max-width:100%;}
+.height600{height:600px;overflow-y:scroll;}
+.height500{height:500px;}
+.grayremind{font-size:12px;color:#A0A0A0;}
+.tdleft{ width:100px;}
+
+.headsearch{width:240px;margin-top:30px;}
+.headsearch .form-control{width:190px;} 
+.main_left_ul li{list-style-type:none;background-color:#86d5e5;width:100%;height:60px;border-bottom:1px solid #fff;cursor:pointer;white-space: nowrap;overflow: hidden;}/*text-overflow: ellipsis;*/
+.main_left_ul li:hover{background-color:#1796BF;}
+.main_left_ul .lastli{border-bottom:6px solid #0066cc;}
+.main_left_ul .activeli{background-color:#0066cc;}
+.main_left_ul li .glyphicon{color:#fff;font-size:1.5em;margin-left:25px;line-height:60px;}
+.litxt{color:#fff;padding-left:30px;line-height:60px;font-size:1.3em;}
+#AllID_Chk{float:left;margin-left:10px;}
+.top{height:5em; color:#fff; background:#1796BF;}
+.topimg{width:60px;height:60px;position:absolute;padding:1px;border:1px solid #ddd;background:#fff;left:20px;top:5px;}
+.top h1{height:5em;line-height:5em;font-size:1.4em;}
+.top h1 small{padding-left:2em;}
+.all0{margin:0; padding:0;}
+ .uploadify-queue { margin-bottom: 1em; margin-top:40px; }
+.navbar{min-height:40px; margin-bottom:5px;}
+.navbar-nav > li > a { padding-top:0; padding-bottom:0;height:40px; line-height:40px;}
+.top_r a{color:#fff; padding-left:1em;padding-top:30px;}
+.breadcrumb{ margin-bottom:0;}/*面包屑导航*/
+.glyphicon{cursor:pointer;}
+.error{color:#B94A48;font-weight:lighter;padding-left:5px;}
+.ibanner img{max-width: 100%;height: auto;}
+#scolls{ height:40px;background:url(/Plat/images/nav_bg.jpg) repeat-x; border:none; padding:0;}/*顶部滑动*/
+#scolls .navbar-nav .active a { background:#1695BE; color:#FFF;}
+#scolls .navbar-nav li a:hover{background:#1695BE; color:#FFF;}
+#scolls .navbar-nav li a span { font-size:1.5em;}
+.main .send{margin-top:5px; margin-bottom:5px;height:10em;}
+.main_list{ margin-top:1em; padding-top:1em;padding-left:5px; border-top:1px dotted #ccc;}/*留言列表*/
+.main_list img{ margin-left:10px; margin-right:10px; width:48px; height:48px; border:1px solid #ccc; padding:2px;}
+.foot{ height:60px; line-height:60px; border-top:1px solid #C0C0C0; background:rgba(239, 239, 239, 0.50); text-align:center;}/*页脚*/
+.foot span{cursor:pointer;margin-right:10px;line-height:60px;height:60px;font-size:3em;}
+.foot span:hover{color:#0066cc;}
+
+.Calendar { font-family: verdana;font-size: 12px;  text-decoration: none; width: 100%; background-color: #C0D0E8; border: 0px dotted #1C6FA5; }
+.CalendarTD { font-family: verdana; font-size: 12px; color: #000000; background-color: #f6f6f6; height: 20px; width: 11%; text-align: center; }
+.Day { font-family: verdana; font-size: 12px; color: #243F65; background-color: #E5E9F2; height: 20px; width: 11%; text-align: center; }
+.DaySat { font-family: verdana; font-size: 12px; color: #FF0000; text-decoration: none; background-color: #E5E9F2; text-align: center; height: 18px; width: 12%; }
+.DaySun { font-family: verdana; font-size: 12px; color: #FF0000; text-decoration: none; background-color: #E5E9F2; text-align: center; height: 18px; width: 12%; }
+.DayNow { font-family: verdana; font-size: 12px; font-weight: bold; color: #000000; background-color: #FFFFFF; height: 20px; text-align: center; }
+.DayTitle { font-family: verdana; font-size: 12px; color: #000000; background-color: #C0D0E8; height: 20px; width: 11%; text-align: center; }
+.DaySatTitle { font-family: verdana; font-size: 12px; color: #FF0000; text-decoration: none; background-color: #C0D0E8; text-align: center; height: 20px; width: 12%; }
+.DaySunTitle { font-family: verdana; font-size: 12px; color: #FF0000; text-decoration: none; background-color: #C0D0E8; text-align: center; height: 20px; width: 12%; }
+.DayButton { font-size: 12px; font-weight: bold; color: #243F65; cursor: pointer; text-decoration: none; }
+.haveat{color:#e96060;}
+.form-control{width:200px;display:inline-block;max-width:200px;}
+#EGV tr th,#EGV tr td,#Egv tr th,#Egv tr td{text-align:center;vertical-align:middle;}
+.child_head {margin-top:20px;border-bottom:1px solid #7fB2E5;padding-bottom:5px;}
+.child_head_span1 {display:inline-block;background-color:#0066cc;width:3px;height:20px;margin-left:5px;}
+.child_head_span2 {font-size:18px;}
+.child_head_a {float:right;}
+/*通知信息等*/
+.uface_main{width:50px;height:50px;border-radius:28px;margin-left:20px;top:10px;}
+.uinfo_name{margin-left:20px;color:#fff;line-height:60px;}
+.notify_div{border: 1px solid #ddd; display: none; background-color: white; width: 300px; height: 80px; position: fixed; bottom: 20px; right: 10px;cursor:pointer;}
+.notify_left{width: 70px; float: left; padding: 5px 0 0 5px;}
+.notify_left img{width:100%;}
+.notify_body{width: 210px; float: right; padding: 5px 0 0 5px}
+@media screen and (max-width:600px){ /*小于600px私有*/
+.foot{ height:auto;}
+.MYbottom .Mytel{height:3em;line-height:3em;background:#263E84;text-align:center; color:#fff;font-size:1.6em;FONT-FAMILY:"Microsoft Yahei", SimSun, Tahoma, Helvetica, Arial, sans-serif;font-weight:bold;}
+
+}
+
+
+@media (min-width:480px) and (max-width:980px){  /*大于480px并小于980私有*/
+.MYbottom .Mytel{display:none;}
+
+}
+
+@media screen and (min-width:992px){  /*大于992px私有*/
+.top h1{padding-left:4.6em;}
+.container-fluid {padding-left:5px;}
+.MYbottom .Mytel{display:none;}
+#scolls{position:absolute;top:0; /*left:0px;*/z-index:5; width:100%   }
+}
+@media (min-width:768px) /*大于768px私有*/
+{
+    .width1100{width:1100px;}
+    .width800{width:800px;}
+}

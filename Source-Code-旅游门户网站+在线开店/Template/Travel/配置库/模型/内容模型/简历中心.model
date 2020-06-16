@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>33</ModelID>
+    <ModelName>简历中心</ModelName>
+    <Description />
+    <TableName>ZL_C_JLZX</TableName>
+    <ItemName>简历</ItemName>
+    <ItemUnit>张</ItemUnit>
+    <ItemIcon>Default.gif</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认简历中心内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>1</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

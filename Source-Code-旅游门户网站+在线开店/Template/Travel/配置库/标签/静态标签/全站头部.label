@@ -1,0 +1,102 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>697</LabelID>
+    <LabelName>全站头部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="top"&gt;
+&lt;div class="container"&gt;
+&lt;div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 top_l hidden-xs"&gt;
+&lt;a href="/"&gt;&lt;img src="{$LogoUrl/}" alt="{$SiteName/}" class="img-responsive center-block" /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 top_m hidden-xs"&gt;
+&lt;form action="/Search/SearchList.aspx" method="get"&gt;
+&lt;div class="input-group pull-right"&gt;
+&lt;input name="keyword" type="text" placeholder="全站检索" id="TxtKeyword" class="form-control" onclick="setEmpty(this)" onblur="settxt(this)" /&gt;
+&lt;span class="input-group-btn"&gt;
+&lt;input type="submit" name="ButtonSo" value="搜  索" id="ButtonSo" class="btn btn-default" /&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 top_r hidden-xs"&gt;
+&lt;ul class="list-inline"&gt;
+&lt;li&gt;&lt;a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{$SiteURL/}');"&gt;设为首页&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="javascript:window.external.addFavorite('{$SiteURL/}','{$SiteName/}');"&gt;加入收藏&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.weibo.com" target="_blank"&gt;官方微博&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl(70)/}" target="_blank"&gt;联系我们&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;strong&gt;24小时客户服务热线：962168&lt;/strong&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 padding0 top_code"&gt;
+&lt;img src="{$CssDir/}images/code.jpg" class="center-block img-responsive" alt="" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="home_nav"&gt;
+&lt;div class="navbar navbar-default"&gt;
+&lt;div class="navbar navbar-static-top" role="navigation" id="scolls"&gt;
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 nav_l"&gt;
+	&lt;div class="navbar-header"&gt;
+	&lt;button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"&gt;
+	&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+	&lt;span class="icon-bar"&gt;&lt;/span&gt;
+	&lt;span class="icon-bar"&gt;&lt;/span&gt;
+	&lt;span class="icon-bar"&gt;&lt;/span&gt;    
+	&lt;/button&gt;
+    &lt;a class="navbar-brand visible-xs-inline" href="/"&gt;赣旅网&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class="navbar-collapse collapse"&gt;
+	&lt;ul class="nav navbar-nav"&gt;
+	&lt;li class="home hidden-xs"&gt;&lt;a href="/"&gt;首页&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="menu1"&gt;&lt;a href="{ZL:GetNodeLinkUrl(1)/}" target="_blank"&gt;乡村旅游&lt;/a&gt;&lt;/li&gt;     
+	&lt;li class="menu2"&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"&gt;赣鄱文化&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="menu3"&gt;&lt;a href="{ZL:GetNodeLinkUrl(3)/}" target="_blank"&gt;时尚健身&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="menu12"&gt;&lt;a href="{ZL:GetNodeLinkUrl(12)/}" target="_blank"&gt;百姓美食&lt;/a&gt;&lt;/li&gt;
+               &lt;li class="menu44"&gt;&lt;a href="{ZL:GetNodeLinkUrl(44)/}" target="_blank"&gt;会展专题&lt;/a&gt;&lt;/li&gt;	
+               &lt;li class="menu5"&gt;&lt;a href="{ZL:GetNodeLinkUrl(5)/}" target="_blank"&gt;光雨小铺&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding0 nav_m"&gt;
+	&lt;ul class="list-inline pull-right"&gt;
+	{ZL.Label id="用户登陆状态显示"/} 
+	&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 nav_r"&gt;
+&lt;div class="renav"&gt; 
+&lt;ul class="list-unstyled"&gt;
+&lt;li&gt;&lt;img src="{$CssDir/}images/phone.png" class="center-block img-responsive" alt=""  /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="{$CssDir/}images/phone1.png" class="center-block img-responsive" alt=""  /&gt;&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

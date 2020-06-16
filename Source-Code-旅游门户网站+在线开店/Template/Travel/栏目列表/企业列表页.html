@@ -1,0 +1,203 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{ZL.Label id="抽取黄页样式名" PageNodeID="{$GetRequest(NodeStyle)$}" /}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<style type="text/css">
+.navbar-default .navbar .nav_l .menu5 a{ margin-top:-2px; border-top:2px solid #2E9900; background:#288400; }
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="mySite">
+<div class="container">
+<ul class="breadcrumb">
+<li>您的位置：<a href="/">首页</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(5)/}">光雨小铺</a></li>
+<li>{ZL.Label id="抽取黄页样式名" PageNodeID="{$GetRequest(NodeStyle)$}" /}</li>
+</ul>
+</div>
+</div>
+<!--面包屑导航结束-->
+<div class="container">
+<div class="row text-center">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 shoplist_l">
+<ul class="list-unstyled">
+{ZL.Label id="输出企业列表" NodeStyle="{$GetRequest(NodeStyle)$}" TitleNum="30" ShowNum="9" /}
+</ul>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 shoplist_r" >
+<ul class="list-unstyled">
+<li><a class="center-block btn btn-lg btn-danger" id="shop_search">光雨小铺查询</a>
+<div id="loginBox" style="position:absolute; left:0; top:0; z-index:1;display: none;" >
+<div class="title" id="Mdown">
+<strong class="pull-left">光雨小铺查询<span>(提示：窗口可拖动)</span></strong><span class="pull-right glyphicon glyphicon-remove" title="关闭" onClick="login.style.display='none';bgDiv.style.display='none'" style="padding-top:6px; font-size:24px; color:#ddd;"></span>
+</div>
+<div class="login">
+<form method="post" action="">
+<ul class="list-unstyled">
+<li><span> 小铺ID：</span><input type="number" name="shopID" ></li>
+<li><span>小铺名称：</span><input type="text" name="shopname" ></li>
+<li><button type="submit" class="btn btn-sm btn-danger center-block" style="padding-left:30px; padding-right:30px;">查询</button></li>
+</ul>
+</form>
+</div>
+</div>                
+</li>
+<li><a href="{ZL:GetNodeLinkUrl(29)/}?NodeStyle=1" target="_blank" class="center-block btn btn-lg btn-danger">招聘信息</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(29)/}?NodeStyle=2" target="_blank" class="center-block btn btn-lg btn-danger">家政信息</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+<div class="job">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-6 colsm-6 col-xs-12 job_l">
+<div class="job_title">最新招聘</div>
+<div id="demo" class="table-responsive" style="OVERFLOW: hidden; HEIGHT: 300px; ">
+<table class="table">
+<tr style="position:absolute; top:30px; width:100%; background:#fff; z-index:80;">
+<th class="th1">职位名称</th><th class="th2">企业名称</th><th class="th3">工作地点</th><th class="th4">更新时间</th>
+</tr>
+<tr>
+<td id="demo1"><table class="table" height="310">
+{ZL.Label id="输出招聘信息列表" NodeID="29" TitleNum="30" ShowNum="10" /}
+</table></td>
+</tr>
+<tr>
+<td id="demo2"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 colsm-6 col-xs-12 job_r">
+<div class="job_title">热门职位</div>
+<div id="demor" class="table-responsive" style="OVERFLOW: hidden; HEIGHT: 300px; ">
+<table class="table">
+<tr style="position:absolute; top:30px; width:100%; background:#fff; z-index:80;">
+<th class="th5">职位名称</th><th class="th2">企业名称</th><th class="th3">工作地点</th><th class="th4">更新时间</th><th>查看数</th>
+</tr>
+<tr>
+<td id="demor1"><table class="table" height="310">
+{ZL.Label id="输出热门招聘信息列表" NodeID="29" TitleNum="24" ShowNum="10" /}
+</table></td>
+</tr>
+<tr>
+<td id="demor2"></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script type="text/javascript">
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//关闭顶部广告
+ function img_clo(){
+	var t= setTimeout($(".home_ad").slideUp(2000),2000);	
+	}
+
+//导航手机列表向上定时滚动
+$(function(){ 
+var $this = $(".renav"); 
+var scrollTimer; 
+$this.hover(function(){ 
+clearInterval(scrollTimer); 
+},function(){ 
+scrollTimer = setInterval(function(){ 
+scrollNews( $this ); 
+}, 2000 ); 
+}).trigger("mouseout"); 
+}); 
+function scrollNews(obj){ 
+var $self = obj.find("ul:first"); 
+var lineHeight = $self.find("li:first").height(); 
+$self.animate({ "margin-top" : -lineHeight +"px" },300 , function(){ 
+$self.css({"margin-top":"0px"}).find("li:first").appendTo($self); 
+}) 
+}
+
+</script>
+<SCRIPT>
+var speed=60;
+var MyMarh=setInterval(Marqueeh,speed)
+demo2.innerHTML=demo1.innerHTML
+demo.onmouseover=function(){ clearInterval(MyMarh) }
+demo.onmouseout=function(){ MyMarh=setInterval(Marqueeh,speed) }
+function Marqueeh(){
+if(demo2.offsetHeight-demo.scrollTop<=0)
+   demo.scrollTop-=demo1.offsetHeight
+else{
+   demo.scrollTop++
+}
+}
+
+var speed2=60;
+var MyMarh2=setInterval(Marqueeh2,speed2)
+demor2.innerHTML=demor1.innerHTML
+demor.onmouseover=function(){ clearInterval(MyMarh2) }
+demor.onmouseout=function(){ MyMarh2=setInterval(Marqueeh2,speed2) }
+function Marqueeh2(){
+if(demor2.offsetHeight-demor.scrollTop<=0)
+   demor.scrollTop-=demor1.offsetHeight
+else{
+   demor.scrollTop++
+}
+}
+//小铺查询
+$().ready(function(e) {
+    $("#shop_search").bind("click",function(){
+		$("#loginBox").fadeIn();
+	})
+});
+
+var IsMousedown, LEFT, TOP, login;
+
+document.getElementById("Mdown").onmousedown=function(e) {
+login = document.getElementById("loginBox");
+IsMousedown = true;
+e = e||event;
+LEFT = e.clientX - parseInt(login.style.left);
+TOP = e.clientY - parseInt(login.style.top);
+
+document.onmousemove = function(e) {
+e = e||event;
+if (IsMousedown) {
+login.style.left = e.clientX - LEFT + "px";
+login.style.top = e.clientY - TOP + "px";
+}
+}
+
+document.onmouseup=function(){
+IsMousedown=false;
+}
+}
+</SCRIPT>

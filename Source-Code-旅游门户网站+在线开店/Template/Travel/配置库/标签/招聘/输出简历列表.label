@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>757</LabelID>
+    <LabelName>输出简历列表</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>招聘</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,30,1,节点ID|TitleNum,30,1,标题长度|QzNum,20,1,求职意向长度|ShowNum,20,1,显示个数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_JLZX on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_JLZX.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_JLZX.gznx,{table1}.dbo.ZL_C_JLZX.qzyx,{table1}.dbo.ZL_C_JLZX.Sex,{table1}.dbo.ZL_C_JLZX.xl</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) and status=99</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.ItemID DESC</LabelOrder>
+    <LabelContent>&lt;table class="table-striped"&gt;
+&lt;tr&gt;
+&lt;th class="th1"&gt;标题&lt;/th&gt;&lt;th class="th2"&gt;求职意向&lt;/th&gt;&lt;th class="th3"&gt;性别&lt;/th&gt;&lt;th class="th4"&gt;学历&lt;/th&gt;&lt;th class="th5"&gt;工作经验&lt;/th&gt;
+&lt;/tr&gt;
+{Repeate}
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank"&gt;{ZL:CutText({Field="Title"/},@TitleNum,...)/}&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{ZL:CutText({Field="qzyx"/},@QzNum,...)/}&lt;/td&gt;&lt;td&gt;{Field="Sex"/}&lt;/td&gt;&lt;td&gt;{Field="xl"/}&lt;/td&gt;&lt;td&gt;{Field="gznx"/}&lt;/td&gt;&lt;/tr&gt;
+{/Repeate}
+&lt;/table&gt;
+{ZL.Page id="大图标响应式列表分页v3"/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

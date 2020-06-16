@@ -1,0 +1,555 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{$SiteName/}_首页</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot()/}
+<link href="/dist/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css">
+<script src="js/scrolljs.js" type=text/javascript></script>
+<script src="/js/scrolltopcontrol.js" type="text/javascript" ></script>
+<script type="text/javascript" src="{$CssDir/}js/NSW_Index.js"></script>
+<script type="text/javascript" src="{$CssDir/}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$CssDir/}js/jquery.yx_rotaion.js"></script>
+<style type="text/css">
+.navbar-default .navbar .nav_l .home a{ margin-top:-2px; border-top:2px solid #2E9900; background:#288400; }
+.modal-dialog{ width:1000px; height:500px;}
+.modal-body { height:400px;}
+#followDiv1{ position:absolute; top:100px; left:0;}
+#followDiv2{ position:absolute; top:100px; right:0;}
+</style>
+</head>
+<body> 
+<div class="top">
+<div class="container">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 top_l hidden-xs">
+<a href="/"><img src="{$LogoUrl/}" alt="{$SiteName/}" class="img-responsive center-block" /></a>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 top_m hidden-xs">
+<form action="/Search/SearchList.aspx" method="get">
+<div class="input-group pull-right">
+<input name="keyword" type="text" placeholder="全站检索" id="TxtKeyword" class="form-control" onclick="setEmpty(this)" onblur="settxt(this)" />
+<span class="input-group-btn">
+<input type="submit" name="ButtonSo" value="搜  索" id="ButtonSo" class="btn btn-default" />
+</span>
+</div>
+</form>
+</div>
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 top_r hidden-xs">
+<ul class="list-inline">
+<li><a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{$SiteURL/}');">设为首页</a></li>
+<li><a href="javascript:window.external.addFavorite('{$SiteURL/}','{$SiteName/}');">加入收藏</a></li>
+<li><a href="http://www.weibo.com" target="_blank">官方微博</a></li>
+<li><a href="{ZL:GetInfoUrl(70)/}" target="_blank">联系我们</a></li>
+</ul>
+<div class="clearfix"></div>
+<strong>24小时客户服务热线：962168</strong>
+</div>
+<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 padding0 top_code">
+<img src="{$CssDir/}images/code.jpg" class="center-block img-responsive" alt="" />
+</div>
+</div>
+</div>
+<div class="home_ad">
+<a href="{ZL:GetNodeLinkUrl(9)/}" target="_blank"><img src="{$CssDir/}images/ad1.jpg" alt="" class="center-block img-responsive"/></a>
+</div>
+<div id="home_nav">
+<div class="navbar navbar-default">
+<div class="navbar navbar-static-top" role="navigation" id="scolls">
+<div class="container">
+<div class="row">
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 nav_l">
+	<div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>    
+	</button>
+    <a class="navbar-brand visible-xs-inline" href="/">赣旅网</a>
+	</div>
+	<div class="navbar-collapse collapse">
+	<ul class="nav navbar-nav">
+	<li class="home hidden-xs"><a href="/">首页</a></li>
+    <li class="menu1"><a href="{ZL:GetNodeLinkUrl(1)/}" target="_blank">乡村旅游</a></li>     
+	<li class="menu2"><a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank">赣鄱文化</a></li>
+	<li class="menu3"><a href="{ZL:GetNodeLinkUrl(3)/}" target="_blank">时尚健身</a></li>
+	<li class="menu12"><a href="{ZL:GetNodeLinkUrl(12)/}" target="_blank">百姓美食</a></li>
+    <li class="menu44"><a href="{ZL:GetNodeLinkUrl(44)/}" target="_blank">会展专题</a></li>
+	<li class="menu5"><a href="{ZL:GetNodeLinkUrl(5)/}" target="_blank">光雨小铺</a></li>
+	</ul>
+	</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding0 nav_m">
+	<ul class="list-inline pull-right">
+    {ZL.Label id="用户登陆状态显示"/} 
+  	</ul>
+</div>
+<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 nav_r">
+<div class="renav"> 
+<ul class="list-unstyled">
+<li><img src="{$CssDir/}images/phone.png" class="center-block img-responsive" alt=""  /></li>
+<li><img src="{$CssDir/}images/phone1.png" class="center-block img-responsive" alt=""  /></li> 
+</ul> 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 导航到此结束 -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="z-index:-100">
+<ol class="carousel-indicators">
+<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+<div class="item active">
+<img src="{$CssDir/}images/banner1.jpg" alt="迎新脚步 让旅行来敲门" class="img-responsive center-block">
+<div class="carousel-caption">
+</div>
+</div>
+<div class="item">
+<img src="{$CssDir/}images/banner2.jpg" alt="2014年度 江西旅游热门事件盘点" class="img-responsive center-block">
+<div class="carousel-caption">
+</div>
+</div>
+<div class="item">
+<img src="{$CssDir/}images/banner3.jpg" alt="江西时尚专业旅游" class="img-responsive center-block">
+<div class="carousel-caption">
+</div>
+</div>
+</div>
+<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+<div class="top_news">
+<div class="container">
+<ul class="list-inline">
+{ZL.Label id="输出指定节点信息_不分页" NodeID="7" TitleNum="40" ShowNum="4" /}
+</ul>
+</div>
+</div>
+{Split/}
+<div class="flash">
+<div class="container">
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 padding0 flash_l">
+<div class="yx-rotaion">
+<ul class="rotaion_list">
+<li><a href="{ZL:GetNodeLinkUrl(11)/}"><img src="{$CssDir/}images/flash1.jpg" alt=""></a></li>
+<li><a href="{ZL:GetNodeLinkUrl(10)/}"><img src="{$CssDir/}images/flash2.jpg" alt=""></a></li>
+<li><a href="{ZL:GetNodeLinkUrl(12)/}"><img src="{$CssDir/}images/flash3.jpg" alt=""></a></li>
+</ul>
+</div>  
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding10 flash_m">
+<ul class="nav nav-tabs" role="tablist">
+<li class="active"><a href="#home" role="tab" data-toggle="tab">精品路线</a></li>
+<li><a href="#profile" role="tab" data-toggle="tab">地方特产</a></li>
+</ul> 
+<div class="tab-content">
+<div class="tab-pane active" id="home"> 
+<div id="way" style="OVERFLOW: hidden; WIDTH: 100%; HEIGHT: 236px; ">
+<div id="way1" style="width:100%; height:237px;">
+<ul class="list-unstyled" >
+{ZL.Label id="输出指定节点信息_不分页" NodeID="9" TitleNum="44" ShowNum="8" /}
+</ul>
+</div>
+<div id="way2"></div>
+</div> 
+</div>
+<div class="tab-pane" id="profile">
+<ul class="list-unstyled">   
+{ZL.Label id="首页地方特产列表" TitleNum="30" ShowNum="8" /}
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding0 flash_r">
+<div class="mysign">
+<a href="/User/UserFunc/UserSignin.aspx" target="_blank"><img src="{$CssDir/}images/sign.png" class="center-block img-responsive" alt="由此点击进入签到" /></a>
+</div>
+<div class="gov_info">
+<div class="gov_title">官方动态</div>
+<ul class="list-unstyled">
+{ZL.Label id="输出指定节点信息_不分页" NodeID="7" TitleNum="37" ShowNum="5" /}
+</ul> 
+</div>
+</div>
+</div>
+ 
+</div>  
+<div class="home_main">
+<div class="container">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 padding0">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding0 home_main_l">
+<div class="home_main_title"><span class="pull-right"><a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank">更多>></a></span>赣鄱文化</div>
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 padding5"><a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"><img src="{$CssDir/}images/pic7.jpg" class="center-block img-responsive" alt="" /></a></div>
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 padding5"><p>江西自下以来就是吴楚分界，拥有丰富的人文江西自下以来就是吴楚分界，拥有丰富的人文江西自，拥有丰富的人文江西自下以来就是吴楚分界，拥有丰富的人文。。<a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank">[详情]</a></p></div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding10">
+<div class="home_main_m">
+<div class="home_main_title"><span class="pull-right"><a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank">更多>></a></span>文化作品</div>
+<ul class="list-unstyled">
+{ZL.Label id="首页文化作品列表" NodeID="2" ShowNum="4" /}
+</ul>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding0 home_main_r">
+<div class="home_main_title"><span class="pull-right"><a href="{ZL:GetNodeLinkUrl(10)/}" target="_blank">更多>></a></span>精品小说推荐榜</div>
+<ul class="list-unstyled">
+{ZL.Label id="输出指定节点推荐信息_无时间属性" NodeID="10" TitleNum="30" ShowNum="6" /}
+</ul>
+</div>
+</div>
+</div>
+{Split/}
+<div class="novel"> 
+<div class="container">
+<div class="zj_js">
+<div class="zjs01 fl" id="Left_ding1" style="cursor: pointer;">
+<a href="javascript:void(0)"><i class="fa fa-angle-left"></i></a></div>
+<div class="container zjs02 fl" id="ISL_Cont_1d1" style="float: left;">
+<ul class="list-unstyled text-center">
+{ZL.Label id="首页推荐小说列表" NodeID="10" TitleNum="30" ShowNum="6" /}    
+</ul>
+</div>
+<div class="zjs03 fr" style="cursor: pointer;" id="Right_ding1">
+<a href="javascript:void(0)"><i class="fa fa-angle-right"></i></a></div>
+<div class="clearfix"></div>
+</div> 
+</div>
+</div>
+<div class="home_sport">
+<div class="container padding5">
+<ul class="list-unstyled">
+{ZL.Label id="首页体育场馆列表_带图带简介" NodeID="33" TitleNum="50" SynNum="60" ShowNum="4" /}
+</ul>
+</div>
+</div>
+{Split/}
+<div class="home_shop">
+<div class="container padding10">
+<ul class="list-unstyled">
+{ZL.Label id="光雨小铺图片列表" NodeID="69" TitleNum="30" SynNum="100" ShowNum="6" /}
+</ul>
+</div>
+</div>
+<div class="home_job">
+<div class="container padding10">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding5 home_job_l text-center">
+<img src="{$CssDir/}images/pic12.jpg" class="img-responsive" alt="点击浏览更多小铺" />
+<span class="center-block text-center"><a href="{ZL:GetNodeLinkUrl(5)/}" class="center-block" target="_blank"><h1>达芬时装</h1>光雨小铺梦时代时装店</a><a href="{ZL:GetNodeLinkUrl(5)/}" class="btn btn-xs btn-danger" target="_blank">更多小铺点此浏览</a></span>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding5 home_job_m">
+<ul class="nav nav-tabs" role="tablist">
+<li class="active"><a href="#home_job1" role="tab" data-toggle="tab">家政服务</a></li>
+<li><a href="#home_job2" role="tab" data-toggle="tab">创业项目</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+<div class="tab-pane active" id="home_job1">
+<div id="jia" style="OVERFLOW: hidden; WIDTH: 100%; HEIGHT: 224px; ">
+<div id="jia1" style="width:100%; height:225px;">
+<ul class="list-unstyled" >
+{ZL.Label id="首页招聘信息列表" NodeID="71" TitleNum="30" ShowNum="10" /}
+</ul>
+</div>
+<div class="clearfix"></div>
+<div id="jia2" style="margin-top:40px;"></div>
+</div>
+<div class="home_job_ad padding10"><img src="{$CssDir/}images/p1.jpg" alt="" /></div>
+<div class="home_job_ad padding10"><img src="{$CssDir/}images/p2.jpg" alt="" /></div>
+</div>
+<div class="tab-pane" id="home_job2">
+<div id="chuang" style="OVERFLOW: hidden; WIDTH: 100%; HEIGHT: 224px; ">
+<div id="chuang1" style="width:100%; height:225px;">
+<ul class="list-unstyled" >
+{ZL.Label id="首页招聘信息列表" NodeID="72" TitleNum="30" ShowNum="10" /}
+</ul>
+</div>
+<div id="chuang2"></div>
+</div>
+<div class="home_job_ad padding10"><img src="{$CssDir/}images/p11.jpg" alt="" /></div>
+<div class="home_job_ad padding10"><img src="{$CssDir/}images/p12.jpg" alt="" /></div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>{Split/}
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding5 home_job_m">
+<ul class="nav nav-tabs" role="tablist">
+<li class="active"><a href="#home_job3" role="tab" data-toggle="tab">就业岗位</a></li>
+<li><a href="#home_job4" role="tab" data-toggle="tab">生活咨询</a></li>
+</ul> 
+<div class="tab-content">
+<div class="tab-pane active" id="home_job3">
+<div id="jiu" style="OVERFLOW: hidden; WIDTH: 100%; HEIGHT: 224px; ">
+<div id="jiu1" style="width:100%; height:225px;">
+<ul class="list-unstyled" >
+{ZL.Label id="首页招聘信息列表" NodeID="73" TitleNum="30" ShowNum="10" /}
+</ul>
+</div>
+<div id="jiu2"></div>
+</div>
+<div class="home_job_ad padding10"><img src="{$CssDir/}images/p3.jpg" alt="" /></div>
+<div class="home_job_ad padding10"><img src="{$CssDir/}images/p4.jpg" alt="" /></div>
+</div>
+<div class="tab-pane" id="home_job4">
+<div id="sheng" style="OVERFLOW: hidden; WIDTH: 100%; HEIGHT: 224px; ">
+<div id="sheng1" style="width:100%; height:225px;">
+<ul class="list-unstyled" >
+{ZL.Label id="首页招聘信息列表" NodeID="74" TitleNum="30" ShowNum="10" /}
+</ul>
+</div>
+<div id="sheng2"></div>
+</div>
+<div class="home_job_ad padding10"><a href="#" target="_blank"><img src="{$CssDir/}images/p13.jpg" alt="" /></a></div>
+<div class="home_job_ad padding10"><a href="#" target="_blank"><img src="{$CssDir/}images/p14.jpg" alt="" /></a></div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="home_food">
+<div class="container">
+<div class="home_title"><span class="pull-right"><a href="{ZL:GetNodeLinkUrl(12)/}" target="_blank">更多>></a></span>美食推荐</div>
+<ul class="list-unstyled">
+{ZL.Label id="首页美食缩略图列表_无标题" NodeID="12" ShowNum="4" /}
+<div class="clearfix"></div>
+</ul>
+</div>
+</div>
+<div class="friend_link padding1">
+<div class="container">
+<div class="home_title"><span class="pull-right"><a href="{ZL:GetNodeLinkUrl(17)/}" target="_blank">更多>></a></span>友情链接</div>
+<div class="row">
+<ul class="list-unstyled">
+{ZL.Label id="友情链接缩略图列表输出" ShowNum="6" NodeID="17" /}
+</ul>
+</div>
+</div>
+</div>
+<div class="home_bottom padding1">
+<div class="container">
+<ul class="list-inline text-center">
+<li><a href="{ZL:GetInfoUrl(135)/}" target="_blank"><img src="{$CssDir/}images/fun1.png" class="center-block" alt="">阳光保障</a></li>
+<li><a href="{ZL:GetInfoUrl(136)/}" target="_blank"><img src="{$CssDir/}images/fun2.png" class="center-block" alt="">产品丰富</a></li>
+<li><a href="{ZL:GetInfoUrl(137)/}" target="_blank"><img src="{$CssDir/}images/fun3.png" class="center-block" alt="">卓越服务</a></li>
+<li><a href="{ZL:GetInfoUrl(138)/}" target="_blank"><img src="{$CssDir/}images/fun4.png" class="center-block" alt="">预定价格保障</a></li>
+<li><a href="{ZL:GetInfoUrl(139)/}" target="_blank"><img src="{$CssDir/}images/fun5.png" class="center-block" alt="">酒店升级保障</a></li>
+<li><a href="{ZL:GetInfoUrl(140)/}" target="_blank"><img src="{$CssDir/}images/fun6.png" class="center-block" alt="">航班延误保障</a></li>
+<li><a href="{ZL:GetInfoUrl(141)/}" target="_blank"><img src="{$CssDir/}images/fun7.png" class="center-block" alt="">特殊原因退订保障</a></li>
+<li><a href="{ZL:GetInfoUrl(142)/}" target="_blank"><img src="{$CssDir/}images/fun8.png" class="center-block" alt="">不可抗力退订保障</a></li>
+<li><a href="{ZL:GetInfoUrl(143)/}" target="_blank"><img src="{$CssDir/}images/fun9.png" class="center-block" alt="">重大灾害保障</a></li>
+</ul>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="home_footer">
+<div class="container  text-center">
+<ul class="list-inline">
+<li><a href="{ZL:GetInfoUrl(1)/}" target="_blank">公司简介</a></li>|
+<li><a href="{ZL:GetInfoUrl(132)/}" target="_blank">招贤纳士</a></li>|
+<li><a href="{ZL:GetInfoUrl(133)/}" target="_blank">广告服务</a></li>|
+<li><a href="{ZL:GetInfoUrl(70)/}" target="_blank">联系方式</a></li>|
+<li><a href="{ZL:GetInfoUrl(131)/}" target="_blank">版权声明</a></li>|
+<li><a href="{ZL:GetInfoUrl(134)/}" target="_blank">法律顾问</a></li>|
+<li><a href="/guest/" target="_blank">问题报告</a></li>
+</ul>
+<p>{$Copyright/}</p>
+</div>
+<div class="container footer_attestation">
+<ul class="list-inline text-center">
+<li><a href="http://117.40.91.39/"><img src="{$CssDir/}images/ba1.gif" alt="报警岗亭" width="50"><span>南昌网络警察报警平台</span></a></li>
+<li><a href="http://117.40.91.39/"><img src="{$CssDir/}images/ba2.jpg" alt="卡通警察"></a></li>
+<li><a href="http://www.nc315.gov.cn/ba!certificate.html?id=64"><img src="{$CssDir/}images/ba3.gif" alt="互联网经营备案登记信息"><span>经营性网站备案信息</span></a></li>
+<li><a href="http://117.40.91.39/wzba_search.asp"><img src="{$CssDir/}images/ba4.jpg" alt="网站备案"><span>南昌市公安局网监备案</span></a></li>
+<li><a href="http://www.anquan.org/authenticate/cert/?site=www.tiboo.cn&at=realname"><img src="{$CssDir/}images/ba5.png" alt="报警岗亭"></a></li>
+</ul>
+</div>
+</div> 
+<div class="side_ad hidden-xs">
+<div class="container">
+<div id=duilian01 class="pull-left">{ZL.Label id="输出对联广告" GeneralID="210" /}<button onClick="ad_close1()"><i class="fa fa-close "></i>关闭</button></div>
+<div id=duilian02 class="pull-right">{ZL.Label id="输出对联广告" GeneralID="211" /}<button onClick="ad_close2()"><i class="fa fa-close "></i>关闭</button></div>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+ //]]>
+
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+  var msViewportStyle = document.createElement("style");
+  msViewportStyle.appendChild(
+    document.createTextNode(
+      "@-ms-viewport{width:auto!important}"
+    )
+  );
+  document.getElementsByTagName("head")[0].
+    appendChild(msViewportStyle);
+}
+
+//搜索关键字
+function setEmpty(obj) {
+	if (obj.value == "全站检索") {
+		obj.value = "";
+	}
+}
+function settxt(obj) {
+	if (obj.value == "") {
+		obj.value = "全站检索";
+	}
+}
+$().ready(function(e) {
+    setTimeout("$('.home_ad').slideUp(3000);",3000);
+});
+
+$(".yx-rotaion").yx_rotaion({auto:true});
+
+$().ready(function(e) {
+	$(".flash_item .nav-tabs>li>a").mouseover(function(){
+	$(this).parent().addClass("active");
+	$(this).parent().siblings("li").removeClass("active");
+	$(this).parent().parent().parent().find(".tab-content .tab-pane").removeClass("active");
+	$($(this).attr("tab-pane")).addClass("active");
+	})
+});
+//导航手机列表向上定时滚动
+$(function(){ 
+var $this = $(".renav"); 
+var scrollTimer; 
+$this.hover(function(){ 
+clearInterval(scrollTimer); 
+},function(){ 
+scrollTimer = setInterval(function(){ 
+scrollNews( $this ); 
+}, 2000 ); 
+}).trigger("mouseout"); 
+}); 
+function scrollNews(obj){ 
+var $self = obj.find("ul:first"); 
+var lineHeight = $self.find("li:first").height(); 
+$self.animate({ "margin-top" : -lineHeight +"px" },300 , function(){ 
+$self.css({"margin-top":"0px"}).find("li:first").appendTo($self); 
+}) 
+}			
+ 
+$(".yx-rotaion").css("width",'100%');
+$(".yx-rotaion").css("height",'280px');
+ 
+var scrollPic_01 = new ScrollPicleft();
+scrollPic_01.scrollContId = "ISL_Cont_1d1"; // 内容容器ID""
+scrollPic_01.arrLeftId = "Left_ding1"; //左箭头ID
+scrollPic_01.arrRightId = "Right_ding1"; //右箭头ID
+scrollPic_01.frameWidth = $(".zj_js").innerWidth(); //显示框宽度
+scrollPic_01.pageWidth = $(".zj_js").innerWidth(); //翻页宽度
+scrollPic_01.speed = 10; //移动速度(单位毫秒，越小越快)
+scrollPic_01.space = 10; //每次移动像素(单位px，越大越快)
+scrollPic_01.autoPlay = true; //自动播放
+scrollPic_01.autoPlayTime = 3; //自动播放间隔时间(秒)
+scrollPic_01.initialize(); //初始化
+
+function ad_close1(){
+	$("#duilian01").hide();		
+}
+function ad_close2(){
+	$("#duilian02").hide();		
+}
+//精品路线滚动 
+var speed5=40
+var MyMarh5=setInterval(Marqueeh5,speed5)
+way2.innerHTML=way1.innerHTML  
+way.onmouseover=function(){ clearInterval(MyMarh5) }
+way.onmouseout=function(){ MyMarh5=setInterval(Marqueeh5,speed5) }
+function Marqueeh5(){
+if(way2.offsetHeight-way.scrollTop<=0)
+   way.scrollTop-=way1.offsetHeight
+else{
+   way.scrollTop++
+}
+}
+//家政服务滚动
+var speed=40
+var MyMarh=setInterval(Marqueeh,speed)
+jia2.innerHTML=jia1.innerHTML  
+jia.onmouseover=function(){ clearInterval(MyMarh) }
+jia.onmouseout=function(){ MyMarh=setInterval(Marqueeh,speed) }
+function Marqueeh(){
+if(jia2.offsetHeight-jia.scrollTop<=0)
+   jia.scrollTop-=jia1.offsetHeight
+else{
+   jia.scrollTop++
+}
+}
+//创业项目滚动
+var speed2=40
+var MyMarh2=setInterval(Marqueeh2,speed2)
+chuang2.innerHTML=chuang1.innerHTML  
+chuang.onmouseover=function(){ clearInterval(MyMarh2) }
+chuang.onmouseout=function(){ MyMarh2=setInterval(Marqueeh2,speed2) }
+function Marqueeh2(){
+if(chuang2.offsetHeight-chuang.scrollTop<=0)
+   chuang.scrollTop-=chuang1.offsetHeight
+else{
+   chuang.scrollTop++
+}
+}
+//就业项目滚动
+var speed3=40
+var MyMarh3=setInterval(Marqueeh3,speed3)
+jiu2.innerHTML=jiu1.innerHTML  
+jiu.onmouseover=function(){ clearInterval(MyMarh3) }
+jiu.onmouseout=function(){ MyMarh3=setInterval(Marqueeh3,speed3) }
+function Marqueeh3(){
+if(jiu2.offsetHeight-jiu.scrollTop<=0)
+   jiu.scrollTop-=jiu1.offsetHeight
+else{
+   jiu.scrollTop++
+}
+}
+//生活咨询滚动 
+var speed4=40
+var MyMarh4=setInterval(Marqueeh4,speed4)
+sheng2.innerHTML=sheng1.innerHTML  
+sheng.onmouseover=function(){ clearInterval(MyMarh4) }
+sheng.onmouseout=function(){ MyMarh4=setInterval(Marqueeh4,speed4) }
+function Marqueeh4(){
+if(sheng2.offsetHeight-sheng.scrollTop<=0)
+   sheng.scrollTop-=sheng1.offsetHeight
+else{
+   sheng.scrollTop++
+}
+}
+
+
+</script>

@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>812</LabelID>
+    <LabelName>输出指定父ID的小铺子列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>商城</LabelCate>
+    <LabelDesc />
+    <LabelParam>ParentID,697,1,父ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Grade</LabelTable>
+    <LabelField>GradeName</LabelField>
+    <LabelWhere>ParentID=@ParentID</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Repeate}
+&lt;option value="{Field="GradeName"/}"&gt;{Field="GradeName"/}&lt;/option&gt;
+{/Repeate}
+</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,78 @@
+﻿{ZL.Source id="简历中心数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{SField sid="简历中心数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="简历中心数据源标签" FD="Tagkey" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="mySite">
+<div class="container">
+<ul class="breadcrumb">
+<li>您的位置：<a href="/">首页</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(5)/}">光雨小铺</a></li>
+<li>{SField sid="简历中心数据源标签" FD="Title" page="0"/}</li>
+</ul>
+</div>
+</div>
+<div class="container">
+<div class="myresume">
+<h1>{SField sid="简历中心数据源标签" FD="Title" page="0"/}</h1>
+<span class="hidden"><SCRIPT language=javascript src="/Common/GetHits.aspx?id={SField sid="简历中心数据源标签" FD="GeneralID" page="0"/}"></SCRIPT></span>
+<table class="table table-bordered">
+<tr>
+<td><strong>姓名：</strong></td><td>{ZL.Label id="抽取简历的所属者" GeneralID="{SField sid="简历中心数据源标签" FD="GeneralID" page="0"/}" /}</td><td><strong>性别：</strong></td><td>{SField sid="简历中心数据源标签" FD="Sex" page="0"/}</td>
+</tr>
+<tr>
+<td><strong>出生日期：</strong></td><td>{SField sid="简历中心数据源标签" FD="csrq" page="0"/}</td><td><strong>学历：</strong></td><td>{SField sid="简历中心数据源标签" FD="xl" page="0"/}</td>
+</tr>
+<tr>
+<td><strong>工作年限：</strong></td><td>{SField sid="简历中心数据源标签" FD="gznx" page="0"/}</td><td><strong>求职意向：</strong></td><td>{SField sid="简历中心数据源标签" FD="qzyx" page="0"/}</td>
+</tr>
+<tr>
+<td><strong>现居住地址：</td><td>{SField sid="简历中心数据源标签" FD="jzd " page="0"/}</strong></td><td><strong>联系方式：</strong></td><td>{SField sid="简历中心数据源标签" FD="lxdh" page="0"/}</td>
+</tr>
+</table>
+<div class="myresume_t"><strong>{ZL.Label id="抽取简历的所属者" GeneralID="{SField sid="简历中心数据源标签" FD="GeneralID" page="0"/}" /}的自我描述</strong></div>
+<p>{SField sid="简历中心数据源标签" FD="zwpj" page="0"/}</p>
+<div class="myresume_t"><strong>{ZL.Label id="抽取简历的所属者" GeneralID="{SField sid="简历中心数据源标签" FD="GeneralID" page="0"/}" /}的工作经历</strong></div>
+<p>{SField sid="简历中心数据源标签" FD="gzjy" page="0"/}</p>
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+ //]]>
+
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+  var msViewportStyle = document.createElement("style");
+  msViewportStyle.appendChild(
+    document.createTextNode(
+      "@-ms-viewport{width:auto!important}"
+    )
+  );
+  document.getElementsByTagName("head")[0].
+    appendChild(msViewportStyle);
+}
+</script>

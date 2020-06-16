@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>793</LabelID>
+    <LabelName>指定父ID下节点名称与链接列表_图库内容页</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>ParentID,0,1,父节点ID|ShowNum,100,1,调用信息数</LabelParam>
+    <LabelTable>ZL_Node</LabelTable>
+    <LabelField>NodeID,NodeName</LabelField>
+    <LabelWhere>NodeID&lt;&gt;@ParentID And (ParentID=(select ParentID from ZL_Node where NodeID=@ParentID))</LabelWhere>
+    <LabelOrder>OrderID ASC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;div class="art_list1"&gt;
+&lt;div class="art_lt"&gt;&lt;strong&gt;{Field="NodeName"/}&lt;/strong&gt;&lt;/div&gt;
+&lt;div class="row"&gt;
+&lt;div class="padding10"&gt;
+&lt;ul class="list-unstyled"&gt;
+{ZL.Label id="输出指定节点图库的缩略图列表" NodeID="{Field="NodeID"/}" TitleNum="20" ShowNum="4" /}
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

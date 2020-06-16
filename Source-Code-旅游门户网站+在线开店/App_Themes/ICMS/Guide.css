@@ -1,0 +1,7 @@
+﻿.tvNavDiv{float:left;background-color:#f3f3f3;height:100%;width:100%;margin-top:1px;}
+.tvNav_ul li{padding-left:20px;}
+.left_ul ul li {border-bottom:1px solid #ddd;}
+.left_ul ul li a{color:#1963aa;font-size:0.9em;display:block;text-decoration:none;height:35px;line-height:35px;padding-left:10px;}
+.left_ul ul li a:hover{ background:#6BBEF6; color:#fff;}
+.activeLi{ background:#6BBEF6; color:#fff;border-bottom:1px solid #ddd;}
+.list_span {margin-right:10px;}/*End*/

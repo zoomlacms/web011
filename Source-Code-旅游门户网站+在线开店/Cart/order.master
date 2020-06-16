@@ -1,0 +1,46 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="test_Cart_order, App_Web_3gd1ryq3" clientidmode="Static" %><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="/JS/jquery-1.9.1.min.js"></script>
+    <script src="/JS/ICMS/ZL_Common.js"></script>
+    <script src="/JS/ZL_Regex.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/dist/css/font-awesome.min.css" rel="stylesheet" />
+    <style type="text/css">
+      *{font-family:'Microsoft YaHei';font-size:12px;}
+      ul{padding-left:0px;}
+      ul li{list-style-type:none;}
+      .form-control{width:240px;display:inline-block;}
+      .control-md{width:160px;}
+      .bordered {border-bottom: 1px solid #ddd;padding:5px;padding-left:15px;}
+      .grayremind{font-size:12px;color:#666;}
+        @media (max-width:960px)
+        {
+             .container{width:100%;padding-left:0px;padding-right:0px;}
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="text-align: right; height: 35px; background: #F7F7F7; line-height: 35px; border-bottom: 1px solid #ddd; font-size: 12px;">
+            <div class="container" style="padding-right:15px;">
+                <div runat="server" id="logged_div" visible="false">
+                    <a href="#" class="grayremind" runat="server" id="logged_a" ></a>
+                    <a href="#" target="_blank" class="btn btn-primary btn-xs">我的订单</a>
+                    <a href="/User/Logout.aspx" class="btn btn-primary btn-xs">退出</a>
+                </div>
+                <div runat="server" id="nologin_div" visible="false">
+                    <a href="/User/Login.aspx?Returnurl=/test/cart/cart.aspx" runat="server" id="login_a" class="btn btn-primary btn-xs"></a>
+                    <a href="/User/Register.aspx" class="btn btn-primary btn-xs" target="_blank">注册</a>
+                </div>
+            </div>
+        </div>
+        <div class="container"><asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder></div>
+        <asp:ContentPlaceHolder runat="server" ID="ScriptContent"></asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

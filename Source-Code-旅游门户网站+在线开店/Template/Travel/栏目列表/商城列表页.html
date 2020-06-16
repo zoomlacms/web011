@@ -1,0 +1,88 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<style type="text/css">
+.navbar-default .navbar .nav_l .menu{ZL.Label id="抽取父节点ID" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" /} a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+</style>
+</head>
+<body >
+{ZL.Label id="全站头部"/}
+<div class="container mySites">
+<div class="row">
+<ul class="breadcrumb">
+<li>当前位置：<a href="/">首页</a><span class="divider"></span></li>
+<li><a href="{ZL:GetNodeLinkUrl(3)/}">时尚健身</a></li>
+<li>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}<span class="divider"></span></li>
+</ul>
+</div>
+<div class="clearfix"></div>
+</div>
+<!--面包屑导航结束 -->
+<div class="sort_list">
+<div class="container">
+<div class="row">  
+<div class="sort_title text-center"><span>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</span></div>
+<div class="sport_shop">
+{ZL.Label id="商城商品标签_分页" NodeID="{SField sid="节点栏目信息数据源" FD="Nodeid" page="0"/}" TitleNum="36" ShowNum="12" /}
+</div> 
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//关闭顶部广告
+ function img_clo(){
+	var t= setTimeout($(".home_ad").slideUp(2000),2000);	
+	}
+
+//导航手机列表向上定时滚动
+$(function(){ 
+var $this = $(".renav"); 
+var scrollTimer; 
+$this.hover(function(){ 
+clearInterval(scrollTimer); 
+},function(){ 
+scrollTimer = setInterval(function(){ 
+scrollNews( $this ); 
+}, 2000 ); 
+}).trigger("mouseout"); 
+}); 
+function scrollNews(obj){ 
+var $self = obj.find("ul:first"); 
+var lineHeight = $self.find("li:first").height(); 
+$self.animate({ "margin-top" : -lineHeight +"px" },300 , function(){ 
+$self.css({"margin-top":"0px"}).find("li:first").appendTo($self); 
+}) 
+}
+ 
+$().ready(function(e) {
+    $(".sport_shop li").mouseenter(function(e) {
+        $(this).find(".gobuy").show();
+    }).mouseleave(function(e) {
+        $(this).find(".gobuy").hide();
+    });; 	 
+}); 
+</script>

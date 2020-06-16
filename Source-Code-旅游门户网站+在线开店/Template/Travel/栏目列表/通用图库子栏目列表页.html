@@ -1,0 +1,127 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<style type="text/css">
+.navbar-default .navbar .nav_l .menu{ZL.Label id="抽取父节点ID" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" /} a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+.navbar-default .navbar .nav_l .menu{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="mySite">
+<div class="container">
+<ul class="breadcrumb">
+<li>当前位置：<a href="/">首页</a><span class="divider"></span></li> 
+<li>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</li>
+</ul>
+</div>
+</div> 
+<div class="container">
+<div class="fashion_style">
+<ul class="list-inline">       
+<li><strong>地区：</strong></li>
+<li><a href="{ZL:GetNodeLinkUrl(12)/}" class="place0">全部</a></li><li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?area={$GetUrlencode(南昌县)$}" class="place1">南昌县</a></li><li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?area={$GetUrlencode(新建县)$}" class="place2">新建县</a></li><li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?area={$GetUrlencode(进贤县)$}" class="place3">进贤县</a></li><li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?area={$GetUrlencode(安义县)$}" class="place4">安义县</a></li><li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?area={$GetUrlencode(东湖区)$}" class="place5">东湖区</a></li><li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?area={$GetUrlencode(西湖区)$}" class="place6">西湖区</a></li><li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?area={$GetUrlencode(青云谱区)$}" class="place7">青云谱区</a></li><li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?area={$GetUrlencode(青山湖区)$}" class="place8">青山湖区</a></li><li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?area={$GetUrlencode(湾里区)$}" class="place9">湾里区</a></li>
+</ul>
+</div>
+</div>
+<div class="fashion container"> 
+<div class="food_sort">美食推荐</div> 
+<ul class="list-unstyled">
+{ZL.Label id="百姓美食缩略图列表_带标题带分页" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" TitleNum="30" ShowNum="20" SynNum="70" Area="{$GetUrldecode({$GetRequest(area)$})$}" /}
+</ul>  
+</div>  
+{ZL.Label id="全站底部"/}
+<div class="side_ad hidden-xs">
+<div class="container">
+<div id=duilian01 class="pull-left">{ZL.Label id="输出对联广告" GeneralID="452" /}<button onClick="ad_close1()"><i class="fa fa-close "></i>关闭</button></div>
+<div id=duilian02 class="pull-right">{ZL.Label id="输出对联广告" GeneralID="453" /}<button onClick="ad_close2()"><i class="fa fa-close "></i>关闭</button></div>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//关闭顶部广告
+ function img_clo(){
+	var t= setTimeout($(".home_ad").slideUp(2000),2000);	
+	}
+
+//导航手机列表向上定时滚动
+$(function(){ 
+var $this = $(".renav"); 
+var scrollTimer; 
+$this.hover(function(){ 
+clearInterval(scrollTimer); 
+},function(){ 
+scrollTimer = setInterval(function(){ 
+scrollNews( $this ); 
+}, 2000 ); 
+}).trigger("mouseout"); 
+}); 
+function scrollNews(obj){ 
+var $self = obj.find("ul:first"); 
+var lineHeight = $self.find("li:first").height(); 
+$self.animate({ "margin-top" : -lineHeight +"px" },300 , function(){ 
+$self.css({"margin-top":"0px"}).find("li:first").appendTo($self); 
+}) 
+} 
+$().ready(function(e) {
+    var cur_node='{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}';
+	$(".fashion_style li").find(".node"+cur_node).addClass("btn btn-xs btn-danger");
+	var placekey='{$GetUrldecode({$GetRequest(area)$})$}';
+	switch (placekey)
+	{
+		case '南昌县':
+		  $(".fashion_style li").find(".place1").addClass("btn btn-xs btn-danger");		 
+		  break;
+		case '新建县':
+		  $(".fashion_style li").find(".place2").addClass("btn btn-xs btn-danger");
+		  break;
+		case '进贤县':
+		  $(".fashion_style li").find(".place3").addClass("btn btn-xs btn-danger");
+		  break;
+		case '安义县':
+		  $(".fashion_style li").find(".place4").addClass("btn btn-xs btn-danger");
+		  break;
+		case '东湖区':
+		  $(".fashion_style li").find(".place5").addClass("btn btn-xs btn-danger");
+		  break;
+		case '西湖区':
+		  $(".fashion_style li").find(".place6").addClass("btn btn-xs btn-danger");
+		  break;
+		case '青云谱区':
+		  $(".fashion_style li").find(".place7").addClass("btn btn-xs btn-danger");
+		  break;
+		case '青山湖区':
+		  $(".fashion_style li").find(".place8").addClass("btn btn-xs btn-danger");
+		  break;
+		case '湾里区':
+		  $(".fashion_style li").find(".place9").addClass("btn btn-xs btn-danger");
+		  break;
+		default:
+		  $(".fashion_style li").find(".place0").addClass("btn btn-xs btn-danger");
+		  break;
+	} 
+}); 
+</script>

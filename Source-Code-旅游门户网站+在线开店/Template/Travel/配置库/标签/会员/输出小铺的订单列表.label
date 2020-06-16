@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>807</LabelID>
+    <LabelName>输出小铺的订单列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>会员</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>{table1}.dbo.ZL_Orderinfo left join {table1}.dbo.ZL_CartPro on {table1}.dbo.ZL_Orderinfo.id={table1}.dbo.ZL_CartPro.Orderlistid</LabelTable>
+    <LabelField>{table1}.dbo.ZL_Orderinfo.AddTime,{table1}.dbo.ZL_Orderinfo.Extend,{table1}.dbo.ZL_Orderinfo.OrderNo,{table1}.dbo.ZL_Orderinfo.Receiver,{table1}.dbo.ZL_CartPro.Attribute,{table1}.dbo.ZL_CartPro.ProID,{table1}.dbo.ZL_CartPro.Proname,{table1}.dbo.ZL_CartPro.Pronum</LabelField>
+    <LabelWhere>Attribute like '%{ZL:GetuserName()/}%'</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_Orderinfo.AddTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;tr&gt;
+&lt;td&gt;{Field="OrderNo"/}&lt;/td&gt;&lt;td&gt;&lt;a href="{ZL:GetShopUrl({Field="ProID"/})/}"&gt;{Field="Proname"/}&lt;/a&gt;&lt;/td&gt;&lt;td&gt;{Field="Pronum"/}&lt;/td&gt;&lt;td&gt;{Field="Receiver"/}&lt;/td&gt;&lt;td&gt;{ZL:FormatDate({Field="AddTime"/},yyyy-MM-dd hh:mm)/}&lt;/td&gt;&lt;td&gt;{Field="Attribute"/}&lt;/td&gt;&lt;td&gt;&lt;script&gt;GetStr('{Field="Extend"/}');&lt;/script&gt;&lt;/td&gt;  
+&lt;/tr&gt;  
+{/Repeate}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

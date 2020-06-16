@@ -1,0 +1,161 @@
+﻿{ZL.Source id="全民健身数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{SField sid="全民健身数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="全民健身数据源标签" FD="Tagkey" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<style>
+.navbar-default .navbar .nav_l .menu3 a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="mybanner">
+<img src="{$CssDir/}images/sport_con.jpg" class="img-responsive" alt="" />
+<div class="sport_place">
+<div class="container"><span class="pull-left">{ZL.Label id="输出栏目图片" NodeID="{SField sid="全民健身数据源标签" FD="NodeID" page="0"/}" /}{SField sid="全民健身数据源标签" FD="Title" page="0"/}</span><span class="pull-right"><i class="fa fa-map-marker"></i>{SField sid="全民健身数据源标签" FD="szdq" page="0"/}{SField sid="全民健身数据源标签" FD="xxdz" page="0"/}</span></div>
+</div>
+</div>
+
+<div class="container padding0 mysite"> 
+<ol class="breadcrumb">
+<li>当前位置：<a href="/">首页</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(3)/}">时尚健身</a></li>
+<li class="par_node">{ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="全民健身数据源标签" FD="NodeID" page="0"/}" /}</li>
+<li>{ZL.Label id="输出指定ID节点名和链接" NodeID="{SField sid="全民健身数据源标签" FD="NodeID" page="0"/}" /}</li>
+<li>{SField sid="全民健身数据源标签" FD="Title" page="0"/}</li>  
+</ol>
+</div> 
+<!--面包屑导航结束-->
+<div class="container"> 
+<div class="padding1" id="sportImg"><img src="{ZL:GetPicUrl({SField sid="全民健身数据源标签" FD="pic" page="0"/})/}" class="center-block img-responsive" onerror="this.style.dislpay='none'" /></div>
+<div class="sport_con_title"><span><i class="fa fa-ellipsis-v"></i>场所介绍</span></div>
+<div class="place_border"></div>
+<div class="sport_con_content">
+{SField sid="全民健身数据源标签" FD="detail" page="0"/}</div>
+</div>
+</div>  
+<div class="clearfix"></div>
+<div class="text-center hidden"><input type="button" class="btn btn-sm btn-danger" value="我要报名" id="baoming"  style="padding-left:30px; padding-right:30px;"/></div>
+<div class="tab-pane" id="profile">
+<div id="registration" style="display:none;">
+<form id="form" name="form" method="post" action="/doShopCar.aspx" runat="server"><br>
+<script type="text/javascript" language="javascript" >
+function onkeychange()
+{
+var values = document.getElementById("ProUrl").value;
+if(values.indexOf("http://")==0)
+{
+
+document.getElementById("ProUrl").value = values.replace("http://","");
+}
+}
+</script></p>
+<div class="table-responsive">
+<table class="table">
+<tr style="display:none;">
+<td class="text-right">商品页网址：</td><td><input type="text" id="ProUrl" name="ProUrl" class="form-control but" onkeypress="onkeychange()" onchange="onkeychange()" onkeyup="onkeychange()"  /></td><td></td>
+</tr>
+<tr>
+<td class="text-right">活动名称：</td><td><input type="text" id="Proname" name="Proname" class="form-control" value="{SField sid="全民健身数据源标签" FD="Title" page="0"/}" readonly="true"/></td><td></td>
+</tr>
+<tr style="display:none;">
+<td class="text-right">来源卖家：</td><td><input type="text" id="ProSeller" name="ProSeller" class="form-control" value="admin"/></td><td></td>
+</tr>
+<tr>
+<td class="text-right">活动价格：</td><td><input type="text" id="Wholesaleone" name="Wholesaleone" class="form-control" onKeyUp="value=value.replace(/[^\d\.]/g,'')" value="{SField sid="全民健身数据源标签" FD="Price" page="0"/}元"  readonly="true"/></td><td></td>
+</tr>
+<tr>
+<td class="text-right">报名人数：</td><td><input type="text" id="Stock" name="Stock" class="form-control" onKeyUp="value=value.replace(/[^\d\.]/g,'')" /></td><td></td>
+</tr>
+<tr style="display:none;">
+<td class="text-right">活动类型：</td><td><input type="text" id="ProClass" name="ProClass" class="form-control" value="1" /></td><td></td>
+</tr>
+<tr>
+<td class="text-right">联系电话：</td><td><input type="text" id="Phone" name="Phone" class="form-control"/></td><td></td>
+</tr>
+<tr>
+<td class="text-right">附加信息：</td><td><input type="text" id="Proinfo" name="Proinfo" class="form-control"/></td><td></td>
+</tr>
+<tr style="display:none;">
+<td class="text-right">商品属性：</td><td><input type="text" id="Attribute" name="Attribute" value="Attribute" class="form-control"/></td><td></td>
+</tr>
+<tr>
+<td></td><td><input type="submit" name="button" id="button" value="立即报名" class="btn btn-sm btn-danger" /></td>
+</tr>
+</table>
+</div>
+</form>
+</div>
+</div>
+
+</div>
+</div>
+<div class="other_sport">
+<div class="container">
+<div class="sport_con_title"><span><i class="fa fa-ellipsis-v"></i>其他场所</span></div>
+<div class="place_border"></div>
+<ul class="list-unstyled">
+{ZL.Label id="输出其他健身场所列表" NodeID="33" TitleNum="30" ShowNum="3" /}
+</ul>
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script>
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+	".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+ if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//]]>
+
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+  var msViewportStyle = document.createElement("style");
+  msViewportStyle.appendChild(
+    document.createTextNode(
+      "@-ms-viewport{width:auto!important}"
+    )
+  );
+    document.getElementsByTagName("head")[0].
+    appendChild(msViewportStyle);
+}
+$().ready(function(e) {
+   document.getElementById("ProUrl").value=window.location;
+});
+
+$().ready(function(e) {
+    if('{SField sid="全民健身数据源标签" FD="NodeID" page="0"/}'==16){
+		$("#sportImg").hide();
+		}
+});
+var clinum=1;
+$("#baoming").bind("click",function(){
+	
+	if(clinum==1){
+		$("#registration").fadeIn();
+		$("#baoming").val("收起报名");
+	}
+	else{
+		$("#registration").fadeOut();
+		$("#baoming").val("我要报名");
+	}
+	clinum*=-1;
+	})
+</script>

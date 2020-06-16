@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>742</LabelID>
+    <LabelName>光雨小铺查询结果_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,5,1,节点ID|TitleNum,30,1,标题长度|ShopID,1,1,小铺ID|ShopName,默认值,1,小铺名称|ShowNum,9,1,显示个数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_GYXP on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_GYXP.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_GYXP.ShopLogo</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID)  and status=99 and Tablename='ZL_C_GYXP' and (GeneralID=@ShopID or Title like '@ShopName')</LabelWhere>
+    <LabelOrder>CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank" title="{Field="Title"/}"&gt;&lt;img src="{ZL:GetPicUrl({Field="ShopLogo"/})/}" class="center-block img-responsive" alt="{Field="Title"/}" /&gt;&lt;/a&gt;&lt;/li&gt;
+{/Repeate}
+</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>704</LabelID>
+    <LabelName>输出制定精品路线的评论列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>GeneralID,0,1,精品路线ID|ShowNum,10,1,显示个数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Pub_JPLX left join {table1}.dbo.ZL_UserBase on {table1}.dbo.ZL_Pub_JPLX.PubUserID={table1}.dbo.ZL_UserBase.UserID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_Pub_JPLX.PubAddTime,{table1}.dbo.ZL_Pub_JPLX.PubContent,{table1}.dbo.ZL_Pub_JPLX.PubUserName,{table1}.dbo.ZL_UserBase.UserFace</LabelField>
+    <LabelWhere>PubGeneralID=@GeneralID and Pubstart=1</LabelWhere>
+    <LabelOrder>PubAddTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;
+&lt;div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center padding5"&gt;&lt;img src="{Field="UserFace"/}" class="center-block img-responsive" alt="{Field="PubUserName"/}" onerror="this.src='{$CssDir/}images/noface.png'"/&gt;&lt;/div&gt;&lt;div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 padding5"&gt;&lt;strong&gt;{Field="PubUserName"/}&lt;/strong&gt;&lt;span class="pull-right"&gt;{ZL:FormatDate({Field="PubAddTime"/},yyyy-MM-dd)/}&lt;/span&gt;&lt;br/&gt;&lt;p&gt;{Field="PubContent"/}&lt;/p&gt;&lt;/div&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

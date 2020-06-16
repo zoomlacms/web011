@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>26</ModelID>
+    <ModelName>精品路线</ModelName>
+    <Description />
+    <TableName>ZL_C_stfj</TableName>
+    <ItemName>风景</ItemName>
+    <ItemUnit>张</ItemUnit>
+    <ItemIcon>Default.gif</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认生态风景内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>true</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

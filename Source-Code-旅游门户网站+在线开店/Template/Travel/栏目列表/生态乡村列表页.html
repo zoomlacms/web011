@@ -1,0 +1,186 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="{$CssDir/}js/scrollAd.js" type="text/javascript"></script>
+<style type="text/css">
+.navbar-default .navbar .nav_l .menu{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+
+.box{ width:100%;text-align:center;font-size:50px; position:relative; overflow:hidden;}
+.box ul{height:220px;width:100%;position:relative;}
+.box ul li{width:100%;height:220px; top:0;position:absolute;}
+.box ul li img{ width:100%;}
+.box ol{position:absolute; bottom:15px; width:260px; left:40%;z-index:20;text-align:center;}
+.box ol a{width:16px;height:16px;margin-right:10px;background:#3F9;border-radius:50%;display:inline-block;box-shadow:2px 3px 5px #CCCCCC;}
+.box ol a.active{background:white;z-index:18;}
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="container padding0">
+<div class="box">
+<ol></ol>
+<ul class="list-unstyled">
+<li class="active"><img src="{$CssDir/}images/list2_banner1.jpg" class="img-responsive" alt="" /></li>
+<li><img src="{$CssDir/}images/list2_banner2.jpg" class="img-responsive" alt="" /></li>
+</ul>
+</div>
+</div>
+<div class="mySite">
+<div class="container">
+<ul class="breadcrumb">
+<li>您的位置：<a href="/">首页</a><span class="divider"></span></li>
+<li>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</li>
+</ul>
+</div>
+</div>
+<div class="scene_main">
+<div class="container">
+<div class="row">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+<div class="scene_list">
+<div class="news_title"><span class="pull-right"><ul class="list-inline">{ZL.Label id="推荐信息列表" NodeID="8" TitleNum="20" ShowNum="3" /}<li><a href="{ZL:GetNodeLinkUrl(8)/}" target="_blank" id="more">更多>></a></li></ul></span><strong>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</strong></div>
+<div class="row">
+<ul class="list-unstyled">
+{ZL.Label id="生态乡村列表_带图带简介" NodeID="8" TitleNum="60" SynNum="60" ShowNum="9" /}
+</ul>
+</div>
+<div class="clearfix"></div>
+</div><!--scene_list end-->
+<div class="choice">
+<div class="news_title"><strong>精品路线</strong></div>
+<div class="choice_style">
+<ul class="list-unstyled">
+<li><strong>所在区域:</strong><a href="/Class_1/NodePage.aspx?place={$GetUrlencode(南昌县)$}">南昌县</a><a href="/Class_1/NodePage.aspx?place={$GetUrlencode(新建县)$}">新建县</a><a href="/Class_1/NodePage.aspx?place={$GetUrlencode(进贤县)$}">进贤县</a><a href="/Class_1/NodePage.aspx?place={$GetUrlencode(安义县)$}">安义县</a><a href="/Class_1/NodePage.aspx?place={$GetUrlencode(东湖区)$}">东湖区</a><a href="/Class_1/NodePage.aspx?place={$GetUrlencode(西湖区)$}">西湖区</a><a href="/Class_1/NodePage.aspx?place={$GetUrlencode(青云谱区)$}">青云谱区</a><a href="/Class_1/NodePage.aspx?place={$GetUrlencode(青山湖区)$}">青山湖区</a><a href="/Class_1/NodePage.aspx?place={$GetUrlencode(湾里区)$}">湾里区</a></li>
+<li><strong>热门标签:</strong><a href="/Class_1/NodePage.aspx?keyword={$GetUrlencode(休闲)$}">休闲</a><a href="/Class_1/NodePage.aspx?keyword={$GetUrlencode(拓展)$}">拓展</a><a href="/Class_1/NodePage.aspx?keyword={$GetUrlencode(温泉)$}">温泉</a><a href="/Class_1/NodePage.aspx?keyword={$GetUrlencode(春秋游)$}">春秋游</a></li>
+<li><strong>游玩类型:</strong><a href="/Class_1/NodePage.aspx?theme={$GetUrlencode(一日游)$}">一日游</a><a href="/Class_1/NodePage.aspx?theme={$GetUrlencode(二日游)$}">二日游</a><a href="/Class_1/NodePage.aspx?theme={$GetUrlencode(周末游)$}">周末游</a><a href="/Class_1/NodePage.aspx?theme={$GetUrlencode(七日游)$}">七日游</a> </li>
+</ul>
+</div>
+<div class="choice_content">
+<div class="row">
+{ZL.Label id="路线列表_带图带简介带分页" NodeID="9" TitleNum="60" SynNum="200" ShowNum="10" /}
+</div>
+</div>
+</div>
+
+</div>
+<!--列表左侧结束-->
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="raiders">
+<div class="scene_rt">旅游动态</div>
+<div class="index-main-bd">
+<div class="dh-section dh-col-m">
+<div class="index-catlist">
+</div>
+</div>
+<div class="dh-aside dh-col-s">
+<div class="index-sub-news">
+<div class="bd">
+<ul class="list-unstyled">
+{ZL.Label id="文章列表_带图带简介" NodeID="7" TitleNum="36" ShowNum="10" synNum="80" /}
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="padding1">
+<img src="{$CssDir/}images/ad2.jpg" class="center-block img-responsive" alt="江西十元钱的旅行技能get" />
+</div>
+<div class="padding1">
+<img src="{$CssDir/}images/ad3.jpg" class="center-block img-responsive" alt="江西十元钱的旅行技能get" />
+</div>
+<div class="place padding1">
+<div class="scene_rt">热门标签</div>
+<a href="/Search/Searchlist.aspx?keyword={$GetUrlencode(美食)$}" target="_blank" class="btn btn-sm btn-danger">美食</a><a href="/Search/Searchlist.aspx?keyword={$GetUrlencode(特色小吃)$}" target="_blank" class="btn btn-sm btn-danger">特色小吃</a><a href="/Search/Searchlist.aspx?keyword={$GetUrlencode(文化)$}" target="_blank" class="btn btn-sm btn-danger">文化</a><a href="/Search/Searchlist.aspx?keyword={$GetUrlencode(名胜)$}" target="_blank" class="btn btn-sm btn-danger">名胜</a><a href="/Search/Searchlist.aspx?keyword={$GetUrlencode(当季)$}" target="_blank" class="btn btn-sm btn-danger">当季</a><a href="/Search/Searchlist.aspx?keyword={$GetUrlencode(比赛)$}" target="_blank" class="btn btn-sm btn-danger">比赛</a><a href="/Search/Searchlist.aspx?keyword={$GetUrlencode(休闲娱乐)$}" target="_blank" class="btn btn-sm btn-danger">休闲娱乐</a><a href="/Search/Searchlist.aspx?keyword={$GetUrlencode(时尚)$}" target="_blank" class="btn btn-sm btn-danger">时尚</a><a href="/Search/Searchlist.aspx?keyword={$GetUrlencode(赣旅)$}" target="_blank" class="btn btn-sm btn-danger">赣旅</a><a href="/Search/Searchlist.aspx?keyword={$GetUrlencode(全民健身)$}" target="_blank" class="btn btn-sm btn-danger">全民健身</a><a href="/Search/Searchlist.aspx?keyword={$GetUrlencode(自然生态)$}" target="_blank" class="btn btn-sm btn-danger">自然生态</a>
+</div>
+</div>
+</div>
+<!--列表右侧结束-->
+</div>
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+<div class="side_ad hidden-xs">
+<div class="container">
+<div id=duilian01 class="pull-left">{ZL.Label id="输出对联广告" GeneralID="446" /}<button onClick="ad_close1()"><i class="fa fa-close "></i>关闭</button></div>
+<div id=duilian02 class="pull-right">{ZL.Label id="输出对联广告" GeneralID="447" /}<button onClick="ad_close2()"><i class="fa fa-close "></i>关闭</button></div>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//关闭顶部广告
+ function img_clo(){
+	var t= setTimeout($(".home_ad").slideUp(2000),2000);	
+	}
+
+//导航手机列表向上定时滚动
+$(function(){ 
+var $this = $(".renav"); 
+var scrollTimer; 
+$this.hover(function(){ 
+clearInterval(scrollTimer); 
+},function(){ 
+scrollTimer = setInterval(function(){ 
+scrollNews( $this ); 
+}, 2000 ); 
+}).trigger("mouseout"); 
+}); 
+function scrollNews(obj){ 
+var $self = obj.find("ul:first"); 
+var lineHeight = $self.find("li:first").height(); 
+$self.animate({ "margin-top" : -lineHeight +"px" },300 , function(){ 
+$self.css({"margin-top":"0px"}).find("li:first").appendTo($self); 
+}) 
+}
+$().ready(function(e) {
+    $(".scene_list li").mouseenter(function(e) {
+	   $(".scene_list li .item_info").fadeOut();	
+       $(this).find(".item_info").fadeIn();
+    }).mouseleave(function(e) {
+       $(this).find(".item_info").fadeOut(); 
+    });;
+	$(".raiders li .raider_item:first").show();	//设置旅游动态的第一条信息默认显示
+});
+//旅游动态列表滚动效果
+var cms={
+        box:'',
+        index:0,
+        init:function(){
+            this.box=$(".index-sub-news").find(".bd");
+            this.run();
+        },
+        run:function(){
+            var _this=this;
+            setInterval(function(){
+                var _index=_this.index%10;
+                _this.box.find("li").eq(_index).find(".raider_item").slideDown();
+                _this.box.find("li").eq(_index).siblings().find(".raider_item").slideUp();
+                _this.index++;
+            },2000);
+        }
+    }
+cms.init();
+</script>

@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>778</LabelID>
+    <LabelName>输出其他健身场所列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,34,1,节点ID|TitleNum,30,1,标题长度|ShowNum,10,1,显示个数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_QMJS on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_QMJS.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_QMJS.pic</LabelField>
+    <LabelWhere>(NodeID=@NodeID  or NodeID in (select NodeID from ZL_Node where ParentID=@NodeID ))</LabelWhere>
+    <LabelOrder>NewID() </LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding10"&gt;&lt;div class="other_sport_item"&gt;
+&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank"&gt;&lt;img src="{ZL:GetPicUrl({Field="pic"/})/}" class="center-block img-responsive" alt="{Field="Title"/}" /&gt;&lt;/a&gt;&lt;span&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank"&gt;{ZL:CutText({Field="Title"/},@TitleNum,)/}&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

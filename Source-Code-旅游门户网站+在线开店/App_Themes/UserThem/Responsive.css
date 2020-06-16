@@ -1,0 +1,111 @@
+.padding0{padding:0;}/*用户登录*/
+.backs{  background:#eaf3fc;}
+.applgntype a{ padding-left:15px;}
+#qqLoginBtn{ background:url(/images/QQ.gif) no-repeat;}
+#qqLoginBtn a{ padding-left:0; }
+#qqLoginBtn a img { width:32px;}
+.main_ldiv h1{ line-height:40px;font-size:1.3em;font-family:"Microsoft Yahei", SimSun, Tahoma, Helvetica, Arial, sans-serif;}
+.main_ldiv h1 span{font-size:1.5em; color:#00CCFF; margin-left:5px;}
+.main_ldiv li{margin-top:0.2em;}
+.applgntype a{ display:block; height:32px;width:32px; float:left;}
+.applgntype{ margin-top:10px;}
+.top li a{ color:#fff;}
+.top li a:hover{ color:#004b9b;background:#fff;}
+.top_menu .navbar-toggle{ background:#ddd;}
+.top_menu .navbar-toggle .icon-bar{ background:#fff;}
+
+.top {height:75px;width:100%;}/*用户注册*/
+.logo {width:400px;margin:auto;margin-top:10px;}
+.regDiv { width:50%;min-width:320px;}/*border:1px solid #d9d9d9;*/
+.desc {text-align:right;width:100px;display:inline-block; }
+.remindDiv {height:15px;}
+.reg_title{font-size:1.3em; font-weight:500; border-bottom:1px solid #d9d9d9; clear:both; color: #007BBB; height:28px; line-height:28px; padding-left:20px;text-align:center;}
+.tdbgleft {text-align:center;}
+.bottom {bottom:0px;text-align:center;width:100%;}
+/*Need To Remove*/
+#apDiv1{position: absolute;	width: 106px;height: 16px;z-index: 1;top: 991px;left: 166px;}
+.emptyDiv{height:auto;}
+#userinfo { margin-top:20px; margin-bottom:200px; width:50%;min-width:320px;margin:auto;}
+#userinfo li span {color:#f00;}
+
+.backs .navbar-nav li a:hover{text-decoration:underline}
+.backs .navbar-nav li{ padding:0;margin:0;}
+#reg_main li { list-style:none;}
+.border_right { border-right:1px solid #ccc; min-height:400px}
+
+.padding0 {padding:0}
+.reg_sub  h1,.reg_sub  h4{ text-align:left; font-size:2em; padding-left:0.5em}
+.reg_sub  h4{ margin-top:30px;}
+.reg_sub  h4 span,.reg_sub  h1 span{ font-size:1.2em;margin-right:10px; color:#00CCFF;}
+.reg_sub  ul{ padding:0;}
+.reg_sub  .form-group .col-xs-12{ text-align:left; padding-left:15px;}
+.backs  .navbar-toggle .icon-bar{ background:#fff;}
+.margintop50{ margin-top:50px;}
+
+#userinfo li{ list-style:none; line-height:30px;}
+
+
+.user_m_top{ background:#0099CC;width:100%; position:fixed;_position:absolute;bottom:auto;_top:expression(eval(document.documentElement.scrollTop)); top:0px;/*left:0px;*/height:4em;z-index:1001;}
+.padding0{ padding:0;}
+.topmenu_a:hover{ background:#094ab2;}
+.usertop_menu { border-radius:0;margin-top:-1px; background:#1d1d1d;text-align:center; padding:20px 0; z-index:9999;}
+.usertop_menu a { height:90px;display:block;background:#ccc;text-decoration:none;color:#fff;}
+.usertop_menu a :hover{ color:#DDD;}
+.usertop_menu a span{ display:block;margin:auto; padding-top:20px; padding-bottom:10px;font-size:2em;}
+
+.user_m_top .dropdown > a{ color:#fff;}
+.user_m_top .dropdown > a:hover{ text-decoration:none;}
+.user_main{ margin-top:4em;}
+#xs_menu >li>a{ color:#fff;}
+#xs_menu >li>ul>li>a{ color:#fff;}
+#xs_menu li a:hover{color:#00aeef;}
+#xs_menu >li.open>a{ color:#00aeef;}
+#user_left .user_leftd{ height:100%;overflow-y:auto;}
+#user_left{ border-right:1px solid #ddd;left:0;top:4em; bottom:0em; position:fixed !important;padding-top:1px;}
+#user_left ul li a { display:block; width:100%;line-height:2.2em;padding-left:15px;}
+#user_left ul li a:hover{ text-decoration:none;}
+.user_l_ul >ul >li >a{ border-bottom:1px solid #ddd;}
+.user_l_ul >ul >li >a:hover{ background:#428BCA; color:#fff;}
+.user_l_ul >ul >li >a >span{ line-height:2.2em; margin-right:5px;}
+.user_l_ul >ul >li > ul> li> a> span{ margin-right:5px;}
+.user_l_ul >ul >li > ul> li> a:hover{ color:#fff; background:#61b0e9;}
+.user_l_ul >ul >li > ul> .active> a{ color:#fff; background:#61b0e9;}
+.user_l_ul >ul >li > ul{ border-bottom:1px solid #ddd;}
+.user_l_ul >ul >.active >a { background:#428BCA; color:#fff;}
+.user_m_right{ margin-top:5px;}
+.user_base a{ display:block; height:180px; line-height:180px; text-align:center; color:#fff;font-size:16px; margin-bottom:10px;}
+.user_base a:hover{ text-decoration:none;}
+.display_none{display:none;}
+
+/*141217新会员登陆*/
+.cms2login{background:url(http://code.zoomla.cn/web/plat/login-bg.jpg);color:#ccc;}
+.cms2login .navbar-default{background:none; border:none;}
+.cms2login .navbar-default li a:hover{color:#fff; text-decoration:underline;}
+.cms2login h4{margin-top:2.2em;}
+.cms2login .codestyle{width:72%}
+.cms2login .pass_code img{padding-left:0.2em;padding-top:0.2em;}
+.imgstyle{cursor: pointer; height:30px; vertical-align: middle;}
+/*141225找回密码*/
+.headText{font-size:15px;color:white;}
+
+@media (max-width:767px) {/*小于768px私有*/
+
+}
+@media (min-width:768px) and (max-width:991px){/*在768和991px之间的屏幕里生效*/
+.cms2login .navbar-default .menua{display:none;}
+.cms2login .codestyle{width:66%}
+
+}
+@media (min-width:992px){  /*大于992px私有*/
+.cms2login .navbar-default .menua{display:none;}
+.cms2login .container{margin-top:5%;}
+.cms2login .navbar-default li a{color:#fff; display:inherit;}
+.cms2login .codestyle{width:70%}
+}
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+

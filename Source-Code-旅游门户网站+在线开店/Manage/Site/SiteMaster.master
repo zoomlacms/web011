@@ -1,0 +1,117 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="manage_Site_SiteMaster, App_Web_dytz1zsq" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link type="text/css" rel="stylesheet" href="/App_Themes/AdminDefaultTheme/Guide.css" />
+<link type="text/css" rel="stylesheet" href="/App_Themes/AdminDefaultTheme/index.css" />
+<link type="text/css" rel="stylesheet" href="/App_Themes/AdminDefaultTheme/main.css" />
+<style>
+.naver{position:relative; width:100%;}
+#nav_site{position:absolute;top:0;_top:0px; /*left:0px;*/z-index:999; background:#000; width:100%;}
+#site_nav a:hover{text-decoration:none;}
+.cuSSS {background:green;width:300px;height:300px;}
+</style>
+  <script src="/JS/jquery-1.9.1.min.js"></script>
+<asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" >
+        <div id="site_top">
+            <div id="site_top_l">
+                <div id="site_logo">
+                    <a href="Default.aspx">
+                        <img src="<%:Call.LogoUrl %>" alt="<%:Call.SiteName %>" /></a>
+                </div>
+                <div id="site_top_lr">
+                    <strong><a href="Default.aspx">站群管理中心</a> </strong><a href="Default.aspx">首页</a>|<a href="../Default.aspx">经典后台</a> |
+                    <a href="../I/Default.aspx">响应式后台</a> |
+                    <a href="javascript:modalDialog('/Common/calc.html', 'calculator', 400, 300)">计算器</a>
+                </div>
+            </div>
+            <div id="site_top_r">
+                <div id="site_top_t">
+                    当前授权版权：开放版|被授权用户：<span id="site_user" runat="server"></span><a href="../SignOut.aspx">[安全退出]</a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+<div class="naver">
+    <div id="nav_site">
+        <div id="site_naver">
+            <div id="site_nav">
+                <%if(badmin.CheckLogin()) {%><!--如果是管理员登录-->
+                <ul>
+                    <li class="site08"><a href="SiteConfig.aspx">全局配置</a></li>
+                    <li class="site09"><a href="ServerClusterConfig.aspx">服务器集群</a></li>
+                    <li class="site05"><a href="DBManage.aspx">数据库管理</a></li>
+                    <li class="site01"><a href="Default.aspx">站点列表</a></li>
+                    <li class="site02"><a href="SitePool.aspx">应用程序池</a></li>
+                    <li class="site03"><a href="CloudLead.aspx">模板云台</a></li>
+                    <li class="site04"><a href="SiteCloudSetup.aspx">快云安装</a></li>
+                    <li class="site07"><a href="SiteDataCenter.aspx">智能采集</a></li>
+                    <li class="site10"><a href="DomName.aspx">域名注册</a></li>
+                </ul>
+                <%}else if(!buser.GetLogin().IsNull) { %><!--如果非管理员,但为用户登录-->
+                <ul>
+                </ul>
+                <%} %>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    var IO=document.getElementById('nav_site'),Y=IO,H=0,IE6;
+    IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+    while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+    if(IE6)
+        IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+            ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+    window.onscroll=function (){
+        var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+        if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+        if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+        IO.fix=!IO.fix;
+    };
+    try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+    //]]>
+</script>
+</div>
+<div style="clear:both;height:47px;"></div>
+<div class="site_boot"></div>
+<asp:ContentPlaceHolder ID="pageContent" runat="server">
+</asp:ContentPlaceHolder>
+</div>
+</form>
+<div id="site_bottom">
+<div id="site_bot">
+<div id="site_bot_l">
+<ul>
+    <li><a href="http://www.zoomla.cn/help" target="_blank">新手指南</a></li>
+    <li><a href="http://www.zoomla.cn/mtv" target="_blank">学习资源</a></li>
+    <li><a href="http://ad.zoomla.cn" target="_blank">广告代码</a></li>
+    <li><a href="http://help.zoomla.cn/data/">数据字典</a></li>
+    <li><a href="http://www.zoomla.cn/templet/" target="_blank">模板中心</a></li>
+    <li><a href="http://help.zoomla.cn/" target="_blank">帮助文档</a></li>
+    <li><a href="http://bbs.zoomla.cn" target="_blank">开发社区</a></li>
+    <li>Copyright &copy;
+<script type="text/javascript"> 
+<!--
+var year = "";
+mydate = new Date();
+myyear = mydate.getYear();
+year = (myyear > 200) ? myyear : 1900 + myyear;
+document.write(year); 
+--> 
+</script>
+	<%:Call.SiteName %> All Rights Reserved
+	</li>
+ </ul>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</body>
+</html>

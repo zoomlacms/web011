@@ -1,0 +1,135 @@
+﻿{ZL.Source id="光雨小铺数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{SField sid="光雨小铺数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<link href="/skin/style.css" rel="stylesheet" type="text/css" />
+<meta name="Keywords" content="{SField sid="光雨小铺数据源标签" FD="Tagkey" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<style type="text/css">
+.navbar-default .navbar .nav_l .menu{ZL.Label id="抽取父节点ID" NodeID="{SField sid="光雨小铺数据源标签" FD="NodeID" page="0"/}" /} a{ margin-top:-2px; border-top:2px solid #2E9900;background:#288400; }
+</style>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="shop_nav" >
+<div class="container">
+<ul class="nav navbar-nav">
+<li><a href="/"><img src="{$LogoUrl/}" alt="{$SiteName/}"/></a></li>
+<li class="padding_t20"><a href="/">首页</a></li>
+<li class="dropdown padding_t20">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">赣旅频道<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li class="menu1"><a href="{ZL:GetNodeLinkUrl(1)/}" target="_blank">乡村旅游</a></li>     
+<li class="menu2"><a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank">赣鄱文化</a></li>
+<li class="menu3"><a href="{ZL:GetNodeLinkUrl(3)/}" target="_blank">时尚健身</a></li>
+<li class="menu12"><a href="{ZL:GetNodeLinkUrl(12)/}" target="_blank">百姓美食</a></li>
+<li class="menu44"><a href="{ZL:GetNodeLinkUrl(44)/}" target="_blank">会展专题</a></li>
+<li class="menu5"><a href="{ZL:GetNodeLinkUrl(5)/}" target="_blank">光雨小铺</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="clearfix"></div>
+</div> 
+ 
+<!--面包屑导航结束-->
+<div class="shop_nav_bg"> 
+</div>
+<div class="container shop_item">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding5 shop_item_l">
+<ul class="list-unstyled">
+<li><img src="{ZL:GetPicUrl({SField sid="光雨小铺数据源标签" FD="ShopLogo" page="0"/})/}" class="img-responsive" alt="{SField sid="光雨小铺数据源标签" FD="Title" page="0"/}"></li>
+<li class="text-center"><strong>{SField sid="光雨小铺数据源标签" FD="Title" page="0"/}</strong></li> 
+<li class="rz">星级：<span class="grade grade{SField sid="光雨小铺数据源标签" FD="ShopGrade" page="0"/}"></span></li>
+<li>店主：{SField sid="光雨小铺数据源标签" FD="ShopPep" page="0"/}</li>
+<li>电话：<a href="tel:{SField sid="光雨小铺数据源标签" FD="ShopTel" page="0"/}">{SField sid="光雨小铺数据源标签" FD="ShopTel" page="0"/}</a></li>
+<li>地址：{SField sid="光雨小铺数据源标签" FD="ShopAddr" page="0"/}</li>
+</ul>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 shop_item_r"> 
+<ul class="nav nav-tabs" role="tablist">
+<li class="active"><a href="#home" role="tab" data-toggle="tab"><i class="fa fa-refresh"></i>动态</a></li>
+<li><a href="#profile" role="tab" data-toggle="tab"><i class="fa fa-cubes"></i>信息</a></li>
+<li><a href="#messages" role="tab" data-toggle="tab"><i class="fa fa-image"></i>相册</a></li>
+<li><a href="#settings" role="tab" data-toggle="tab"><i class="fa fa-user"></i>资料</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+<div class="tab-pane active" id="home">
+<ul class="list-unstyled">
+{ZL.Label id="输出商铺的文章列表" NodeID="12" TitleNum="60" SynNum="200" ShowNum="15" author="{SField sid="光雨小铺数据源标签" FD="Title" page="0"/}" /}
+</ul>
+</div>
+<div class="tab-pane" id="profile">
+<table class="table table-striped table-bordered">
+<tr>
+<th>标题</th><th>薪资</th><th>地点</th><th>发布时间</th>
+</tr>
+{ZL.Label id="输出商铺的信息列表" NodeID="29" author="{SField sid="光雨小铺数据源标签" FD="Title" page="0"/}" TitleNum="30" /}
+</table>
+</div>
+<div class="tab-pane" id="messages">
+<ul class="list-unstyled">{ZL:SplitPicUrl({SField sid="光雨小铺数据源标签" FD="ShopPics" page="0"/})/}</ul></div>
+<div class="tab-pane" id="settings">{SField sid="光雨小铺数据源标签" FD="ShopContent" page="0"/}
+</div>
+</div>
+
+</div>
+</div> 
+{ZL.Label id="全站底部"/} 
+</body>
+</html>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script>
+//检测固顶事件
+var IO=document.getElementById('scolls'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+	".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+ if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//]]>
+
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+  var msViewportStyle = document.createElement("style");
+  msViewportStyle.appendChild(
+    document.createTextNode(
+      "@-ms-viewport{width:auto!important}"
+    )
+  );
+  document.getElementsByTagName("head")[0].
+    appendChild(msViewportStyle);
+}
+var shop_pics='{SField sid="光雨小铺数据源标签" FD="ShopPics" page="0"/}';
+$().ready(function(e) { 
+	if(shop_pics.length==0){
+		$("#messages").html("店主还没上传图片哦!");
+		}
+});
+$().ready(function(e) {
+	$(".art_content .nav-tabs>li>a").mouseover(function(){
+		$(this).parent().addClass("active");
+		$(this).parent().siblings("li").removeClass("active");
+		$(this).parent().parent().parent().find(".tab-content .tab-pane").removeClass("active");
+		$($(this).attr("tab-pane")).addClass("active");
+	})
+	 
+});
+$(".grade1").append('<i class="fa fa-star">');
+$(".grade2").append('<i class="fa fa-star"><i class="fa fa-star">');
+$(".grade3").append('<i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star">');
+$(".grade4").append('<i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star">');
+$(".grade5").append('<i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star"><i class="fa fa-star">');
+</script>

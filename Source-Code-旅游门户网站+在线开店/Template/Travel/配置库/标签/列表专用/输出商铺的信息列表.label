@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>809</LabelID>
+    <LabelName>输出商铺的信息列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,29,1,节点ID|author,作者,1,作者名|TitleNum,30,1,标题长度</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_ZPXX on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_ZPXX.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.CreateTime,{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_ZPXX.Salary,{table1}.dbo.ZL_C_ZPXX.WorkPlace</LabelField>
+    <LabelWhere>(NodeID=@NodeID or NodeID in (select NodeID from ZL_Node where ParentID=@NodeID)) and status=99 and Inputer like '@author'</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}"&gt;{ZL:CutText({Field="Title"/},@TitleNum,)/}&lt;/a&gt;&lt;/td&gt;&lt;td&gt;￥{Field="Salary"/}&lt;/td&gt;&lt;td&gt;{Field="WorkPlace"/}&lt;/td&gt;&lt;td&gt;{Field="CreateTime"/}&lt;/td&gt; 
+&lt;/tr&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>Travel</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,121 @@
+﻿@charset "utf-8";
+/*问卷投票页面*/
+*{  margin: 0px; padding: 0px;}
+img{ border: none;}
+li{ list-style-type: none;}
+ul, ol{ list-style: none;}
+a:link{ color: #000;text-decoration: none;}
+a:hover{ text-decoration: none;}
+a:focus{outline: none;}
+.clear{ clear: both;}
+body{background: #F2E5C3 url(images/Survey/body_bg.jpg) repeat-x;   font: 12px Arial, Helvetica, sans-serif;}
+#head, .qlink, .banner, #main, .bottom, .desp, .result{  margin: 0 auto;}
+#Survey_main{ width:960px; margin:auto; clear:both; }
+
+#head{ height: 200px;}
+#htop{ background: #5e8fdb url(images/Survey/top_bg.gif) top left repeat-x;margin-top: 2px;width: 100%;height: 27px;}
+
+.qlink{ width: 960px; height: 25px;line-height: 25px; font-size: 14px;}
+.qlink a:hover{color: #fff;}
+
+.qlink .left{ float: left; }
+.qlink .left a:hover{color: #CCC;}
+.qlink .right{ float: right;}
+.banner{ width: 861px; height: 192px; margin-top: 20px;background: url(images/Survey/Survey_banner.png) no-repeat;}
+#main{ width: 863px; border: solid 1px #d5ddd4; background: #FFF; margin-top: 5px;}
+.title{  width: 800px;  background: url(images/Survey/title_bg.jpg) left top no-repeat;height: 48px;padding: 37px 0 0 65px;font-size: 20px;font-weight: bolder;color: blue;float: left;}
+.date{float: right;padding-right: 35px;color: #5e8fdb;font-size: 12px;font-style: italic;font-weight: normal;}
+.desp{width: 90%;font-size: 13px;color: #808080;}
+.desp p{line-height: 17px;text-indent: 26px;padding-bottom: 4px;}
+.compart{ border: dotted 1px #ff6a00;margin-top: 8px;}
+.list, .result{ margin-top: 2px;}
+.list table {width: 750px;margin: 6px auto;border-bottom: solid 1px #f1eded;}
+.list th{font-size: 13.5px;font-weight: bold;color: #0a63c4;margin-bottom: 5px;text-align: justify;letter-spacing: 1.5px;}
+.list td{padding: 5px 0 5px 20px;color: #000;font-size: 14px;line-height: 1.8em;}
+.list td label{padding-left: 12px;}
+.list td input{padding-right: 8px;}
+.result{width: 820px;}
+.result a{color: #0a63c4;}
+.result a:hover{color: purple;}
+.result dl{margin: 10px;}
+.result dt span{font-size: 15px;color: #b200ff;font-weight: 500;}
+.result dd{}
+/*待实现： 最小高度。 google。*/
+.result dd table{width: 620px;margin: 5px;float: left;min-height: 150px;}
+.result dd td{color: #808080;}
+.bottom{height: 50px;padding-top: 10px;width: 350px;}
+.btn{height: 35px;width: 70px;background-color: #ffb202;line-height: 25px;font-size: 14px;color: purple;border: none;cursor: pointer;}
+#foot{height: 40px;}
+#foot{ float: right; font-size: 14px; color: #06C; margin: 8px;}
+#foot a:hover{color: #FD5A02;}
+
+/*注册页*/
+.Survey_bg { background:url(images/Survey/background.png) repeat ;}
+#Survey_main{height:700px; background:#fff; margin-top:10px;}
+.Survey_tit{ padding-left:20px; line-height:25px;  font-size:16px;}
+.Survey_ban{ padding-left:20px; height:30px; line-height:30px; background:url(images/Survey/page-head.png) repeat-x; color:#fff; font-size:20px; font-family:"黑体";}
+.Survey_ban strong{ font-size:16px;  }
+.STit{ padding-left:80px; margin-top:10px; height:35px; line-height:35px; font-size:16px; color:#028EDB; }
+.STit img{ float:left; margin-right:10px;}
+.STit a{ font-size:12px; color:#028EDB; }
+.Survey_Reg{ width:510px; margin:auto; margin-top:30px; clear:both;}
+.Survey_Reg strong{ color:#F00}
+ 
+.Survey_Reg .Td_left{ background:#86D7F9; height:35px; line-height:35px;text-align:center;}
+.Survey_Reg .Td_right{ background:#C7ECFC;text-align:left; padding-left:10px;}
+.Survey_Reg .Td_right input{ border:none;}
+.i_bottom{ margin-top:20px; float:right; width:100px; height:30px; background:url(images/Survey/register.png) left no-repeat; border:none}
+
+.Survey_banL{ float:left; width:200px; background:#fff; text-align:center}
+.Survey_banR{ float:left; width:200px;}
+.Survey_banL strong{ color:#028EDB}
+
+.Survey_m { margin-top:30px;}
+.Survey_ml{ float:left; width:450px; margin-left:30px;}
+.Survey_mr{ float:right; width:400px;margin:0px 30px; }
+.Survey_login{ background:#C7ECFC;padding-left:20px; padding-top:10px; }
+.Sur_tit{ height:30px; line-height:30px;}
+.Sur_tit img{ float:left; margin-right:5px; }
+.Sur_tit strong{ color:#028EDB; font-size:16px;}
+.Sur_t{ line-height:30px; text-align:center;}
+.Survey_ml p{ line-height:25px;}
+
+.Survey_login td{ height:40px; line-height:40px; }
+.Survey_login td img{ float:left; margin-right:5px;}
+.Survey_login td strong{ margin:0px 15px; font-size:18px;}
+.Survey_login td button{ float:right;}
+.Survey_login td a img{ margin-left:40px;}
+.Survey_login td a { color:#028EDB;}
+.lefts{ width:90px; font-size:20px; text-align:right; font-family:"宋体";}
+.l_bottom{width:110px; height:35px;background:url(images/Survey/button-signin.png) left no-repeat; border:none;}
+.Survey_login td p{ line-height:22px;}
+.Survey_login td p strong{ color:#028EDB}
+.contact p{ line-height:22px;}
+
+#CopyRight{ text-align:center; line-height:22px; }
+
+/*问卷主页*/
+.Sur_Main{ border-bottom:1px solid #028EDB}
+.Sur_Mainl{ float:left; width:200px; background:url(images/Survey/sidebar-shadow.png) right repeat-y}
+.Sur_Mainr{ float:right; width:750px;}
+.Sur_Mtit{ height:50px; line-height:50px; background:url(images/Survey/compass.gif) 5px no-repeat; padding-left:37px;}
+.Sur_Mtit strong{ color:#028EDB; font-size:18px;}
+.Sur_li {padding-bottom:10px;}
+.Sur_li li{ padding-left:20px; line-height:22px; margin-top:10px;}
+.Sur_li li strong a{ color:#f00}
+.Sur_con p{ line-height:25px;}
+
+
+.disno { display:none;}
+#VoteMain, #Votetop{  margin:auto; width:960px;background:none;}
+#Votetop { height:80px; border-bottom:5px solid #0193e0;}
+#Votetop strong { font-size:24px; display:block; line-height:80px; }
+#VoteL { float:left;padding-top:10px; width:160px; min-height:500px; line-height:25px;border-right:2px solid #c5daeb;}
+#VoteL li { line-height:30px; font-size:14px; padding-left:20px; background:url(images/Survey/icon2.gif) no-repeat left center;}
+.voteL_t { border-bottom:1px solid #ddd; margin-top:10px;}
+#VoteR {float:right;width:780px; line-height:25px;}
+#VoteR strong { height:40px;}
+.votetab th{ font-weight:normal;}
+
+
+/* Powered by Zoomla!逐浪CMS www.zoomla.cn */
